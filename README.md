@@ -28,6 +28,7 @@ xychart-beta
 - [5. Por salario](#5-cómo-te-afecta-según-tu-salario-bruto-anual-jornada-completa-sin-hijos-salvo-indicado)
 - [6. Derechos e igualdad](#6-derechos-e-igualdad-qué-cambia-más-allá-del-dinero)
 - [Fuentes y metodología](comparativa/02_metodologia_y_fuentes.md)
+- [Sostenibilidad deuda 2026-30 con escenarios](comparativa/03_sostenibilidad_deuda.md)
 
 ## Contenido
 
@@ -38,8 +39,9 @@ xychart-beta
 | `pp/` | [01_propuestas_pp.md](pp/01_propuestas_pp.md) | [02_simulacion_pp.md](pp/02_simulacion_pp.md) | `03_pp_simulacion.py` |
 | `sumar/` | [01_propuestas_sumar.md](sumar/01_propuestas_sumar.md) | [02_simulacion_sumar.md](sumar/02_simulacion_sumar.md) | `03_sumar_simulacion.py` |
 | `comparativa/` | [00_baseline_INE.md](comparativa/00_baseline_INE.md) | [01_comparativa_global.md](comparativa/01_comparativa_global.md) | [02_metodologia_y_fuentes.md](comparativa/02_metodologia_y_fuentes.md) |
+| `comparativa/` | [03_sostenibilidad_deuda.md](comparativa/03_sostenibilidad_deuda.md) | escenarios 2026-30 por partido | `04_deuda_sostenibilidad.py` |
 
-Para reproducir: `python vox/03_vox_simulacion.py`, y lo mismo con los otros tres. Solo usan la librería estándar.
+Para reproducir: `python vox/03_vox_simulacion.py`, y lo mismo con los otros tres. Deuda: `python comparativa/04_deuda_sostenibilidad.py`. Solo usan la librería estándar.
 
 ## 0. Punto de partida común (para no comparar peras con manzanas)
 

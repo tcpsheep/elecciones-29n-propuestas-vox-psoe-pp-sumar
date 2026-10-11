@@ -1,19 +1,43 @@
 # Qué pasaría en España si se aplicaran todas las propuestas económicas de VOX, PSOE, PP y Sumar
 
-Simulación comparada con la misma base macroeconómica para los cuatro programas vigentes (2023-2026).
-Corte de datos: 11/10/2026. Base prioritaria: INE, Agencia Tributaria, Banco de España, IGAE/Hacienda, Seguridad Social, BOE y programas oficiales de los partidos.
+![GitHub Repo stars](https://img.shields.io/github/stars/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar?style=social)
+![GitHub release](https://img.shields.io/github/v/release/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar)
+![License](https://img.shields.io/badge/license-CC%20BY%204.0-green)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Datos](https://img.shields.io/badge/datos-INE%20%7C%20AEAT%20%7C%20BdE-orange)
+![Estado](https://img.shields.io/badge/corte-11%2F10%2F2026-lightgrey)
 
-Este repositorio contiene, por cada partido, sus propuestas económicas literales con fuente oficial, el cálculo reproducible en Python y el escenario resultante año 1-3 si se aplicaran todas a la vez y sin mezclar partidos.
+> Simulador economía España 2026: programas VOX, PSOE, PP, Sumar comparados con la misma base (PIB, déficit, deuda, IRPF, IVA, pensiones, SMI, paro). Con scripts Python reproducibles y fuentes oficiales.
+
+```mermaid
+xychart-beta
+  title "Déficit resultante (% PIB) desde 2,39%"
+  x-axis ["Base", "PSOE", "PP", "Sumar", "VOX"]
+  y-axis "Déficit % PIB" 0 --> 7
+  bar [2.39, 2.57, 3.45, 3.6, 5.8]
+```
+
+**Resultado en 10 segundos:** PSOE 2,6%→1,8% | PP 3,3-3,6% | Sumar 3,0-3,7% | VOX 5,0-6,2%. El detalle por sueldo, vivienda y pensiones está abajo.
+
+## Índice
+- [Contenido y cómo reproducir](#contenido)
+- [1. Qué propone cada uno](#1-qué-propone-cada-uno-resumen-fiel-fuentes-en-cada-01_propuestas_)
+- [2. Resultado comparado](#2-resultado-si-se-aplicara-todo-de-cada-uno-año-1-estático--ajuste-dinámico-1-3-años)
+- [3. Según tu prioridad](#3-según-tu-prioridad-elige-2-y-mira-su-fila)
+- [4. Riesgo país](#4-riesgo-de-quiebra-del-país-lo-que-dicen-los-números)
+- [5. Por salario](#5-cómo-te-afecta-según-tu-salario-bruto-anual-jornada-completa-sin-hijos-salvo-indicado)
+- [6. Derechos e igualdad](#6-derechos-e-igualdad-qué-cambia-más-allá-del-dinero)
+- [Fuentes y metodología](comparativa/02_metodologia_y_fuentes.md)
 
 ## Contenido
 
-```
-vox/01_propuestas_vox.md / 02_simulacion_vox.md / 03_vox_simulacion.py
-psoe/01_propuestas_psoe.md / 02_simulacion_psoe.md / 03_psoe_simulacion.py
-pp/01_propuestas_pp.md / 02_simulacion_pp.md / 03_pp_simulacion.py
-sumar/01_propuestas_sumar.md / 02_simulacion_sumar.md / 03_sumar_simulacion.py
-comparativa/00_baseline_INE.md / 01_comparativa_global.md / 02_metodologia_y_fuentes.md
-```
+| Carpeta | Propuestas | Simulación | Script |
+|---|---|---|---|
+| `vox/` | [01_propuestas_vox.md](vox/01_propuestas_vox.md) | [02_simulacion_vox.md](vox/02_simulacion_vox.md) | `03_vox_simulacion.py` |
+| `psoe/` | [01_propuestas_psoe.md](psoe/01_propuestas_psoe.md) | [02_simulacion_psoe.md](psoe/02_simulacion_psoe.md) | `03_psoe_simulacion.py` |
+| `pp/` | [01_propuestas_pp.md](pp/01_propuestas_pp.md) | [02_simulacion_pp.md](pp/02_simulacion_pp.md) | `03_pp_simulacion.py` |
+| `sumar/` | [01_propuestas_sumar.md](sumar/01_propuestas_sumar.md) | [02_simulacion_sumar.md](sumar/02_simulacion_sumar.md) | `03_sumar_simulacion.py` |
+| `comparativa/` | [00_baseline_INE.md](comparativa/00_baseline_INE.md) | [01_comparativa_global.md](comparativa/01_comparativa_global.md) | [02_metodologia_y_fuentes.md](comparativa/02_metodologia_y_fuentes.md) |
 
 Para reproducir: `python vox/03_vox_simulacion.py`, y lo mismo con los otros tres. Solo usan la librería estándar.
 

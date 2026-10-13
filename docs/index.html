@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador Económico España 2026: VOX, PSOE, PP, Sumar | IRPF, IVA, Pensiones, Deuda</title>
+<meta name="description" content="Qué pasaría si se aplicaran todas las propuestas económicas de VOX, PSOE, PP y Sumar. IRPF, IVA, pensiones, déficit y deuda simulados con datos del INE, AEAT, Banco de España y Hacienda. Monte Carlo 10.000 iteraciones.">
+<meta name="keywords" content="VOX, PSOE, PP, Sumar, simulador económico, IRPF, IVA, pensiones, deuda pública, déficit, elecciones 2026, reforma fiscal, España, Hacienda, AEAT, INE, Banco de España, Monte Carlo, proposición no de ley, programa electoral">
+<meta name="author" content="tcpsheep">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Simulador Económico España 2026: ¿Qué pasaría con las propuestas de VOX, PSOE, PP y Sumar?">
+<meta property="og:description" content="IRPF, IVA, pensiones, déficit y deuda comparados con datos oficiales INE, AEAT, BdE, Hacienda. Monte Carlo 10.000 iteraciones.">
+<meta property="og:url" content="https://tcpsheep.github.io/simulador-economico-espana-vox-psoe-pp-sumar/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simulador Económico España 2026: VOX vs PSOE vs PP vs Sumar">
+<meta name="twitter:description" content="IRPF 85B Hacienda, déficit 7,6-8,9% VOX, Monte Carlo 10.000 iteraciones. Datos INE, AEAT, BdE.">
+
+<!-- Schema.org structured data for Google rich snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Simulador económico España 2026: propuestas VOX, PSOE, PP, Sumar",
+  "description": "Simulación del impacto fiscal de las propuestas económicas de VOX, PSOE, PP y Sumar sobre el IRPF, IVA, pensiones, déficit y deuda pública de España. Datos baseline: PIB 1.690.012 M€ (INE), deuda 100,7% PIB (BdE), déficit 2,39% (IGAE), recaudación AEAT 294.734 M€. Monte Carlo 10.000 iteraciones.",
+  "keywords": ["VOX", "PSOE", "PP", "Sumar", "IRPF", "IVA", "pensiones", "deuda pública", "déficit", "simulación", "Monte Carlo", "España", "elecciones 2026", "reforma fiscal"],
+  "creator": {"@type": "Person", "name": "tcpsheep"},
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "distribution": [{"@type": "DataDownload", "contentUrl": "https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar"}]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Cuánto costaría la reforma del IRPF de VOX?", "acceptedAnswer": {"@type": "Answer", "text": "El Ministerio de Hacienda (13-10-2026, ministro Arcadi España) cifra el coste de la reforma del IRPF de VOX en 85.000 millones de euros, equivalente al 61% de toda la recaudación del impuesto (~140.000 M€ anuales). VOX declaraba 40.000 M€ pero solo contaba el tramo estatal, sin incluir el tramo autonómico que también elimina. Ejemplos: quien cobra SMI no ahorra nada, quien cobra 100.000€ ahorra 18.935€, quien cobra 1.000.000€ ahorra 212.333€."}},
+    {"@type": "Question", "name": "¿Qué déficit tendría España con las propuestas de VOX?", "acceptedAnswer": {"@type": "Answer", "text": "Con IRPF corregido a 85B (Hacienda), el déficit resultante sería 7,6-8,9% del PIB (estático-dinámico). Sin ahorro realista (solo 15B de los 40B prometidos), el déficit superaría el 10%. En el Monte Carlo (10.000 iteraciones), VOX tiene 100% de probabilidad de déficit excesivo (>3% PIB) y 100% de probabilidad de déficit >5%."}},
+    {"@type": "Question", "name": "¿Qué pasaría con la pensión media con la exención de IRPF de VOX?", "acceptedAnswer": {"@type": "Answer", "text": "El 63% de los pensionistas no presenta IRPF (Gestha). El umbral exento de retenciones es 15.876€/año y la pensión media es 17.668€/año (1.262€/mes × 14 pagas), por lo que el pensionista medio paga retenciones bajas (~800-1.000€/año) que se eliminarían. El ahorro real se concentra en el ~37% con pensión >22.000€ (~4.160€/año de media). Fuente: AEAT 2024 (retenciones pensiones públicas 14.317 M€), Gestha, demon.code.blog."}},
+    {"@type": "Question", "name": "¿Qué partido genera más déficit en España?", "acceptedAnswer": {"@type": "Answer", "text": "VOX genera el mayor déficit: 7,6-8,9% del PIB (merma 149B - ahorro 40B). Le sigue Sumar con 3,0-3,7%, PP con 3,3-3,6%, y PSOE con ~2,6% (cumple el límite del 3%). El PSOE es el único que no entraría en procedimiento de déficit excesivo de la UE."}},
+    {"@type": "Question", "name": "¿Cuánto sube el IRPF con Sumar?", "acceptedAnswer": {"@type": "Answer", "text": "Sumar propone IRPF marginal del 52% desde 300.000€, capital hasta 33%, gravamen del 3% sobre patrimonios >50M€ (~4.200 M€ recaudación), fin de SICAV/SOCIMI, herencia universal 20.000€ a los 23 años, crianza universal 200€/mes <18 años. El gasto total es 41,5B pero los ingresos solo cubren ~20B, dejando un neto de +21B."}}
+  ]
+}
+</script>
+
+<style>
+:root { --bg:#0d1117; --card:#161b22; --border:#30363d; --text:#e6edf3; --muted:#8b949e; --blue:#58a6ff; --green:#3fb950; --red:#f85149; --yellow:#d29922; --purple:#bc8cff; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6; max-width:1100px; margin:0 auto; padding:20px; }
+h1 { font-size:1.8em; margin-bottom:8px; line-height:1.2; }
+h2 { font-size:1.3em; margin-top:32px; margin-bottom:12px; border-bottom:1px solid var(--border); padding-bottom:8px; color:var(--blue); }
+h3 { font-size:1.1em; margin-top:20px; margin-bottom:8px; }
+p { margin-bottom:12px; color:var(--text); }
+.muted { color:var(--muted); font-size:0.9em; }
+.hero { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:24px; margin-bottom:24px; }
+.hero h1 { color:var(--text); }
+.badge { display:inline-block; padding:2px 10px; border-radius:12px; font-size:0.8em; font-weight:600; margin:2px; }
+.badge-vox { background:#f8514922; color:var(--red); border:1px solid #f8514944; }
+.badge-psoe { background:#3fb95022; color:var(--green); border:1px solid #3fb95044; }
+.badge-pp { background:#58a6ff22; color:var(--blue); border:1px solid #58a6ff44; }
+.badge-sumar { background:#bc8cff22; color:var(--purple); border:1px solid #bc8cff44; }
+table { width:100%; border-collapse:collapse; margin:12px 0; font-size:0.85em; }
+th, td { padding:8px 10px; border:1px solid var(--border); text-align:left; }
+th { background:var(--card); font-weight:600; }
+td.num { text-align:right; font-variant-numeric:tabular-nums; }
+.red { color:var(--red); font-weight:600; }
+.green { color:var(--green); font-weight:600; }
+.yellow { color:var(--yellow); font-weight:600; }
+.alert { background:#f8514911; border:1px solid #f8514944; border-radius:8px; padding:16px; margin:12px 0; }
+.alert h3 { color:var(--red); }
+.info { background:#58a6ff11; border:1px solid #58a6ff44; border-radius:8px; padding:16px; margin:12px 0; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin:16px 0; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:16px; }
+.card h3 { margin-top:0; }
+.card .big { font-size:2em; font-weight:700; margin:8px 0; }
+a { color:var(--blue); text-decoration:none; }
+a:hover { text-decoration:underline; }
+.barchart { margin:16px 0; }
+.bar-row { display:flex; align-items:center; margin:6px 0; }
+.bar-label { width:80px; font-weight:600; font-size:0.9em; }
+.bar-track { flex:1; background:var(--bg); border-radius:4px; height:24px; position:relative; overflow:hidden; }
+.bar-fill { height:100%; border-radius:4px; display:flex; align-items:center; justify-content:flex-end; padding-right:8px; font-size:0.8em; font-weight:600; color:#fff; }
+.src { font-size:0.8em; color:var(--muted); margin-top:4px; }
+.faq { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:16px; margin:8px 0; }
+.faq summary { cursor:pointer; font-weight:600; color:var(--blue); padding:4px 0; }
+.faq p { margin-top:8px; font-size:0.9em; }
+footer { margin-top:40px; border-top:1px solid var(--border); padding-top:16px; color:var(--muted); font-size:0.85em; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+<h1>¿Qué pasaría en España si se aplicaran todas las propuestas económicas de VOX, PSOE, PP y Sumar?</h1>
+<p class="muted">Simulador con datos oficiales INE, AEAT, Banco de España, Hacienda, IGAE. Scripts Python reproducibles. Monte Carlo 10.000 iteraciones. Corte: 13 octubre 2026.</p>
+<div>
+<span class="badge badge-vox">VOX: déficit 7,6-8,9%</span>
+<span class="badge badge-pp">PP: déficit 3,3-3,6%</span>
+<span class="badge badge-sumar">Sumar: déficit 3,0-3,7%</span>
+<span class="badge badge-psoe">PSOE: déficit 2,6% → 1,8%</span>
+</div>
+</div>
+
+<h2>Resultado en 10 segundos</h2>
+<p>Partiendo del mismo punto (PIB 1.690B, deuda 100,7%, déficit 2,39%), si se aplicaran <strong>TODAS</strong> las propuestas fiscales de cada partido a la vez:</p>
+
+<div class="barchart">
+<div class="bar-row"><div class="bar-label">PSOE</div><div class="bar-track"><div class="bar-fill" style="width:26%;background:var(--green)">2,6%</div></div></div>
+<div class="bar-row"><div class="bar-label">PP</div><div class="bar-track"><div class="bar-fill" style="width:36%;background:var(--blue)">3,3-3,6%</div></div></div>
+<div class="bar-row"><div class="bar-label">Sumar</div><div class="bar-track"><div class="bar-fill" style="width:37%;background:var(--purple)">3,0-3,7%</div></div></div>
+<div class="bar-row"><div class="bar-label">VOX</div><div class="bar-track"><div class="bar-fill" style="width:89%;background:var(--red)">7,6-8,9%</div></div></div>
+</div>
+<p class="muted">Límite déficit UE: 3%. EDP = Procedimiento de Déficit Excesivo (Bruselas te exige recortar).</p>
+
+<div class="alert">
+<h3>⚠️ Corrección clave: IRPF de VOX cuesta 85.000 M€, no 40.000 M€</h3>
+<p>El <strong>Ministerio de Hacienda</strong> (ministro Arcadi España, Consejo de Ministros 13-10-2026) cifra el coste real de la reforma del IRPF de VOX en <strong>85.000 M€</strong> = <strong>61% de toda la recaudación del IRPF</strong> (~140B/año). VOX declaraba 40B pero solo contaba el tramo estatal, sin incluir el tramo autonómico que también elimina.</p>
+<p><strong>Ejemplos Hacienda:</strong> SMI = 0€ ahorro · 100.000€ = ahorro 18.935€ · 1.000.000€ = ahorro 212.333€. Quien más gana, más ahorra.</p>
+<p class="src">Fuentes: Infobae, El Independiente, EFE (13-10-2026). Confirmado también por Cinco Días/El País (50% caída recaudación), Alex Wong (infografía VOX 85B), Herqles (VOX estima 64B solo IRPF+IVA+Soc).</p>
+</div>
+
+<h2>Tabla comparativa (todo a la vez, sin mezclar partidos)</h2>
+<table>
+<tr><th></th><th>VOX</th><th>PP</th><th>PSOE</th><th>Sumar</th></tr>
+<tr><td><strong>Merma bruta</strong></td><td class="num red">-149,4B (-8,8% PIB)</td><td class="num">-27B (-1,6%)</td><td class="num green">+5B (+0,3%)</td><td class="num">+31B (+1,8%)</td></tr>
+<tr><td><strong>Ahorro/gasto</strong></td><td class="num">-40B ahorro (dudoso)</td><td class="num">-7B ahorro</td><td class="num">+8B gasto</td><td class="num">+41,5B gasto</td></tr>
+<tr><td><strong>Neto fiscal</strong></td><td class="num red">+109B (+6,5pp)</td><td class="num yellow">+20B (+1,2pp)</td><td class="num green">+2,6B (+0,15pp)</td><td class="num yellow">+21B (+1,3pp)</td></tr>
+<tr><td><strong>Déficit</strong></td><td class="num red">7,6-8,9% (10%+ sin ahorro)</td><td class="num yellow">3,3-3,6%</td><td class="num green">~2,6% → 1,8%</td><td class="num yellow">3,0-3,7%</td></tr>
+<tr><td><strong>Deuda 1-2 años</strong></td><td class="num red">108-113% ↑</td><td class="num">101-102% estable</td><td class="num green">99-100% ↓</td><td class="num yellow">102-104% ↑</td></tr>
+<tr><td><strong>PIB corto</strong></td><td class="num">+2,8pp luego riesgo</td><td class="num">+0,6-0,8pp</td><td class="num green">+2,2-2,6% PRTR</td><td class="num">+0,5pp, -0,5-1pp medio</td></tr>
+<tr><td><strong>Paro</strong></td><td class="num">8-8,5% si se financia</td><td class="num">8,8-9,0%</td><td class="num">8,8-9,5%</td><td class="num">10,5-11% pymes</td></tr>
+<tr><td><strong>IPC</strong></td><td class="num green">-0,8-1,2pp (IVA/energía)</td><td class="num green">-0,4-0,6pp</td><td class="num">2,5-2,8%</td><td class="num">+0,3-0,5pp</td></tr>
+</table>
+<p class="muted">Cálculos en scripts Python reproducibles. Multiplicadores AIReF/BdE. Recuperación parcial 15-20% merma en 2 años.</p>
+
+<h2>Monte Carlo: 10.000 iteraciones × 4 años</h2>
+<p>Simulación con distribuciones triangulares en merma, ahorro, multiplicadores, spread y crecimiento. Semilla 42 para reproducibilidad.</p>
+
+<div class="grid">
+<div class="card">
+<h3 class="green">PSOE</h3>
+<div class="big green">0%</div>
+<p>Probabilidad de déficit excesivo (>3% PIB)</p>
+<p class="muted">Deuda baja a 92,9% en año 4. Estable.</p>
+</div>
+<div class="card">
+<h3 class="blue">PP</h3>
+<div class="big yellow">99%</div>
+<p>Probabilidad de EDP</p>
+<p class="muted">Deuda baja a 95,8%. Manejable con senda.</p>
+</div>
+<div class="card">
+<h3 class="purple">Sumar</h3>
+<div class="big yellow">97%</div>
+<p>Probabilidad de EDP</p>
+<p class="muted">Deuda estabiliza en 99%. Estructural.</p>
+</div>
+<div class="card">
+<h3 class="red">VOX</h3>
+<div class="big red">100%</div>
+<p>Probabilidad de EDP y déficit >5%</p>
+<p class="muted">Deuda sube a 115,3%. 98% prob. >110%. Insostenible.</p>
+</div>
+</div>
+
+<table>
+<tr><th>Año 4 (2029)</th><th>PSOE</th><th>PP</th><th>Sumar</th><th>VOX</th></tr>
+<tr><td>Déficit medio</td><td class="num green">2,4%</td><td class="num yellow">3,3%</td><td class="num yellow">3,5%</td><td class="num red">9,0%</td></tr>
+<tr><td>Deuda media</td><td class="num green">92,9%</td><td class="num">95,8%</td><td class="num">99,0%</td><td class="num red">115,3%</td></tr>
+<tr><td>P(Deuda >110%)</td><td class="num green">0%</td><td class="num green">0%</td><td class="num green">0%</td><td class="num red">98%</td></tr>
+<tr><td>PIB acumulado</td><td class="num">+20,1%</td><td class="num">+20,7%</td><td class="num">+17,0%</td><td class="num">+22,5%</td></tr>
+<tr><td>Paro medio</td><td class="num">9,6%</td><td class="num">9,3%</td><td class="num">10,9%</td><td class="num">8,5%</td></tr>
+</table>
+<p class="src">Script: <code>comparativa/05_montecarlo.py</code>. Resultados completos: <code>comparativa/05_montecarlo_resultados.md</code>.</p>
+
+<h2>Punto de partida común (baseline 2025)</h2>
+<table>
+<tr><th>Dato</th><th>Valor</th><th>Fuente</th></tr>
+<tr><td>PIB 2025</td><td class="num">1.690.012 M€</td><td>INE CNA2025</td></tr>
+<tr><td>Deuda pública</td><td class="num">100,7% PIB (~1.702B)</td><td>Banco de España</td></tr>
+<tr><td>Déficit</td><td class="num">2,39% (40.330M con DANA)</td><td>IGAE/Hacienda</td></tr>
+<tr><td>IRPF recaudación</td><td class="num">129.408 M€</td><td>AEAT 2024</td></tr>
+<tr><td>IVA recaudación</td><td class="num">90.541 M€</td><td>AEAT 2024</td></tr>
+<tr><td>Sociedades</td><td class="num">39.096 M€</td><td>AEAT 2024</td></tr>
+<tr><td>Pensiones (gasto)</td><td class="num">~189.600 M€ (10,28M pensiones)</td><td>Seguridad Social</td></tr>
+<tr><td>Salario medio</td><td class="num">29.540 €</td><td>INE EAES2024</td></tr>
+<tr><td>SMI 2026</td><td class="num">17.094 € (1.221×14)</td><td>La Moncloa/BOE</td></tr>
+<tr><td>Paro</td><td class="num">9,93%</td><td>INE EPA Q4-2025</td></tr>
+</table>
+
+<h2>IRPF de VOX: por qué 85B y no 40B</h2>
+<div class="info">
+<p>VOX propone: mínimo exento 22.000€, tipo único 15% hasta 70.000€, 25% desde 70.000€, -4pp por hijo.</p>
+<p><strong>VOX declaraba 40B</strong> — pero solo cuenta el tramo estatal del IRPF. El IRPF en España tiene dos partes: tramo estatal (~60% de la recaudación) y tramo autonómico (~40%). La reforma de VOX elimina ambos, pero solo contaba uno.</p>
+<p><strong>Hacienda cifra 85B</strong> — el ministro Arcadi España (13-10-2026) calculó el coste total en 85B = 61% de los ~140B que recauda el IRPF anualmente.</p>
+<p>Esto cascada a todo el análisis: merma total 149B (no 104B), déficit 7,6-8,9% (no 5-6%), deuda 108-113% (no 104-107%).</p>
+<table>
+<tr><th>Renta anual</th><th>Ahorro con VOX</th><th>Fuente</th></tr>
+<tr><td>SMI (17.094€)</td><td class="num">0€</td><td>Hacienda 13-10-2026</td></tr>
+<tr><td>100.000€</td><td class="num">18.935€</td><td>Hacienda 13-10-2026</td></tr>
+<tr><td>1.000.000€</td><td class="num">212.333€</td><td>Hacienda 13-10-2026</td></tr>
+</table>
+</div>
+
+<h2>Pensiones: el claim de VOX "+1.200-2.000€/año sin IRPF" es engañoso</h2>
+<div class="info">
+<p>VOX promete eximir las pensiones del IRPF. El claim implícito es que cada pensionista ganaría +1.200-2.000€/año. <strong>Es engañoso</strong>:</p>
+<ul>
+<li>El <strong>63% de los pensionistas no presenta IRPF</strong> (Gestha). No pagan, no ahorran nada.</li>
+<li>El umbral exento de retenciones es <strong>15.876€/año</strong> (=SMI 2024). La pensión media es <strong>17.668€/año</strong> (1.262€/mes × 14 pagas), apenas por encima.</li>
+<li>El pensionista medio paga retenciones bajas (<strong>~800-1.000€/año</strong>) que se eliminarían. No +2.000€.</li>
+<li>El ahorro real se concentra en el <strong>~37% con pensión >22.000€</strong> (~4.160€/año de media).</li>
+</ul>
+<p class="src">Fuentes: AEAT 2024 (retenciones pensiones públicas 14.317 M€), Gestha (63% no presenta), demon.code.blog ("la mayoría de la gente no va a notar ningún cambio").</p>
+</div>
+
+<h2>Sostenibilidad de deuda 2026-2030</h2>
+<table>
+<tr><th>Escenario</th><th>Déficit 2030</th><th>Deuda 2030</th><th>Lectura</th></tr>
+<tr><td>VOX pesimista (12B ahorro)</td><td class="num red">9,65%</td><td class="num red">123,2%</td><td>Casi triplica el 3%. EDP seguro. Bola intereses +22B.</td></tr>
+<tr><td>VOX central (25B)</td><td class="num red">8,58%</td><td class="num red">117,2%</td><td>Triplica el límite. Necesita revertir parte de la rebaja.</td></tr>
+<tr><td>VOX optimista (40B)</td><td class="num red">7,35%</td><td class="num red">110,7%</td><td>Incluso con ahorro íntegro, déficit >7%. Insostenible.</td></tr>
+<tr><td>PP pesimista</td><td class="num yellow">3,54%</td><td class="num">95,5%</td><td>Ligeramente sobre 3%. Corrección pequeña.</td></tr>
+<tr><td>PP central</td><td class="num yellow">3,31%</td><td class="num">94,5%</td><td>Borde. Senda creíble evita EDP duro.</td></tr>
+<tr><td>PSOE central</td><td class="num green">2,38%</td><td class="num green">91,7%</td><td>Compatible con 1,8% en 2027-28.</td></tr>
+<tr><td>Sumar central</td><td class="num yellow">3,79%</td><td class="num">100,1%</td><td>Sobre 3% persistente. Corrección ~0,8pp.</td></tr>
+</table>
+<p class="src">Script: <code>comparativa/04_deuda_sostenibilidad.py</code>. Modelo stock-flujo: D(t)=D(t-1)+Def(t), Y(t)=Y(t-1)*(1+g).</p>
+
+<h2>Preguntas frecuentes</h2>
+
+<details class="faq"><summary>¿Es cierto que VOX baja el IRPF y eso recauda más por efecto Laffer?</summary>
+<p>No. El efecto Laffer (más consumo → más recaudación) recupera solo el 15-20% de la merma en 2 años (multiplicadores AIReF/BdE). Con 149B de merma, se recuperan ~27B. Quedan 122B de agujero neto. La curva Laffer funciona cuando los tipos son muy altos (ej. >70%), no cuando ya están en 19-45% como en España.</p>
+</details>
+
+<details class="faq"><summary>¿Puede España ir a la quiebra con las propuestas de VOX?</summary>
+<p>No hay impago inminente. España emite en euros, el BCE actúa como prestamista de última instancia (TPI desde 2022), el vencimiento medio es ~8 años y hay base inversora amplia. El riesgo real es otro: entrar en Procedimiento de Déficit Excesivo, pagar más intereses (prima +80-150 pb), perder margen fiscal para la siguiente recesión y tener que recortar/subir impuestos en medio de una crisis. Financiable 12 meses, insostenible a 2-3 años sin ejecutar recortes o revertir parte de la rebaja.</p>
+</details>
+
+<details class="faq"><summary>¿El ahorro de 40B de VOX es real?</summary>
+<p>Cuestionado. El Institut Ostrom (think tank <em>liberal</em>, no de izquierdas) lo califica de "tramposo" (oct-2026). Alex Wong estima que VOX solo ha identificado ~15.227 M€ en recortes concretos, no 40B. El gasto político directo (ministerios, subvenciones, cooperación) suma ~8-12B. Llegar a 40B exige recortar transferencias a CCAA o personal, con fricción constitucional y transición de años.</p>
+</details>
+
+<details class="faq"><summary>¿Qué pasa con las pensiones si VOX exime el IRPF?</summary>
+<p>El sistema pierde 14,3B/año de IRPF (AEAT 2024: retenciones pensiones públicas) + 9,4B de cotizaciones bonificadas = ~24B/año. La capitalización sueca que propone VOX es a 20-30 años vista. En el año 1-5, el agujero se cubre con deuda o transferencia del Estado. Además, el 63% de pensionistas no presenta IRPF (Gestha) y no notaría ningún cambio (demon.code.blog).</p>
+</details>
+
+<details class="faq"><summary>¿Quién gana más dinero con las propuestas de cada partido?</summary>
+<p>VOX: rentas 45.000-150.000€ (+4.000 a +10.000€/año) y sobre todo >150.000€ (+20.000-100.000€+). PP: rentas medias con hijos (+1.500-2.000€). PSOE: SMI y rentas bajas (+518€ salario + deducciones). Sumar: familias con hijos (+5.000-5.500€ con 2 hijos por crianza 200/mes). El pensionista medio (17.668€/año) gana más con PSOE/Sumar (+477€ revalorización) que con VOX (~800-1.000€ que deja de retener, no +2.000€).</p>
+</details>
+
+<h2>Fuentes verificadas</h2>
+<div class="grid">
+<div class="card">
+<h3>Organismos oficiales</h3>
+<p>INE (PIB, EPA, EAES), AEAT (recaudación IRPF/IVA/Soc), Banco de España (deuda), IGAE (déficit), Ministerio de Hacienda (coste IRPF VOX 85B), La Moncloa (pensiones, SMI), BOE, Seguridad Social.</p>
+</div>
+<div class="card">
+<h3>Verificación / anti-desinformación</h3>
+<p>Gestha (63% pensionistas no IRPF), Newtral (fact-checking), demon.code.blog (pensiones), SmartVote (VOX = mayor fábrica de bulos), Institut Ostrom (cuentas "tramposas"), Alex Wong (IRPF 85B infografía VOX).</p>
+</div>
+<div class="card">
+<h3>Prensa (doble/triple fuente)</h3>
+<p>Infobae, El Independiente, EFE (Hacienda 85B, 13-10-2026). Cinco Días/El País (IRPF -50%). Herqles (VOX 64B). El Economista, Europa Press, El Mundo, La Voz de Galicia (gravamen Sumar 50M).</p>
+</div>
+</div>
+
+<h2>Reproducir</h2>
+<p>Clona el repo y ejecuta los scripts (solo Python estándar, sin dependencias):</p>
+<p><code>git clone https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar.git</code></p>
+<p><code>python vox/03_vox_simulacion.py</code> · <code>python comparativa/04_deuda_sostenibilidad.py</code> · <code>python comparativa/05_montecarlo.py</code></p>
+
+<p>Repo completo en <a href="https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar">GitHub</a>. Metodología en <a href="https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar/blob/master/comparativa/02_metodologia_y_fuentes.md">comparativa/02_metodologia_y_fuentes.md</a>. Licencia CC BY 4.0.</p>
+
+<footer>
+<p>Simulador económico España 2026 · Datos: INE, AEAT, Banco de España, IGAE, Ministerio de Hacienda · Monte Carlo 10.000 iteraciones · <a href="https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar">GitHub</a> · CC BY 4.0</p>
+</footer>
+
+</body>
+</html>

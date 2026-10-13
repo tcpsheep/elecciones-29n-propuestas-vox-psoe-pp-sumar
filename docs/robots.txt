@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tcpsheep.github.io/simulador-economico-espana-vox-psoe-pp-sumar/sitemap.xml

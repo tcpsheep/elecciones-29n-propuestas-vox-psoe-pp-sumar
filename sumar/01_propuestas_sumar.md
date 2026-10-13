@@ -34,7 +34,7 @@ Fuentes madre:
 
 ## 6. SMI + jornada
 - SMI por encima IPC, 1.080 €=60% insuficiente (salarios 25% bajo eurozona).
-- **Hacia 32h** (desde las 36h que PSOE plantea antes 2030; Forbes oct-2026), 38,5h en 2024→37,5h acuerdo 2024→36h PSOE 2026, extras con tiempo libre, registro reforzado, desconexión, festivos a lunes.
+- **Hacia 32h** (la jornada legal actual es 40h, Estatuto de los Trabajadores art. 34; PSOE propone 36h antes 2030 — Forbes oct-2026 —, acuerdo dic-2024 de 37,5h no implementado en ley). Sumar va más allá: 32h sin recorte salarial, extras con tiempo libre, registro reforzado, desconexión, festivos a lunes.
 
 ## 7. Pensiones
 - IPC automático, mínimas/no contributivas por encima hasta pobreza, más ingresos. Acuerdo: subir mínimas por encima contributivas, brecha género 0, jubilación parcial/relevo.

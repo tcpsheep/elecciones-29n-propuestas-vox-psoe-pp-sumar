@@ -53,7 +53,7 @@ Herencia 9.0B, Crianza 15.6B
 
 **Empleo / empresas (el punto débil)**
 - Sociedades efectivo 15% duro + fin consolidación + límite pérdidas 4 años + banca/energéticas/alimentación extendidos: tipo efectivo pymes (hoy ~15-18%) sube a 18-22%, grandes de ~12-15% a 15-18% pero con más base. Inversión -6-10%, I+D - (deducciones recortadas vs PP que las amplía), deslocalización sedes/filiales + (precedente SICAV/SOCIMI: fuga a Luxemburgo/Irlanda).
-- Jornada 36h→32h sin recorte + SMI por encima IPC: coste hora +6% (36h) → +20% si 32h. Hostelería/comercio/agro pierden 3-6% empleo, automatización + precariedad parcial. Paro **+0,5-1,0 pp (hacia 10,5-11%)** en pymes, aunque empleo público/protegido sube.
+- Jornada 40→32h sin recorte + SMI por encima IPC: la legal actual es 40h (ET art. 34); acuerdo dic-2024 de 37,5h no llegó a implementarse. Reducción a 32h = -20% horas con mismo salario = coste hora +25% teórico, ajustado a ~+15-20% con productividad parcial. Hostelería/comercio/agro pierden 3-6% empleo, automatización + precariedad parcial. Paro **+0,5-1,0 pp (hacia 10,5-11%)** en pymes, aunque empleo público/protegido sube.
 - IVA 21% turístico + fin SOCIMI + recargo >referencia: alquiler turístico -30-40% oferta (pasa a permanente o negro), alquiler permanente +5-8% oferta pero precio regulado -5-10% en tensión. Inversión build-to-rent -50%.
 
 **Vivienda**

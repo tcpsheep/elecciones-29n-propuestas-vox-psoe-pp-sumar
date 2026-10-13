@@ -21,7 +21,7 @@
 - SMI exento IRPF + deducción 340 € (2025-2026): coste **~400-600M** + mayor cotización empresarial (~1,3B masa salarial que va a SS/consumo, no a PGE).
 - Subsidio 570/540/480 € + CAE: **+800-1.200M** (más cobertura <45, parciales, agrarios).
 - Vivienda Plan 7.000M/5 años = **1,4B/año** + ICO 10.000M (riesgo contingente, no gasto directo salvo impago 2-3%) + Bono Joven 250×24 (~500M/año).
-- Jornada 36h antes 2030: coste PGE directo ~0, pero coste empresas **+2,5-3,5% coste hora** si no sube productividad. Ver punto 4.
+- Jornada 36h antes 2030: coste PGE directo ~0, pero coste empresas **+4-6% coste hora** si no sube productividad (4h menos sobre 36h = +11% teórico). Ver punto 4.
 - **Total gasto PGE extra: ~7,5-8,5B/año. Central 8,0B.**
 
 ## 3. Déficit y deuda
@@ -38,7 +38,7 @@
 - Alquiler: deducción ~1.000 € + tope subidas + prórroga 2 años alivia inquilinos tensión (-5-8% esfuerzo), pero propietarios reducen oferta -5-10% si el tope + IVA turístico comprimen rentabilidad.
 
 **Empleo / empresas**
-- Reforma laboral consolidada: temporalidad 16%, 22,46M ocupados. Jornada 36h antes 2030 sin recorte = +6,25% coste hora teórico. Con registro digital y negociación colectiva, el ajuste real es **+1,5-2,5% costes + -0,3-0,6% empleo** en pymes/hostelería/comercio (BdE/AIReF), compensado +productividad en industria/servicios avanzados. Paru: sigue bajando hacia 9-9,5% pero más lento.
+- Reforma laboral consolidada: temporalidad 16%, 22,46M ocupados. Jornada 36h antes 2030 sin recorte = +11,1% coste hora teórico (4h/36h; antes era 37,5h = +6,25%). Con registro digital y negociación colectiva, el ajuste real es **+2,5-4% costes + -0,4-0,8% empleo** en pymes/hostelería/comercio (BdE/AIReF), compensado +productividad en industria/servicios avanzados. Paro: sigue bajando hacia 9-9,5% pero más lento.
 - Banca/energéticas: margen -3-5% beneficio, traslado parcial a comisiones/precios (+0,1-0,2 pp IPC), inversión verde + (deducción H2/biogas) pero inversión fósil -.
 
 **Vivienda**

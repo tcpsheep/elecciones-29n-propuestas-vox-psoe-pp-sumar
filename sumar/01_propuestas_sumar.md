@@ -1,6 +1,6 @@
 # SUMAR — Todas las propuestas económicas actuales
 
-> Base: Programa 23J 2023 (182 págs) + Acuerdo coalición oct-2023 + Propuesta PGE-2025 (+26.803M) + Pacto fiscal nov-2024 + PL Grandes Herencias + gravamen 50M 2026. Oficiales + prensa triple verificada donde se indica.
+> Base: Programa 23J 2023 (182 págs) + Acuerdo coalición oct-2023 + Propuesta PGE-2025 (+26.803M) + Pacto fiscal nov-2024 + PL Grandes Herencias + gravamen 50M 2026. Oficiales + prensa triple verificada donde se indica. ⚠️ **Para el 29-N**: Sumar se presenta como **Frente Amplio** (IU+Comuns+Más Madrid). **Programa electoral no presentado aún** (Forbes 5-oct-2026). Datos basados en programa 2023 + posiciones conocidas 2026. **Podemos** se presenta por separado (35h + SMI 1.800€).
 
 Fuentes madre:
 - https://movimientosumar.es/wp-content/uploads/2023/07/Un-Programa-para-ti.pdf
@@ -34,7 +34,7 @@ Fuentes madre:
 
 ## 6. SMI + jornada
 - SMI por encima IPC, 1.080 €=60% insuficiente (salarios 25% bajo eurozona).
-- **37,5h por ley en 2024 sin recorte + hacia 32h**, 38,5h en 2024→37,5h en 2025, extras con tiempo libre, registro reforzado, desconexión, festivos a lunes.
+- **Hacia 32h** (desde las 36h que PSOE plantea antes 2030; Forbes oct-2026), 38,5h en 2024→37,5h acuerdo 2024→36h PSOE 2026, extras con tiempo libre, registro reforzado, desconexión, festivos a lunes.
 
 ## 7. Pensiones
 - IPC automático, mínimas/no contributivas por encima hasta pobreza, más ingresos. Acuerdo: subir mínimas por encima contributivas, brecha género 0, jubilación parcial/relevo.

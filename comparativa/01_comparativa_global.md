@@ -23,7 +23,7 @@
 
 - **VOX = shock liberal + recentralización.** Todo el estímulo al bolsillo hoy (IRPF 85B Hacienda/IVA/Soc/pensiones) a cambio del mayor agujero (5,2-6,5pp). Si el ahorro 40B fuera real y la liberalización suelo/nuclear ejecuta, España crece +2,8pp y el paro baja a 8% pero endeudada y en conflicto autonómico/UE. Si no, crisis fiscal en 12 meses. Es apuesta de oferta: funciona solo con credibilidad recorte.
 - **PP = VOX descafeinado + gestión.** Mismo signo (bajar IRPF/IVA/Patrimonio, nuclear, antiokupa, 1M casas) pero la mitad de coste (1,2pp vs 3,7pp) y con ahorro factible. Déficit 3,5% manejable, crecimiento +0,7pp sin romper con UE. No resuelve vivienda (promete 250k, entrega 150k) ni desigualdad a fondo, pero es el menor riesgo/retorno.
-- **PSOE = continuidad administrada.** Ya aplicado al 70%. Sube SMI/pensiones/protección + impuestos banca/energía/grandes. Déficit hacia 1,8%, deuda baja por PIB nominal, paro hacia 8,8%. El límite es la jornada 37,5h + costes: si la productividad no acompaña, el empleo se estanca y el crecimiento cae a 1,7-2,0%.
+- **PSOE = continuidad administrada.** Ya aplicado al 70%. Sube SMI/pensiones/protección + impuestos banca/energía/grandes. Déficit hacia 1,8%, deuda baja por PIB nominal, paro hacia 8,8%. El límite es la jornada 36h + costes: si la productividad no acompaña, el empleo se estanca y el crecimiento cae a 1,7-2,0%.
 - **SUMAR = máxima redistribución, máximo Estado.** Gasta 41,5B (crianza 15,6B + herencia 9B + vivienda 16,9B) diciendo que lo pagan 1.500 ultrarricos (4,2B = 17% del gasto). El neto real es +21B déficit. Pobreza infantil -7pp y Gini -3pp, pero inversión -8%, paro pymes +1pp y crecimiento -0,7pp. Sostenible solo focalizando (means-test ahorraría 10B) o subiendo presión a 46% PIB con aval UE.
 
 ## 3. ¿Qué modelo aguanta las cuentas?
@@ -35,7 +35,7 @@
 5. **Pensiones:** todos revalorizan, ninguno financia el +5B/año sin MEI/cuotas/inmigración. VOX lo agrava (-14,3B IRPF, AEAT 2024), SUMAR lo maquilla (+mínimas), PP lo fía a empleo, PSOE a cotizaciones.
 
 ## 4. Combinación imposible
-No se pueden aplicar los 4 a la vez (ej. IVA alimentos 0% VOX/PP vs 21% turístico SUMAR conviven, pero Sociedades 15% VOX vs 15% mínimo + fin deducciones SUMAR se anulan; exención pensiones VOX vs subir mínimas PSOE/SUMAR suman gasto; jornada 37,5h PSOE/SUMAR vs flexibilidad PP/VOX chocan). Cualquier coalición debe elegir un eje fiscal.
+No se pueden aplicar los 4 a la vez (ej. IVA alimentos 0% VOX/PP vs 21% turístico SUMAR conviven, pero Sociedades 15% VOX vs 15% mínimo + fin deducciones SUMAR se anulan; exención pensiones VOX vs subir mínimas PSOE/SUMAR suman gasto; jornada 36h PSOE / 32h Sumar vs flexibilidad PP/VOX chocan). Cualquier coalición debe elegir un eje fiscal.
 
 ## 5. Cómo leer las carpetas
 - `vox/`, `psoe/`, `pp/`, `sumar/`: `01_propuestas_*` (qué proponen, con fuente oficial) + `02_simulacion_*` (cuánto cuesta y qué pasa).

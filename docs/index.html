@@ -23,7 +23,7 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"¿Cuánto costaría la reforma del IRPF de VOX?","acceptedAnswer":{"@type":"Answer","text":"El Ministerio de Hacienda (13-10-2026, ministro Arcadi España) cifra el coste de la reforma del IRPF de VOX en 85.000 millones de euros, equivalente al 61% de toda la recaudación del impuesto (~140.000 M€ anuales). VOX declaraba 40.000 M€ pero solo contaba el tramo estatal, sin incluir el tramo autonómico que también elimina."}},
 {"@type":"Question","name":"¿Qué déficit tendría España con las propuestas de VOX?","acceptedAnswer":{"@type":"Answer","text":"Con IRPF corregido a 85B (Hacienda), el déficit resultante sería 7,6-8,9% del PIB. En el Monte Carlo (10.000 iteraciones), VOX tiene 100% de probabilidad de déficit excesivo (>3% PIB) y 100% de probabilidad de déficit >5%."}},
-{"@type":"Question","name":"¿Qué pasaría con la pensión media con la exención de IRPF de VOX?","acceptedAnswer":{"@type":"Answer","text":"El 63% de los pensionistas no presenta IRPF (Gestha). El pensionista medio (17.668€/año) paga retenciones bajas (~800-1.000€/año) que se eliminarían. El ahorro real se concentra en el ~37% con pensión >22.000€."}},
+{"@type":"Question","name":"¿Qué pasaría con la pensión media con la exención de IRPF de VOX?","acceptedAnswer":{"@type":"Answer","text":"El 63% de los pensionistas no presenta IRPF (Gestha). El pensionista medio (pensión media del sistema 17.668€/año, 65+) paga ~1.100€/año IRPF actual (con reducción por trabajo + mínimo personal 65+ 6.700€; sin deducción SMI que es solo para asalariados). Con VOX: 0€ (exento, base <22.000€). El ahorro real se concentra en el ~37% con pensión >22.000€."}},
 {"@type":"Question","name":"¿Qué partido genera más déficit en España?","acceptedAnswer":{"@type":"Answer","text":"VOX genera el mayor déficit: 7,6-8,9% del PIB. Le sigue Sumar con 3,0-3,7%, PP con 3,3-3,6%, y PSOE con ~2,6%."}},
 {"@type":"Question","name":"¿Cuánto sube el IRPF con Sumar?","acceptedAnswer":{"@type":"Answer","text":"Sumar propone IRPF marginal del 52% desde 300.000€, gravamen del 3% sobre patrimonios >50M€, crianza universal 200€/mes, herencia universal 20.000€ a los 23 años. Gasto total 41,5B, ingresos ~20B."}}
 ]}
@@ -298,17 +298,17 @@ section{padding:40px 16px}
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">IRPF — reforma total 2 tramos</h3>
 <p><strong>Exento 22.000€</strong> + <strong>15% hasta 70.000€</strong> + <strong>25% desde 70.000€</strong>. <strong>-4pp por hijo</strong> (4 hijos y <70k = tipo 0).</p>
-<p class="desc">Coste real: <strong style="color:var(--vox)">85.000 M€</strong> (Hacienda 13-10-2026 = 61% recaudación IRPF). VOX decía 40B (solo tramo estatal).</p>
+<p class="desc">🔴 <strong style="color:var(--vox)">VOX declara: 40.000 M€</strong> (solo tramo estatal, sin contar autonómico que también elimina). ✅ <strong style="color:var(--psoe)">Hacienda (13-10-2026): 85.000 M€</strong> = 61% recaudación IRPF. Ministro Arcadi España, Consejo de Ministros. SMI = 0€ ahorro, 100k = 18.935€, 1M = 212.333€. <strong>Usamos 85B</strong>.</p>
 </div>
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">IVA</h3>
 <p>21→18% general · 10→8% reducido · 0% alimentos básicos · 4% luz/gas/agua · Fin IVA primera vivienda</p>
-<p class="desc">Coste: <strong>18.075 M€</strong> (1,07% PIB)</p>
+<p class="desc">🔴 <strong style="color:var(--vox)">VOX declara: 14.000 M€</strong> (solo tipos 21→18 + 10→8). ✅ <strong style="color:var(--psoe)">Cálculo propio: 18.075 M€</strong> (suma además 0% alimentos ~2,5B + 4% luz/gas ~2,0B que VOX no incluye en sus 14B). Ambas son propuestas reales de VOX; la diferencia es qué incluye cada cifra.</p>
 </div>
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">Sociedades</h3>
 <p>25→15% general (confirmado programa oct-2025). Bonif 100% SS nuevos indefinidos. Cuota 0 autónomos <SMI.</p>
-<p class="desc">Coste: <strong>12B Soc</strong> + 6,25B autónomos + 3,2B bonif SS</p>
+<p class="desc">🔴 <strong style="color:var(--vox)">VOX declara: 10.000 M€</strong> (asume modulación empleo/relocalización). ✅ <strong style="color:var(--psoe)">Estático (tipo×base): 15.600 M€</strong> (39,1B×10/25). ✅ <strong>Central usado: 12.000 M€</strong>. Autónomos 6,25B + Bonif SS 3,2B aparte.</p>
 </div>
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">Impuestos suprimidos</h3>
@@ -323,7 +323,7 @@ section{padding:40px 16px}
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">Ahorro prometido</h3>
 <p>40.000 M€/año: 22→12 ministerios, fin subvenciones/ODS/cooperación/TVs autonómicas, presupuestos base cero.</p>
-<p class="desc">⚠️ <strong>Cuestionado</strong>: Institut Ostrom (liberal) lo llama "tramposo". Alex Wong: solo 15B identificados.</p>
+<p class="desc">🔴 <strong style="color:var(--vox)">VOX declara: 40.000 M€</strong>. ✅ <strong style="color:var(--psoe)">Cuestionado por independientes</strong>: Institut Ostrom (liberal) lo llama "tramposo"; Alex Wong identifica solo <strong>~15.000 M€</strong> en partidas concretas. <strong>Usamos tres escenarios</strong>: 40B (VOX), 25B (central), 15B (realista).</p>
 </div>
 </div>
 <div class="alert" style="margin-top:16px">
@@ -341,7 +341,7 @@ section{padding:40px 16px}
 <div class="card" style="border-left:3px solid var(--psoe)"><h3 style="color:var(--psoe)">Sociedades</h3><p>Mínimo 15% grupos >750M. Rebaja pymes. Impuestos banca y energéticas permanentes.</p></div>
 <div class="card" style="border-left:3px solid var(--psoe)"><h3 style="color:var(--psoe)">SMI/Pensiones</h3><p>SMI 1.221×14 = 17.094€ (exento IRPF). Pensiones +2,7% (+7%/+11,4% mínimas).</p></div>
 <div class="card" style="border-left:3px solid var(--psoe)"><h3 style="color:var(--psoe)">Vivienda</h3><p>Plan 7.000M 2026-2030. Aval ICO 20-25%. Bono Joven 250×24. Ley 12/2023.</p></div>
-<div class="card" style="border-left:3px solid var(--psoe)"><h3 style="color:var(--psoe)">Empleo</h3><p>Jornada 40→37,5h sin recorte salarial. PRTR 77.000M (76% MRR ejecutado).</p></div>
+<div class="card" style="border-left:3px solid var(--psoe)"><h3 style="color:var(--psoe)">Empleo</h3><p>Jornada 40→36h antes 2030 (Forbes oct-2026; legal hoy 40h). PRTR 77.000M (76% MRR ejecutado).</p></div>
 </div>
 <div class="info" style="margin-top:16px"><p><strong>Neto fiscal: +2,6B (+0,15pp)</strong>. Déficit ~2,6% → 1,8% en 2027. Deuda baja por PIB nominal. Es el escenario inercial: ya está en vigor al 60-70%.</p></div>
 </div>
@@ -361,13 +361,14 @@ section{padding:40px 16px}
 
 <!-- SUMAR PANEL -->
 <div class="tab-panel" id="panel-sumar">
+<p style="font-size:.8em;color:var(--muted);margin-bottom:12px">⚠️ Sumar se presenta como <strong>Frente Amplio</strong> (IU+Comuns+Más Madrid) para el 29-N. <strong>Programa electoral no presentado aún</strong> (Forbes 5-oct-2026). Datos basados en programa 2023 + posiciones conocidas 2026.</p>
 <div class="grid2">
 <div class="card" style="border-left:3px solid var(--sumar)"><h3 style="color:var(--sumar)">IRPF</h3><p>Marginal 52% desde 300.000€. Capital hasta 33%.</p></div>
 <div class="card" style="border-left:3px solid var(--sumar)"><h3 style="color:var(--sumar)">Sociedades</h3><p>15% efectivo duro. Fin SICAV/SOCIMI/consolidación. Límite pérdidas 4 años (+13.000M).</p></div>
 <div class="card" style="border-left:3px solid var(--sumar)"><h3 style="color:var(--sumar)">Gravamen >50M</h3><p>3% patrimonio >50M€ (~1.500 contrib., ~4.200M).</p><p class="desc">✅ Verificado multi-fuente: El País, El Economista, Europa Press, Infobae, El Mundo, La Voz de Galicia.</p></div>
 <div class="card" style="border-left:3px solid var(--sumar)"><h3 style="color:var(--sumar)">Crianza universal</h3><p>200€/mes <18 años = 15,6B. Herencia universal 20.000€ a los 23 = 9B.</p></div>
 <div class="card" style="border-left:3px solid var(--sumar)"><h3 style="color:var(--sumar)">Vivienda</h3><p>1% PIB 10 años (>2M protegidas). Topes alquiler. SOCIMI condicionadas.</p></div>
-<div class="card" style="border-left:3px solid var(--sumar)"><h3 style="color:var(--sumar)">Empleo</h3><p>Jornada 37,5h → 32h. SMI sobre IPC. Mínimas sobre IPC. Banco público ICO+Correos.</p></div>
+<div class="card" style="border-left:3px solid var(--sumar)"><h3 style="color:var(--sumar)">Empleo</h3><p>Jornada hacia 32h. SMI sobre IPC. Mínimas sobre IPC. Banco público ICO+Correos.</p></div>
 </div>
 <div class="info" style="margin-top:16px"><p><strong>Gasto: 41,5B (crianza 15,6 + herencia 9 + vivienda 16,9). Ingresos: ~20B. Neto: +21B (+1,3pp)</strong>. Déficit 3,0-3,7%. Pobreza infantil -7pp y Gini -3pp, pero paro pymes +1pp y crecimiento -0,7pp.</p></div>
 </div>
@@ -415,23 +416,24 @@ section{padding:40px 16px}
 <!-- ============ POR SALARIO ============ -->
 <section id="salario" class="reveal">
 <h2 class="sec-title"><span class="dot" style="background:var(--yellow)"></span>Cómo te afecta según tu salario</h2>
-<p class="sec-sub">Ahorro/año total (IRPF + IVA + otros impuestos). Ojo: el ahorro de IRPF de VOX solo se nota desde ~22.000€ — en SMI es 0€ porque ya se paga ~0€ (reducción trabajo 7.302€ + mínimo personal 5.550€ + deducción SMI 590,89€ RDL 5/2026). Verificado con el <a href="https://www.sueldovox.es/">simulador oficial de VOX</a> y Ministerio de Hacienda (SMI=0€ ahorro). Cálculos orientativos 2026.</p>
+<p class="sec-sub">IRPF verificado con el <a href="https://www.sueldovox.es/">simulador oficial de VOX</a> (Programa Económico jun-2025, base del 29-N). IVA estimado por cesta de consumo. <strong>Nota clave</strong>: VOX dice "exento hasta 22.000€" pero el umbral se aplica al rendimiento neto (tras cotizaciones SS + 2.000€ gastos), no al bruto. En la práctica, quien cobra hasta <strong>~25.300€ brutos</strong> paga 0€ IRPF con VOX (sueldovox.es confirma: 25.000€ → 0€).</p>
 <table class="sal-table">
-<tr><th>Renta anual</th><th style="color:var(--vox)">VOX</th><th style="color:var(--pp)">PP</th><th style="color:var(--psoe)">PSOE</th><th style="color:var(--sumar)">Sumar</th></tr>
-<tr><td class="num">Hasta SMI (~16.500€)</td><td class="num r">+0€ IRPF (ya exento) · +400-600€ IVA</td><td class="num">+200-400€ (IVA energía/básicos; IRPF ~0€)</td><td class="num">+518€ salario</td><td class="num">+300-500€ sin hijos · +5.000+ con hijos</td></tr>
-<tr><td class="num">16.500-22.000€</td><td class="num r">+0-400€ IRPF · +400-600€ IVA = +400-1.000€</td><td class="num">+400-700€ (deflact + IVA)</td><td class="num">+400-700€</td><td class="num">+200-400€ · +3.000-5.000 con hijos</td></tr>
-<tr><td class="num">22.000-30.000€ (mediana)</td><td class="num r">+1.800-3.000€ (soltero) · +3.500-4.500 con 2 hijos</td><td class="num">+400-700€ · +1.500-2.000 con hijos</td><td class="num">+300-600€</td><td class="num">-100 a +200€ · +4.500-5.000 con hijos</td></tr>
-<tr><td class="num">30.000-45.000€</td><td class="num r">+2.500-4.500€</td><td class="num">+800-1.500€ con hijos</td><td class="num">+200-500€</td><td class="num">-200 a +300€ · +3.000-4.500 con hijos</td></tr>
-<tr><td class="num">45.000-70.000€</td><td class="num r">+4.000-7.000€</td><td class="num">+600-1.200€</td><td class="num">Neutro</td><td class="num">-300 a -1.000€ sin hijos</td></tr>
-<tr><td class="num">70.000-150.000€</td><td class="num r">+6.000-10.000€</td><td class="num">+1.000-2.500€</td><td class="num">-0-500€</td><td class="num">-1.500 a -5.000€</td></tr>
+<tr><th>Renta anual</th><th style="color:var(--vox)">VOX (IRPF + IVA)</th><th style="color:var(--pp)">PP</th><th style="color:var(--psoe)">PSOE</th><th style="color:var(--sumar)">Sumar</th></tr>
+<tr><td class="num">16.500€ (SMI)</td><td class="num r"><strong>0€</strong> IRPF¹ + ~500€ IVA = <strong>~500€</strong></td><td class="num">+200-400€ (IVA; IRPF ~0€)</td><td class="num">+518€ salario</td><td class="num">+300-500€ sin hijos · +5.000+ con hijos</td></tr>
+<tr><td class="num">20.000€</td><td class="num r"><strong>2.035€</strong> IRPF¹ + ~600€ IVA = <strong>~2.600€</strong></td><td class="num">+400-700€</td><td class="num">+400-700€</td><td class="num">+200-400€ · +3.000-5.000 con hijos</td></tr>
+<tr><td class="num">25.000€ (salario medio)</td><td class="num r"><strong>3.524€</strong> IRPF¹ + ~700€ IVA = <strong>~4.200€</strong></td><td class="num">+400-700€ · +1.500-2.000 con hijos</td><td class="num">+300-600€</td><td class="num">-100 a +200€ · +4.500-5.000 con hijos</td></tr>
+<tr><td class="num">~35.000€</td><td class="num r">~4.500-5.500€ IRPF² + ~700€ IVA</td><td class="num">+800-1.500€ con hijos</td><td class="num">+200-500€</td><td class="num">-200 a +300€ · +3.000-4.500 con hijos</td></tr>
+<tr><td class="num">50.000€</td><td class="num r"><strong>7.792€</strong> IRPF¹ + ~800€ IVA = <strong>~8.600€</strong></td><td class="num">+600-1.200€</td><td class="num">Neutro</td><td class="num">-300 a -1.000€ sin hijos</td></tr>
+<tr><td class="num">100.000€</td><td class="num r"><strong>18.935€</strong> IRPF¹³ + ~900€ IVA = <strong>~19.800€</strong></td><td class="num">+1.000-2.500€</td><td class="num">-0-500€</td><td class="num">-1.500 a -5.000€</td></tr>
 <tr><td class="num">>150.000€ / >1M patrimonio</td><td class="num r">+20.000-100.000€+</td><td class="num">+10.000-40.000€</td><td class="num">-2.000 a -15.000€</td><td class="num">-15.000 a -500.000€+</td></tr>
 </table>
-<details class="acc"><summary>Pensionistas (media 1.262€/mes = 17.668€/año con 14 pagas)</summary>
+<p style="font-size:.75em;color:var(--muted)">¹ Verificado con <a href="https://www.sueldovox.es/">sueldovox.es</a> (simulador oficial VOX, oct-2026). ² Estimación por interpolación. ³ Coincide con Ministerio de Hacienda (13-10-2026). IVA: estimación propia sobre cesta de consumo (VOX: 21→18% general, 10→8% reducido, 0% básicos, 4% luz/gas).</p>
+<details class="acc"><summary>Pensionistas (pensión media del sistema: 1.262€/mes × 14 = 17.668€/año)</summary>
 <div class="acc-body">
 <p><strong style="color:var(--psoe)">PSOE/Sumar</strong>: +2,7% (+477€/año) + mínimas +7-11,4% (+800-1.400€). Sostenible con MEI/cuotas.</p>
 <p><strong style="color:var(--pp)">PP</strong>: revalorización Pacto Toledo, sin cifra extra.</p>
-<p><strong style="color:var(--vox)">VOX</strong>: exención IRPF. El 63% no presenta IRPF (Gestha). El pensionista medio paga ~800-1.000€/año en retenciones que se eliminan (no +2.000€ como afirma VOX). Solo el ~37% con pensión >22.000€ ahorra ~4.160€/año. Sistema pierde 14,3B IRPF + 9,4B cotizaciones = ~24B/año.</p>
-<p class="src" style="font-size:.8em;color:var(--muted)">Fuente: AEAT 2024, Gestha, demon.code.blog/2020/05/07/pensiones</p>
+<p><strong style="color:var(--vox)">VOX</strong>: exención IRPF. Con VOX: base 15.668€ (17.668−2.000 gastos, sin cotizaciones) &lt; 22.000€ → <strong>0€ IRPF</strong>. IRPF actual estimado: <strong>~1.100€</strong> (con reducción por trabajo, umbral 16.825€ neto; mínimo personal 65+ = 6.700€; sin deducción SMI que es solo para asalariados). Santander blog dic-2025: retención media 2-3% para tramo 12.001-18.000€ (más alta en 17.668€ concreto). <strong>63% no presenta IRPF</strong> (Gestha, pensión &lt;15.876€) → ahorra <strong>0€</strong>. Solo ~37% con pensión &gt;22.000€ ahorra más (~4.160€ media). <strong>Claim VOX "+1.200-2.000€": la media aritmética (14.317M÷9,3M=1.540€) es engañosa</strong> porque la mayoría no notará cambio (demon.code.blog).</p>
+<p class="src" style="font-size:.8em;color:var(--muted)">Fuentes: AEAT 2024 (retenciones pensiones públicas 14.317M€), Gestha (63% no presenta IRPF), Santander blog (retenciones por tramo), demon.code.blog/2020/05/07/pensiones, sueldovox.es (metodología: "La deducción del SMI solo es para asalariados"). Nota: sueldovox.es es para trabajadores, no pensionistas; cálculo aproximado.</p>
 </div>
 </details>
 <details class="acc"><summary>Jóvenes <35 que compran (piso 200-250k)</summary>
@@ -448,12 +450,12 @@ section{padding:40px 16px}
 <h2 class="sec-title"><span class="dot" style="background:var(--orange)"></span>Pensiones: el claim engañoso de VOX</h2>
 <p class="sec-sub">VOX promete eximir las pensiones del IRPF con el claim implícito de "+1.200-2.000€/año". Es engañoso. Esto es lo que pasa realmente:</p>
 <div class="grid3">
-<div class="card" style="text-align:center"><div class="big r">63%</div><p class="sub">de pensionistas NO presenta IRPF (Gestha). No pagan, no ahorran nada.</p></div>
-<div class="card" style="text-align:center"><div class="big y">~800-1.000€</div><p class="sub">lo que ahorra el pensionista medio (17.668€/año) — no +2.000€</p></div>
-<div class="card" style="text-align:center"><div class="big g">~37%</div><p class="sub">con pensión >22.000€ concentra el ahorro real (~4.160€/año media)</p></div>
+<div class="card" style="text-align:center"><div class="big r">63%</div><p class="sub">de pensionistas NO presenta IRPF (Gestha). Pensión &lt;15.876€ = sin retenciones. Ahorro con VOX: <strong>0€</strong>.</p></div>
+<div class="card" style="text-align:center"><div class="big y">~1.100€</div><p class="sub">IRPF actual estimado del pensionista medio (17.668€/año, 65+). Con reducción por trabajo y mínimo personal 6.700€. Santander blog: retención 2-3% media tramo 12-18k (más alta en 17.668€).</p></div>
+<div class="card" style="text-align:center"><div class="big g">~37%</div><p class="sub">con pensión &gt;22.000€ concentra el ahorro real (~4.160€/año media)</p></div>
 </div>
 <div class="info">
-<p><strong>El umbral exento de retenciones</strong> es 15.876€/año (=SMI 2024). La pensión media (1.262€/mes × 14 pagas = 17.668€/año) está apenas por encima. La obligación de declarar es 22.000€ (1 pagador). Entre 15.876 y 22.000€ se pagan retenciones bajas.</p>
+<p><strong>El umbral exento de retenciones</strong> es 15.876€/año (=SMI 2024). La pensión media del sistema (1.262€/mes × 14 pagas = 17.668€/año; no confundir con pensión media de jubilación 21.890€) está apenas por encima. La obligación de declarar es 22.000€ (1 pagador). Entre 15.876 y 22.000€ se pagan retenciones bajas (~1.100€/año para el pensionista medio 65+).</p>
 <p>Como dijo el blog <a href="https://demon.code.blog/2020/05/07/pensiones/">demon.code.blog</a>: <em>"la mayoría de la gente no va a notar ningún cambio"</em>. Esto fue clave para corregir el claim de VOX.</p>
 </div>
 <div class="alert">
@@ -603,10 +605,10 @@ section{padding:40px 16px}
 <div class="acc-body"><p>Cuestionado. Institut Ostrom (think tank <em>liberal</em>) lo califica de "tramposo" (oct-2026). Alex Wong: solo ~15.227 M€ identificados en recortes concretos. El gasto político directo suma ~8-12B. Llegar a 40B exige recortar transferencias CCAA o personal, con fricción constitucional.</p></div>
 </details>
 <details class="acc"><summary>¿Qué pasa con las pensiones si VOX exime el IRPF?</summary>
-<div class="acc-body"><p>El sistema pierde 14,3B IRPF (AEAT) + 9,4B cotizaciones = ~24B/año. El 63% de pensionistas no presenta IRPF (Gestha) y no notaría cambio (demon.code.blog). El pensionista medio ahorra ~800-1.000€ (no +2.000€). Solo el 37% con pensión >22.000€ ahorra ~4.160€. La capitalización sueca es a 20-30 años.</p></div>
+<div class="acc-body"><p>El sistema pierde 14,3B IRPF (AEAT) + 9,4B cotizaciones = ~24B/año. El 63% de pensionistas no presenta IRPF (Gestha) y no notaría cambio (demon.code.blog). El pensionista medio (pensión media del sistema 17.668€/año, 65+) paga ~1.100€ IRPF (no +2.000€; con reducción por trabajo + mínimo personal 65+ 6.700€). Solo el 37% con pensión >22.000€ ahorra ~4.160€. La capitalización sueca es a 20-30 años.</p></div>
 </details>
 <details class="acc"><summary>¿Quién gana más dinero con cada partido?</summary>
-<div class="acc-body"><p><strong>VOX</strong>: el SMI paga ~0€ IRPF ya (sueldovox.es lo confirma), así que gana 0€ en IRPF + ~400-600€ en IVA. A partir de 22.000€: +1.800-3.000€ (renta media). Rentas 45-150k (+4.000 a +10.000€) y >150k (+20.000-100.000€+). <strong>PP</strong>: rentas medias con hijos (+1.500-2.000€), en SMI solo IVA (+200-400€). <strong>PSOE</strong>: SMI y bajas (+518€). <strong>Sumar</strong>: familias con hijos (+5.000-5.500€ con 2 hijos). El pensionista medio gana más con PSOE/Sumar (+477€) que con VOX (~800-1.000€ retenciones eliminadas).</p></div>
+<div class="acc-body"><p><strong>VOX</strong>: el SMI paga ~0€ IRPF ya (sueldovox.es lo confirma), así que gana 0€ en IRPF + ~400-600€ en IVA. A partir de 20.000€: +2.035€ (sueldovox.es). 25.000€ (salario medio): +3.524€. 50.000€: +7.792€. 100.000€: +18.935€ (coincide con Hacienda). <strong>PP</strong>: rentas medias con hijos (+1.500-2.000€), en SMI solo IVA (+200-400€). <strong>PSOE</strong>: SMI y bajas (+518€). <strong>Sumar</strong>: familias con hijos (+5.000-5.500€ con 2 hijos). El pensionista medio gana más con PSOE/Sumar (+477€) que con VOX (~1.100€ IRPF eliminado).</p></div>
 </details>
 <details class="acc"><summary>¿Qué partido cumple el límite de déficit de la UE (3%)?</summary>
 <div class="acc-body"><p>Solo el <strong>PSOE</strong> (~2,6%). El PP (3,3-3,6%) lo raspa pero es manejable con senda. Sumar (3,0-3,7%) se queda pegado al límite. VOX (7,6-8,9%) lo triplica: en el Monte Carlo, 100% de los 10.000 escenarios superan el 5%.</p></div>

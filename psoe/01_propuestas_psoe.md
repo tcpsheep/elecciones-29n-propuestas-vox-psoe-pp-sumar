@@ -45,7 +45,7 @@ Fuentes madre:
 
 ## 10. Empleo
 - Pacto Pleno Empleo, paro estructural <8%, reforma laboral (+3M indefinidos, temporalidad 26→16%, 21,3M afiliados). Ley Empleo 3/2023, Estrategia 2025-2028.
-- **Jornada 40→37,5h sin recorte salarial** (acuerdo 20/12/2024, registro digital, desconexión). Mecanismo RED, Kit Digital >50 trabajadores.
+- **Jornada 40→36h antes 2030 sin recorte salarial** (Forbes 5-oct-2026; legal hoy 40h; acuerdo 20/12/2024 registro digital, desconexión). Mecanismo RED, Kit Digital >50 trabajadores.
 
 ## 11. Fondos UE
 - PRTR hasta 160.000 M. Asignados 79.854M, resueltos 53.646M (>40% pymes), recibidos >48.000M, 6º desembolso 7.021M jul-2026 (total >77.000M, 76% MRR). 12 PERTE 25.600M convocados. Impacto +2,6% PIB 2024.

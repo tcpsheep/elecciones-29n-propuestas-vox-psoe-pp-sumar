@@ -79,7 +79,7 @@ PARTIDOS = {
     },
     "PSOE": {
         "tipo": "neto_fijo",
-        "desc": "SMI 1.221x14 | Pensiones +2,7% (+miminas +7-11,4%) | Jornada 37,5h | PRTR 77B | MEI 0,9%",
+        "desc": "SMI 1.221x14 | Pensiones +2,7% (+miminas +7-11,4%) | Jornada 36h antes 2030 | PRTR 77B | MEI 0,9%",
         # Gasto neto pequeno: SMI, pensiones, PRTR vs MEI/cuotas
         "neto": (1.0, 3.0, 6.0),
         "impulso": (-0.002, 0.005, 0.012),

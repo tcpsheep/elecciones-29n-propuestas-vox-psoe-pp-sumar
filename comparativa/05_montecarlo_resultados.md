@@ -33,7 +33,7 @@ Modelo stock-flujo con incertidumbre triangular en merma, ahorro, multiplicadore
 | Drag confianza | -0.5 | 0.0 | 0.3 | pp |
 
 ### PSOE
-**Propuestas**: SMI 1.221x14 | Pensiones +2,7% (+miminas +7-11,4%) | Jornada 37,5h | PRTR 77B | MEI 0,9%
+**Propuestas**: SMI 1.221x14 | Pensiones +2,7% (+miminas +7-11,4%) | Jornada 36h antes 2030 | PRTR 77B | MEI 0,9%
 
 | Parametro | Min | Moda | Max | Unidad |
 |---|---|---|---|---|
@@ -66,7 +66,7 @@ Modelo stock-flujo con incertidumbre triangular en merma, ahorro, multiplicadore
 | 2029 | 2.2 (2.2) [2.2-2.2] | 92.7 [91.5-93.9] | 19.3% | 9.9 | 0% | 0% | 0% |
 
 ### PSOE
-**Propuestas**: SMI 1.221x14 | Pensiones +2,7% (+miminas +7-11,4%) | Jornada 37,5h | PRTR 77B | MEI 0,9%
+**Propuestas**: SMI 1.221x14 | Pensiones +2,7% (+miminas +7-11,4%) | Jornada 36h antes 2030 | PRTR 77B | MEI 0,9%
 
 | Ano | Deficit % (mediana) [P5-P95] | Deuda % [P5-P95] | PIB acum | Paro % | P(EDP>3%) | P(Deuda>110%) | P(Def>5%) |
 |---|---|---|---|---|---|---|---|

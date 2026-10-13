@@ -13,11 +13,11 @@
 xychart-beta
   title "Déficit resultante (% PIB) desde 2,39%"
   x-axis ["Base", "PSOE", "PP", "Sumar", "VOX"]
-  y-axis "Déficit % PIB" 0 --> 7
-  bar [2.39, 2.57, 3.45, 3.6, 5.8]
+  y-axis "Déficit % PIB" 0 --> 10
+  bar [2.39, 2.57, 3.45, 3.6, 8.9]
 ```
 
-**Resultado en 10 segundos:** PSOE 2,6%→1,8% | PP 3,3-3,6% | Sumar 3,0-3,7% | VOX 5,0-6,2%. El detalle por sueldo, vivienda y pensiones está abajo.
+**Resultado en 10 segundos:** PSOE 2,6%→1,8% | PP 3,3-3,6% | Sumar 3,0-3,7% | VOX 7,6-8,9% (IRPF corregido a 85B, Hacienda 13-10-2026). El detalle por sueldo, vivienda y pensiones está abajo.
 
 ## Índice
 - [Contenido y cómo reproducir](#contenido)
@@ -29,6 +29,7 @@ xychart-beta
 - [6. Derechos e igualdad](#6-derechos-e-igualdad-qué-cambia-más-allá-del-dinero)
 - [Fuentes y metodología](comparativa/02_metodologia_y_fuentes.md)
 - [Sostenibilidad deuda 2026-30 con escenarios](comparativa/03_sostenibilidad_deuda.md)
+- [Monte Carlo 10.000 iteraciones](comparativa/05_montecarlo_resultados.md)
 
 ## Contenido
 
@@ -40,6 +41,7 @@ xychart-beta
 | `sumar/` | [01_propuestas_sumar.md](sumar/01_propuestas_sumar.md) | [02_simulacion_sumar.md](sumar/02_simulacion_sumar.md) | `03_sumar_simulacion.py` |
 | `comparativa/` | [00_baseline_INE.md](comparativa/00_baseline_INE.md) | [01_comparativa_global.md](comparativa/01_comparativa_global.md) | [02_metodologia_y_fuentes.md](comparativa/02_metodologia_y_fuentes.md) |
 | `comparativa/` | [03_sostenibilidad_deuda.md](comparativa/03_sostenibilidad_deuda.md) | escenarios 2026-30 por partido | `04_deuda_sostenibilidad.py` |
+| `comparativa/` | [05_montecarlo_resultados.md](comparativa/05_montecarlo_resultados.md) | Monte Carlo 10.000 iter. × 4 años | `05_montecarlo.py` |
 
 Para reproducir: `python vox/03_vox_simulacion.py`, y lo mismo con los otros tres. Deuda: `python comparativa/04_deuda_sostenibilidad.py`. Solo usan la librería estándar.
 
@@ -70,12 +72,12 @@ Prensa usada solo cuando es doble/triple y marcada como tal. Todo lo demás es P
 
 |  | VOX | PP | PSOE | Sumar |
 |---|---|---|---|---|
-| Ingresos / merma bruta | -103,1B (-6,10% PIB) | -27,0B (-1,60%) | +5,0B (+0,30%) | +31,0B teórico (+1,83%), +20-22B real (+1,2-1,3%) |
+| Ingresos / merma bruta | -149,4B (-8,84% PIB) | -27,0B (-1,60%) | +5,0B (+0,30%) | +31,0B teórico (+1,83%), +20-22B real (+1,2-1,3%) |
 | Ahorro / gasto nuevo | -40B ahorro prometido | -7B ahorro burocracia | +8B gasto | +41,5B gasto (16,9 vivienda + 15,6 crianza + 9,0 herencia) |
-| Neto fiscal | +63,1B estático (+3,74pp) / +50,6B dinámico (+2,99pp) | +20B (+1,18pp) / +16,2B (+0,96pp) | +2,6-3B (+0,15-0,18pp) | +10,5B estático (+0,62pp) / +19,6-21,3B real (+1,16-1,26pp) |
-| Déficit resultante | 5,0-6,2% (7%+ si ahorro solo 12-18B realista) | 3,3-3,6% | ~2,6% año 1 → 1,8% en 2027 | 3,0-3,7% (4%+ si crianza+herencia universales plenas) |
-| Deuda 1-2 años | 104-107% y subiendo ~3pp/año | 101-102% estable | 99-100% bajando por PIB nominal | 102-104% y subiendo |
-| PIB corto | +1,4pp impulso, luego riesgo tipos/EDP | +0,6-0,8pp | +2,2-2,6% base PRTR | +0,5pp consumo año 1, -0,5-1pp medio por inversión |
+| Neto fiscal | +109,4B estático (+6,48pp) / +88,5B dinámico (+5,24pp) | +20B (+1,18pp) / +16,2B (+0,96pp) | +2,6-3B (+0,15-0,18pp) | +10,5B estático (+0,62pp) / +19,6-21,3B real (+1,16-1,26pp) |
+| Déficit resultante | 7,6-8,9% (10%+ si ahorro solo 12-18B realista) | 3,3-3,6% | ~2,6% año 1 → 1,8% en 2027 | 3,0-3,7% (4%+ si crianza+herencia universales plenas) |
+| Deuda 1-2 años | 108-113% y subiendo ~4pp/año | 101-102% estable | 99-100% bajando por PIB nominal | 102-104% y subiendo |
+| PIB corto | +2,8pp impulso, luego riesgo tipos/EDP | +0,6-0,8pp | +2,2-2,6% base PRTR | +0,5pp consumo año 1, -0,5-1pp medio por inversión |
 | Paro | 8-8,5% si se financia, rebote si crisis deuda | 8,8-9,0% (+350-450k ocupados) | 8,8-9,5% (más lento por jornada) | 10,5-11% en pymes, más empleo protegido |
 | IPC | -0,8-1,2pp por IVA/energía | -0,4-0,6pp | 2,5-2,8% | +0,3-0,5pp por costes |
 
@@ -84,12 +86,12 @@ Cálculos en `vox/03_vox_simulacion.py` y equivalentes. Multiplicadores AIReF/Bd
 ## 3. Según tu prioridad (elige 2 y mira su fila)
 
 - **Pagar menos impuestos ya:** VOX (mucho menos, mucho déficit) > PP (bastante menos, déficit medio) > PSOE (igual) > Sumar (más si eres capital/alto).
-- **Déficit y deuda bajo control UE:** PSOE (cumple) > PP (desvío manejable con senda) > Sumar (desvío estructural) > VOX (desvío grande salvo tijera 40B creíble).
+- **Déficit y deuda bajo control UE:** PSOE (cumple) > PP (desvío manejable con senda) > Sumar (desvío estructural) > VOX (desvío masivo salvo tijera 40B creíble).
 - **Llegar a fin de mes con hijos:** Sumar (crianza 2.400/año por hijo) > VOX (IRPF -8pp con 2 hijos + IVA) > PP (+1.500-2.000/año) > PSOE (+deducciones puntuales).
 - **Comprar primera vivienda joven:** PP/VOX (entrada -40-50% por IVA/AJD/ITP + aval) > PSOE (aval 20% + bono) > Sumar (más alquiler protegido futuro, compra privada más gravada).
 - **Alquilar en zona tensionada:** Sumar (tope + más oferta pública a 3-5 años) > PSOE (tope + prórroga 2 años) > PP/VOX (más oferta privada por seguridad jurídica, sin tope inicial sube 3-5%).
 - **Autónomo/pyme que contrata:** VOX/PP (cuota 0, bonif 100%, IS 15% o simplificado) > PSOE (Kit Digital, cuota por ingresos) > Sumar (más cuota efectiva y jornada).
-- **Pensionista:** VOX (+1.200-2.000/año sin IRPF pero riesgo sistema) > PSOE/Sumar (revalorización garantizada + mínimas +11%) > PP (Pacto Toledo, sin cifra extra).
+- **Pensionista medio (~17.668 €/año, 14 pagas):** PSOE/Sumar (revalorización +2,7% garantizada +477 €/año + mínimas +7-11,4% (+800-1.400 €)) > PP (Pacto Toledo, sin cifra extra) > VOX (el pensionista medio ya no presenta IRPF —63% según Gestha—; umbral exento retenciones 15.876 €; paga retenciones bajas ~800-1.000 €/año que se eliminan, pero lejos de +2.000; solo el ~37% con pensión >22.000 € ahorra ~4.160 €/año de media; sistema pierde 14,3B AEAT + 9,4B cotizaciones = ~24B/año). Para pensión alta (>22.000 €): VOX > PSOE/Sumar > PP.
 - **Desigualdad baja:** Sumar (Gini -2-3pp) > PSOE (-0,5-1pp) > PP (neutro) > VOX (sube inicial por tipo plano).
 
 ## 4. Riesgo de quiebra del país: lo que dicen los números
@@ -99,7 +101,7 @@ España no quiebra como una empresa (deuda en euros, BCE como prestamista de úl
 - **PSOE:** necesidades de financiación estables. Con PIB nominal +5-6% la deuda baja sola 2-3pp/año. Riesgo de tensión bajo salvo shock externo. Procedimiento excesivo evitable.
 - **PP:** +16-20B neto (+1pp). Financiable con crecimiento +2,5% y senda a 2,5% en 2 años. Prima +20-40 pb. Sin EDP duro si hay presupuestos.
 - **Sumar:** +20B neto estructural (+1,2pp) + derechos permanentes (crianza+herencia 24,6B/año). Si se consolidan, el déficit no baja del 3,5-4% ni creciendo. Prima +40-80 pb, EDP probable, dependencia de que la UE acepte 40-46% presión fiscal. No es impago, es ajuste futuro (más impuestos o menos inversión).
-- **VOX:** +51-63B neto (+3-3,7pp) o +85B si el ahorro se queda en 15B. Eso es volver a 2010-2012 en saldo pero con deuda 100% y BCE menos acomodaticio. Prima +80-150 pb, EDP seguro, riesgo de congelar fondos UE si hay ruptura verde/autonómica. Financiable 12 meses por colchón Tesoro, insostenible a 2-3 años sin ejecutar la tijera o revertir parte de la rebaja. Tampoco es impago inminente, es pérdida de escudo ante la próxima crisis.
+- **VOX:** +89-109B neto (+5,2-6,5pp) o +134B si el ahorro se queda en 15B. Eso es volver a 2010-2012 en saldo pero con deuda 100% y BCE menos acomodaticio. Prima +80-150 pb, EDP seguro, riesgo de congelar fondos UE si hay ruptura verde/autonómica. Financiable 12 meses por colchón Tesoro, insostenible a 2-3 años sin ejecutar la tijera o revertir parte de la rebaja. Tampoco es impago inminente, es pérdida de escudo ante la próxima crisis.
 
 Ningún escenario da impago a 12 meses con BCE activo. La diferencia es el colchón que te queda para la siguiente recesión: PSOE/PP lo mantienen, Sumar lo estrecha, VOX lo agota salvo recorte equivalente.
 
@@ -149,9 +151,9 @@ Base: salario medio 29.540 €, mediana 24.497 €, SMI 16.576 € (2025). Cálc
 - PSOE: +2pp ahorro >300k + banca/energéticas si accionista. **-2.000 a -15.000 €**.
 - Sumar: 52% desde 300k + capital 30-33% + Sucesiones estatal + 3% >50 M. **-15.000 a -500.000 €+** (ej. 5 M herencia: >1,5 M cuota; 10 M: ~3,3 M). Aquí se concentra el +20B.
 
-**Pensionistas (media 1.262 €/mes, 15.145 €/año):**
-- VOX: sin IRPF **+1.200-2.000 €/año**, más consumo pero sistema -13B.
-- PSOE/Sumar: +2,7% (+409 €/año media) + mínimas +7-11% (+800-1.400 €). Sostenible con MEI/cuotas.
+**Pensionistas (media 1.262 €/mes = 17.668 €/año con 14 pagas):**
+- VOX: exención IRPF pensiones. Coste agregado **14,3B** (AEAT 2024: retenciones pensiones públicas 14.317 M€). La media aritmética por pensionista (~1.540 €) caería en el rango +1.200-2.000, **pero es engañosa**: el 63% no presenta declaración (Gestha); umbral exento retenciones = 15.876 €/año; el pensionista medio (17.668 €/año) paga retenciones bajas (~800-1.000 €/año est.) que se eliminan. El ahorro real se concentra en el ~37% con pensión >22.000 € (~4.160 €/año de media). Sistema -14,3B IRPF + 9,4B cotizaciones bonificadas = **~24B/año**. Capitalización sueca a 20-30 años. Fuente: AEAT Nota3_Pensiones, Gestha, demon.code.blog/2020/05/07/pensiones.
+- PSOE/Sumar: +2,7% (+477 €/año media sobre 17.668 €) + mínimas +7-11,4% (+800-1.400 €). Sostenible con MEI/cuotas.
 - PP: revalorización Pacto Toledo sin extra cifrado.
 
 **Jóvenes <35 que compran (piso 200-250k):**
@@ -168,7 +170,7 @@ Base: salario medio 29.540 €, mediana 24.497 €, SMI 16.576 € (2025). Cálc
 - **Género:** brecha salarial 83,9% (26.905 € vs 32.058 €, INE EAES). SMI/mínimas/crianza (PSOE/Sumar) la cierran 1-2pp por abajo; techo 52% + transparencia no la mueven arriba. VOX/PP mejoran neto familiar con hijos pero no brecha horaria/parcialidad. Complemento brecha 36,90 €/mes e IMV se mantienen en PSOE/PP/Sumar, en riesgo en VOX si recorta no contributivas sin arraigo.
 - **Infancia:** pobreza infantil ~28% AROPE. Crianza 200/mes (Sumar) -6-9pp, el mayor efecto. VOX/PP (-4pp por hijo / mínimos x2) -2-4pp vía IRPF (solo si declaran). PSOE (complemento IMV + maternidad) -1-2pp.
 - **Jóvenes:** herencia 20k a los 23 (Sumar) iguala punto de partida pero universal (también ricos). Hucha/aval (PP/PSOE) solo si compran. Cuota 0 (VOX/PP) facilita autónomo. Jornada 32-37,5h (PSOE/Sumar) ayuda conciliar pero destruye parcial juvenil hostel si sin productividad.
-- **Mayores/dependencia:** exención pensiones (VOX) +7-12% neto jubilado medio; mínimas +11% (PSOE/Sumar) +5-9% renta mínima. Capitalización sueca (VOX) a 20-30 años, nada año 1-5.
+- **Mayores/dependencia:** exención pensiones (VOX) solo beneficia a quien ya tributa (>15.876 €/año, ~37% sobre todo >22.000 €: +1.200-4.160 €/año según nivel); el jubilado medio (17.668 €/año) paga retenciones bajas (~800-1.000 €/año est.) que se eliminan, pero el 63% no presenta IRPF y no nota cambio (Gestha); mínimas +11,4% (PSOE/Sumar) +5-9% renta mínima. Capitalización sueca (VOX) a 20-30 años, nada año 1-5.
 - **Territorio:** VOX recentraliza (1 Gobierno/1 Parlamento objetivo, devolver Educación/Sanidad) = ahorro potencial grande pero 2-4 años litigio y parálisis CCAA; PP reforma financiación + suficiencia; PSOE +30.000 M extra + nuevo sistema; Sumar 1% PIB + Sareb/SEPES recentraliza vivienda. España vaciada: banco Correos (Sumar) vs bonif ITP/IBI rural (PP) vs prioridad nacional (VOX).
 - **Migración:** ~2,8 M afiliados extranjeros sostienen cotizaciones 4-6B. VOX (expulsión + excluir no contributivas + 10/5 años) ahorra 3-6B según VOX pero pierde cotizantes y choca con Constitución/UE/CEDH (2-4 años tribunales). PSOE/PP/Sumar mantienen cotización como vía (subsidio con arraigo laboral, pasarela IMV).
 - **Vivienda como derecho:** PSOE/Sumar (20% público, irreversible, tanteo, registro vacías) lo hacen exigible a 5-10 años; PP/VOX (propiedad + seguridad jurídica + suelo) aumentan oferta privada más rápido pero sin garantía social. Ninguno da casa año 1: déficit 100-150k/año (BdE).
@@ -178,21 +180,52 @@ Base: salario medio 29.540 €, mediana 24.497 €, SMI 16.576 € (2025). Cálc
 
 - **Vivienda:** se visan 110-130k y se terminan ~90k. Faltan 100-150k/año. PSOE (30-40k/año públicas) y PP (140-170k reales vs 250k promesa) moderan +1-3%. VOX igual si liberaliza suelo de verdad (+5-8% si no). Solo Sumar (150-200k protegidas con 16,9B/año) cerraría, a 3-5 años y recentralizando.
 - **Empleo:** 22,46 M ocupados, temporalidad 16%. PP/VOX crean 350-500k indefinidos vía coste (-6-9%) si no suben tipos. PSOE mantiene pero jornada resta 0,3-0,6% en pymes. Sumar destruye 0,5-1pp en pymes mano intensiva y crea protegido/público. Paro 8% solo con VOX/PP financiados o PSOE con productividad; 11% si Sumar sin matices o VOX con crisis deuda.
-- **Pensiones:** +5,1B por cada +2,7%. Todos revalorizan. Nadie lo financia sin MEI 0,9% + cuotas + inmigración + empleo. VOX -22B (IRPF+bonif), Sumar +mínimas sin base, PP fía a empleo, PSOE a cotizaciones. Hucha 130.000 M (PSOE) vs capitalización (VOX) son a 10-30 años.
+- **Pensiones:** +5,1B por cada +2,7%. Todos revalorizan. Nadie lo financia sin MEI 0,9% + cuotas + inmigración + empleo. VOX -24B (IRPF 14,3B AEAT + bonif 9,4B), Sumar +mínimas sin base, PP fía a empleo, PSOE a cotizaciones. Hucha 130.000 M (PSOE) vs capitalización (VOX) son a 10-30 años.
 - **Energía:** factura -8-25% con VOX (4% + sin IVPE + nuclear) y -8-12% con PP (10% + sin generación + nuclear CSN). PSOE baja gradual sin rebote. Sumar tarifa verde 4/10/21% + fiscalidad ambiental (+0,3pp IPC). Ruptura verde VOX arriesga PRTR; PP es compatible.
 
 ## 8. Cómo leer los números sin que te engañen
 
 - Son rangos año 1-3, no predicción oficial (±20-30%). Si alguien te da un decimal, desconfía.
 - El PIB nominal +5-6% baja la deuda sola 2-3pp/año. Mira déficit estructural, no solo deuda.
-- La merma VOX 90-103B y el gasto Sumar 41,5B son brutos. El neto dinámico (VOX +51B, Sumar +20B, PP +16B, PSOE +3B) ya descuenta más consumo/empleo y erosión.
+- La merma VOX 135-149B (IRPF corregido a 85B, Hacienda 13-10-2026) y el gasto Sumar 41,5B son brutos. El neto dinámico (VOX +89B, Sumar +20B, PP +16B, PSOE +3B) ya descuenta más consumo/empleo y erosión.
 - Pregunta siempre: ¿con qué se paga? Si no hay partida PGE línea a línea (ahorro 40B VOX, 1% vivienda Sumar), es promesa a 3-5 años, no año 1.
 - Actualiza con INE cada trimestre: CNA (PIB), EPA (paro), IPC (cesta), EAES/EACL (salarios/coste), IGAE (déficit), AEAT (recaudación por figura), ECV (Gini/AROPE).
 
 ## 9. Fuentes (todas oficiales salvo aviso)
 
-Programas PDF: VOX `votaabascal.es/assets/pdf/Programa-VOX-2023.pdf` + `voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf`; PSOE `psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf`; PP `pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf` + `pp.es/wp-content/uploads/2025/07/POLITICA_PARTIDOPOPULAR_2025.pdf`; Sumar `movimientosumar.es/wp-content/uploads/2023/07/Un-Programa-para-ti.pdf` + BOCG `congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-335-1.PDF`.
-BOE: RDL 4/2024, Ley 7/2024, RD SMI/pensiones/subsidio/vivienda. Moncloa/Hacienda/AEAT/BdE/INE: URLs en `comparativa/00_baseline_INE.md` y cada `01_propuestas_*`. Prensa solo doble/triple y marcada.
+### Organismos oficiales (datos baseline y verificación)
+- **INE** — PIB CNA2025 (1.690.012 M€), EAES2024 (salario medio 29.540,26 €), EPA Q4-2024/2025 (paro, ocupados). https://www.ine.es/dyngs/Prensa/CNA2025.htm · https://www.ine.es/dyngs/Prensa/EAES2024.htm · https://www.ine.es/dyngs/Prensa/es/EPA4T24.htm
+- **AEAT** — Informe Anual Recaudación Tributaria 2024: total 294.734 M€, IRPF 129.408 M€, IVA 90.541 M€, Sociedades 39.096 M€, Especiales 22.128 M€. Nota3_Pensiones: retenciones pensiones públicas 14.317 M€. https://sede.agenciatributaria.gob.es/static_files/AEAT/Estudios/Estadisticas/Informes_Estadisticos/Informes_Anuales_de_Recaudacion_Tributaria/Ejercicio_2024/IART24_es_es.pdf
+- **Banco de España** — Deuda pública 100,7% PIB (~1.702 mm). https://www.bde.es
+- **IGAE/Hacienda** — Déficit 2,39% (40.330 M con DANA), 2,18% sin DANA. https://www.igae.pap.hacienda.gob.es
+- **Ministerio de Hacienda** — Coste IRPF VOX = 85.000 M€ (61% recaudación IRPF ~140B). Ministro Arcadi España, Consejo de Ministros 13-10-2026. SMI=0€ ahorro, 100k=18.935€, 1M=212.333€. Fuentes: Infobae, El Independiente, EFE (13-10-2026).
+- **La Moncloa** — Revalorización pensiones +2,7% general, +7% mínimas, +11,4% con cónyuge (10-02-2026). SMI 1.221×14 = 17.094 € (2026). https://www.lamoncloa.gob.es
+- **BOE** — RDL 4/2024, Ley 7/2024, RD SMI/pensiones/subsidio/vivienda. https://www.boe.es
+- **Seguridad Social** — Pensiones: nómina 12.974 M/mes, 10,28 M pensiones, media 1.261,9 €/mes, gasto anual ~189.600 M. https://www.seg-social.es
+
+### Programas electorales (PDF oficiales)
+- VOX: `votaabascal.es/assets/pdf/Programa-VOX-2023.pdf` + `voxespana.es/wp-content/uploads/2025/10/Programa-WEB-021025.pdf`
+- PSOE: `psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf`
+- PP: `pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf` + `pp.es/wp-content/uploads/2025/07/POLITICA_PARTIDOPOPULAR_2025.pdf`
+- Sumar: `movimientosumar.es/wp-content/uploads/2023/07/Un-Programa-para-ti.pdf` + BOCG `congreso.es/public_oficiales/L15/CONG/BOCG/B/BOCG-15-B-335-1.PDF`
+
+### Verificación y anti-desinformación
+- **Gestha** (Técnicos del Ministerio de Hacienda) — 63% de pensionistas no presenta IRPF; umbral exento retenciones 15.876 €/año (=SMI 2024); obligación declarar 22.000 € (1 pagador). https://www.gestha.es
+- **Newtral** — Fact-checking: VOX 2019 programa "15% Sociedades solo para PYMES"; verificación propuestas. https://www.newtral.es
+- **demon.code.blog** — "Desmontando a VOX: pensiones" (07-05-2020). Aclaró que la mayoría de pensionistas no notaría cambio en IRPF: "la mayoría de la gente no va a notar ningún cambio". Clave para corregir el claim engañoso VOX "+1.200-2.000€/año sin IRPF". https://demon.code.blog/2020/05/07/pensiones/
+- **SmartVote** — Estudio: VOX identificada como "mayor fábrica de bulos" entre partidos políticos españoles.
+- **Institut Ostrom** (think tank liberal) — Cuentas de VOX "tramposas" (oct-2026): "Bajar impuestos puede ser buena política. Pero prometer que lo pagarán las subvenciones es tramposo."
+- **Alex Wong** (alexpwong.substack.com) — Análisis independiente: VOX IRPF+IVA = ~118B (vs 64-70B declarado por VOX); solo ~15.227 M€ en recortes concretos identificados; infografía VOX muestra IRPF 85B.
+
+### Prensa (solo cuando doble/triple fuente y marcada)
+- **Cinco Días/El País** (21-07-2023) — Propuesta IRPF VOX "hundiría la recaudación en un 50%" (~65B).
+- **Herqles** (10-10-2026) — VOX estima 64B (IRPF 40B + IVA 14B + Soc 10B); confirma Sociedades 15% general.
+- **Infobae, El Independiente, EFE** (13-10-2026) — Hacienda cifra IRPF VOX en 85B (61% recaudación).
+- **El País, El Economista, Europa Press, Infobae, La Voz de Galicia, El Mundo** — Gravamen 3% >50M Sumar (~4.200 M recaudación).
+- **EFE** (29-06-2025) — VOX propone "rebajas masivas al Impuesto de Sociedades".
+- PP IVA 4% vivienda joven + IRPF jóvenes: confirmado por pp.es + Congreso moción + 6+ periódicos de todo el espectro ideológico.
+
+Prensa usada solo cuando es doble/triple y marcada como tal. Todo lo demás es PDF oficial, BOE, Moncloa o AEAT.
 
 ## 10. Límites
 

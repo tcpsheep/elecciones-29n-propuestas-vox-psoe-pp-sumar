@@ -14,12 +14,12 @@ Fuentes madre:
 - **Plan Choque 2026: duplicar mínimo descendientes**: 1º 2.400→4.800, 2º 2.700→5.400, 3º 4.000→8.000, 4º+ 4.500→9.000, <3 años 2.800→5.600. Ahorro >400 € ago-dic familia 2 hijos.
 - Actualizar tarifa estatal a inflación / devolver lo recaudado por inflación. Estatuto Contribuyente, derecho al error, reforma TEA.
 - Régimen nuevos residentes atractivo, no tributación ayudas catástrofe.
-- Jóvenes 4 primeros años bonificación IRPF si compran/alquilan (solo prensa doble, no PDF: exención progresiva 10%→4% ejemplo).
+- Jóvenes 4 primeros años bonificación IRPF si compran/alquilan. ✅ Verificado multi-fuente: PP oficial (pp.es decálogo 27/09/2026) + Congreso respalda moción (feb-2026) + El Economista, Idealista, Democrata, Servimedia. Exención/bonificación progresiva.
 
 ## 2. IVA
 - Bajar IVA carne/pescado/conservas (medida 41). **Plan Choque: 0% básicos** (leche, quesos, aceite, huevos, fruta, verdura, carne, pescado, conservas).
 - **Energía 21%→10%**. **Exención IVA autónomos <85.000 €** (directiva UE).
-- Vivienda nueva jóvenes 10%→4% (solo prensa doble ABC/Infobae 09-10/2026, no en decálogo web).
+- Vivienda nueva jóvenes 10%→4%. ✅ Verificado multi-fuente: PP oficial (pp.es) + Congreso respalda moción (feb-2026) + prensa multi-fuente (El Economista, Idealista, ABC, Infobae, Democrata, Servimedia). Ya no es "solo prensa".
 - Suavizar escalones + cambiar periodicidad IVA/retenciones al crecer pyme (medida 5).
 
 ## 3. Sociedades / pymes / familia

@@ -23,14 +23,14 @@ PIB_B = 1690.012
 def pp(x_B): return x_B / PIB_B * 100
 
 COSTES = {
-    "irpf_2tramos_exento22k_menos4pp_hijo": 40.0,
+    "irpf_2tramos_exento22k_menos4pp_hijo": 85.0,  # Hacienda 13-10-2026: ministro Arcadi España cifra coste IRPF VOX en 85B = 61% recaudacion (~140B). VOX decia 40B (solo tramo estatal, sin autonómico). Fuentes: Infobae, El Independiente, EFE
     "iva_21a18_general": 9.05,   # 70% base *3/21 sobre 90.541
     "iva_10a8_reducido": 4.525,  # 25% base *2/10
     "iva_0_alimentos": 2.5,
     "iva_4_energia_sin_IIEE": 2.0,
     "soc_25a15": 12.0,  # estatico 15.6, VOX dice 10, central 12
     "patrimonio": 1.4, "sucesiones": 3.2, "plusvalia_IIVTNU": 1.5, "itp_ajd_rebaja": 4.5,
-    "exencion_irpf_pensiones": 13.0,
+    "exencion_irpf_pensiones": 14.3,  # AEAT 2024: retenciones pensiones públicas 14.317M (Nota3_Pensiones.pdf)
     "cuota_autonomos_menorSMI": 6.25,
     "bonif_SS_nuevos_indefinidos": 3.2,
 }
@@ -51,10 +51,11 @@ print("-- detalle (no sumar totales parciales) --")
 for k in ["irpf_2tramos_exento22k_menos4pp_hijo","iva_21a18_general","iva_10a8_reducido","iva_0_alimentos","iva_4_energia_sin_IIEE","soc_25a15","patrimonio","sucesiones","plusvalia_IIVTNU","itp_ajd_rebaja","exencion_irpf_pensiones","cuota_autonomos_menorSMI","bonif_SS_nuevos_indefinidos"]:
     print(f"  {k}: {COSTES[k]:.2f} B€ ({pp(COSTES[k]):.2f}% PIB)")
 print(f"-- subtotales -- iva_total {COSTES['iva_total']:.2f}B, impuestos_suprimidos {COSTES['impuestos_suprimidos']:.2f}B")
-print(f"Merma bruta {merma_bruta:.2f} B€ = {pp(merma_bruta):.2f}% PIB (rango 90-103 con solape IRPF/pensiones)")
+print(f"Merma bruta {merma_bruta:.2f} B€ = {pp(merma_bruta):.2f}% PIB (rango 135-149 con solape IRPF/pensiones)")
 print(f"Ahorro prometido {ahorro:.2f} B€")
 print(f"Neto estatico {neto_estatico:.2f} B€ = +{pp(neto_estatico):.2f}pp -> deficit {BASELINE['deficit_pct_base']+pp(neto_estatico):.2f}%")
 print(f"Dinamico: recupera {recup:.1f}B, ahorro efectivo {ahorro_efectivo:.1f}B, neto {neto_dinamico:.1f}B = +{pp(neto_dinamico):.2f}pp -> deficit {BASELINE['deficit_pct_base']+pp(neto_dinamico):.2f}%")
 print(f"Impulso PIB corto +{impulso_pib:.2f}pp antes de financiacion (tipos/EDP lo recortan en 12-18m)")
-print(f"Pension +exencion: +1200-2000 eur/año pensionista medio; SMI<22k exento IRPF; cesta -2.5-4% por IVA")
-print("Riesgo: sin ahorro 100% realista (solo 12-18B año1), deficit 7%+, deuda 107-110% en 2 años.")
+print(f"Pension +exencion: AEAT 2024 retenciones pensiones publicas 14.3B (no 13); media aritmetica 14317/9.3M=1540 eur/pensionista, PERO 63% no presenta (Gestha), umbral exento retenciones=15876 eur, obligacion declarar=22000 eur 1 pagador; pens media 1262x14=17668 eur/ano, entre 15.876 y 22.000, paga retenciones bajas (~800-1000 est); ahorro real concentrado en ~37% con pension >22k (~4160 eur/ano media); SMI<22k exento IRPF; cesta -2.5-4% por IVA")
+print(f"IRPF 85B: Hacienda 13-10-2026 (ministro Arcadi España) cifra coste IRPF VOX en 85B = 61% recaudacion IRPF (~140B/año). VOX decia 40B (solo tramo estatal). SMI=0€ ahorro, 100k=18.935€, 1M=212.333€. Fuentes: Infobae, El Independiente, EFE")
+print("Riesgo: sin ahorro 100% realista (solo 12-18B año1), deficit 10%+, deuda 110-115% en 2 años.")

@@ -21,7 +21,7 @@ DEF_BASE = 0.022
 
 PARTIDOS = {
     # merma/gasto bruto permanente, recuperacion base, ahorros por escenario, impulso PIB, spread bp
-    "VOX":  {"bruta": 96.5, "recup_rate": 0.15, "ahorro": {"pes": 12.0, "cen": 25.0, "opt": 40.0}, "impulso": [0.012, 0.006, 0.0, 0.0, 0.0], "spread_bp": {"pes": 150, "cen": 110, "opt": 60}, "drag_confianza": {"pes": -0.008, "cen": -0.004, "opt": 0.0}},
+    "VOX":  {"bruta": 142.0, "recup_rate": 0.15, "ahorro": {"pes": 12.0, "cen": 25.0, "opt": 40.0}, "impulso": [0.028, 0.014, 0.0, 0.0, 0.0], "spread_bp": {"pes": 150, "cen": 110, "opt": 60}, "drag_confianza": {"pes": -0.008, "cen": -0.004, "opt": 0.0}},
     "PP":   {"bruta": 27.0, "recup_rate": 0.15, "ahorro": {"pes": 4.0, "cen": 7.0, "opt": 10.0},  "impulso": [0.006, 0.004, 0.002, 0.002, 0.002], "spread_bp": {"pes": 40, "cen": 30, "opt": 15}, "drag_confianza": {"pes": 0.0, "cen": 0.0, "opt": 0.0}},
     "PSOE": {"bruta": 0.0,  "recup_rate": 0.0,  "ahorro": {"pes": 0.0, "cen": 0.0, "opt": 0.0},   "impulso": [0.0]*5, "spread_bp": {"pes": 10, "cen": 0, "opt": 0}, "drag_confianza": {"pes": 0.0, "cen": 0.0, "opt": 0.0}, "neto_fijo": {"pes": 4.0, "cen": 3.0, "opt": 1.5}},
     "SUMAR":{"bruta": 41.5, "recup_rate": 0.0,  "ahorro_ing": {"pes": 17.0, "cen": 20.0, "opt": 24.8}, "impulso": [0.004, -0.005, -0.006, -0.006, -0.006], "spread_bp": {"pes": 80, "cen": 55, "opt": 30}, "drag_confianza": {"pes": -0.004, "cen": -0.002, "opt": 0.0}},

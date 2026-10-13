@@ -30,7 +30,7 @@ Fuentes madre:
 ## 5. Grandes fortunas / herencias
 - Fortunas permanente hasta **4%+**, mínimo estatal Sucesiones no rebajable.
 - PGE-2025: exento ITSGF 3M→1M neto, **grandes herencias/donaciones desde 1M netos** (complementario ISD, tarifa estatal). ISD 3.000M → +2.000M. Ejemplo: 1M paga 221k en CCAA bonificadas, 5M >1,5M, 10M ~3,3M.
-- **2026 gravamen concentración riqueza (prensa triple, pendiente BOCG definitivo): 3% >50M (primeros 50M exentos), ~1.500 contribuyentes, ~4.200M/año** a Fondo Infancia/crianza. Sin exención familiar, tope Patrimonio 3,5%.
+- **2026 gravamen concentración riqueza (verificado multi-fuente 6+ medios, pendiente BOCG definitivo): 3% >50M (primeros 50M exentos), ~1.500 contribuyentes, ~4.200M/año** a Fondo Infancia/crianza. Sin exención familiar, tope Patrimonio 3,5%. Fuentes: El País, El Economista, Europa Press, Infobae, La Voz de Galicia, El Mundo (17-18 sep 2026). Recaudación estimada 4.200M confirmada por Infobae.
 
 ## 6. SMI + jornada
 - SMI por encima IPC, 1.080 €=60% insuficiente (salarios 25% bajo eurozona).

@@ -10,7 +10,7 @@ Fuentes madre:
 - https://www.voxespana.es/grupo_parlamentario/actividad-parlamentaria/bajas-de-iva-de-irpf-prioridad-nacional-en-el-acceso-a-la-vivienda-y-apoyo-a-los-agricultores-asi-es-el-plan-fiscal-de-vox-20251209
 
 ## 1. IRPF — reforma total 2 tramos
-- **Mínimo exento 22.000 €** rentas trabajo + **15% hasta 70.000 € + 25% desde 70.000 €**. **-4 pp por hijo** (ej. 4 hijos y <70k = tipo 0/negativo efectivo). Coste declarado VOX **~40.000 M€**.
+- **Mínimo exento 22.000 €** rentas trabajo + **15% hasta 70.000 € + 25% desde 70.000 €**. **-4 pp por hijo** (ej. 4 hijos y <70k = tipo 0/negativo efectivo). Coste real **85.000 M€** — Ministerio de Hacienda (13-10-2026, ministro Arcadi España en Consejo de Ministros): 85B = 61% de la recaudación IRPF (~140B/año). VOX declaraba 40B (solo tramo estatal, sin tramo autonómico que también elimina). Ejemplos Hacienda: SMI = 0€ ahorro, 100k = -18.935€, 1M = -212.333€. Fuentes: Infobae, El Independiente, EFE (13-10-2026). Estimaciones previas ya advertían: Cinco Días/El País (21-07-2023) ~50% caída (~65B); alexpwong cita infografía VOX con ~85B.
 - Deducción nacimiento/adopción, suministros (agua/luz/gas) familias numerosas, educación 0-3, comedor/libros/transporte/extraescolares.
 - Nómina transparente (cotización empresa visible), plazo pago contribuyente 6 meses sin interés, recuperar deducción vivienda habitual y alquiler (transitorio).
 - Fuente: Programa-WEB-021025 + PNL 07-06-2024 + plan familia 25-03-2025.
@@ -24,7 +24,7 @@ Fuentes madre:
 - Exención IVA vehículos familias numerosas.
 
 ## 3. Sociedades / empresas
-- **25%→15% general**, modulado por relocalización y empleo + incentivos reinversión. Coste **~10.000 M€**.
+- **25%→15% general** (Programa-WEB-021025 + presentación 02-10-2025: VOX YouTube "Sociedades al quince por ciento"), modulado por relocalización y empleo + incentivos reinversión. Coste **~10.000 M€**. ✅ Confirmado para 2025: el programa 2019 solo proponía 15% para PYMES (Newtral), pero el programa oct-2025 extiende el 15% al tipo general. Fuentes: VOX YouTube 02-10-2025, EFE 29-06-2025, Newtral (programa 2019).
 - Rebaja inmediata cotizaciones empresa+trabajador, bonificación **100% SS nuevos indefinidos 1er año + 50% 2º año** (españoles).
 - Unidad mercado, 1 ley nueva = derogar 3.
 
@@ -35,14 +35,14 @@ Fuentes madre:
 
 ## 5. Pensiones
 - Transición **reparto → mixto modelo Suecia** (capitalización pública con rentabilidad privada), eximir todo ahorro jubilación si se cobra tras jubilación.
-- **Exención IRPF pensiones contributivas** (PNL 22-11-2023 + Senado 23-10-2024).
+- **Exención IRPF pensiones contributivas** (PNL 22-11-2023 + Senado 23-10-2024). Nota: el 63% de pensionistas no presenta IRPF (Gestha); umbral exento de retenciones = 15.876 €/año (=SMI 2024); obligación de declarar = 22.000 € (1 pagador). La pensión media (1.262 €/mes × 14 pagas = 17.668 €/año) está entre ambos umbrales. La exención elimina retenciones bajas para el pensionista medio (~800-1.000 €/año est.) y elimina IRPF completo para el ~37% con pensión >22.000 € (~4.160 €/año de media). AEAT 2024: retenciones pensiones públicas = 14.317 M€. Fuentes: AEAT Nota3_Pensiones, Gestha 13-02-2025, demon.code.blog/2020/05/07/pensiones.
 - Más base cotizantes + natalidad en vez de subir cuotas. Crítica deuda SS 55.000 M (2019) →136.000 M (2025).
 
 ## 6. SMI / salarios
 - Sin cifra propia. Subida Gobierno a 1.221 € (+3,1%) calificada de marketing/insuficiente; **cualquier subida con recorte gasto improductivo, no con más cotizaciones**. Prioridad bajar IVA/IRPF (salarios reales -3,2% según VOX).
 
 ## 7. Gasto / autonomías
-- **Ahorro 40.000 M€/año** gasto superfluo, presupuestos base cero, superávit primario.
+- **Ahorro 40.000 M€/año** gasto superfluo, presupuestos base cero, superávit primario. ⚠️ **Cuestionado por analistas independientes**: Institut Ostrom (think tank *liberal*, no de izquierdas) califica las cuentas de VOX como "tramposas" (oct-2026): "Bajar impuestos puede ser buena política. Pero prometer que lo pagarán las subvenciones es tramposo." Análisis independiente (alexpwong.substack.com) estima que VOX solo ha identificado ~15.227 M€ en recortes concretos, no 40B. El propio VOX cifra el coste fiscal en 64-70B, pero análisis independiente estima IRPF+IVA solos en ~118B. Fuentes: Marca/tiramillas 11-10-2026, Institut Ostrom X/Twitter, alexpwong.substack.com, The Objective 27-06-2025.
 - **22→12 ministerios**, auditoría AGE, eliminar gasto ODS/Agenda 2030, propaganda, subvenciones partidos/sindicatos/patronal, observatorios, cooperación, TVs autonómicas.
 - Devolver Educación/Sanidad/Seguridad/Justicia al Estado, limitar capacidad legislativa autonómica, suprimir diputaciones/duplicidades.
 - Suprimir Patrimonio/Sucesiones/Plusvalía (IIVTNU), AJD 1,5→0,5%, ITP 8→4%, bonif 99-100% primera vivienda/jóvenes/numerosas.

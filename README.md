@@ -110,14 +110,14 @@ Ningún escenario da impago a 12 meses con BCE activo. La diferencia es el colch
 Base: salario medio 29.540 €, mediana 24.497 €, SMI 16.576 € (2025). Cálculos orientativos con tipos efectivos 2024.
 
 **Hasta SMI (~16.500 €, ~2,5 M personas + parciales):**
-- VOX: pasas a exento total (16,5k <22k) + cesta -3-4%. Ganas **+800-1.200 €/año** entre no retener y IVA. Si autónomo <SMI: +3.000-3.500 € por cuota 0.
-- PP: deflactación + IVA 0% + energía 10%. Ganas **+500-800 €/año**.
+- VOX: IRPF ~0€ (ya exento: reducción trabajo 7.302€ + mínimo personal 5.550€ + deducción SMI 590,89€ RDL 5/2026 → base ~1.650€, cuota ~35€, con deducción SMI → ~0€; VOX lo pone a 0€ pero ya estaba ~0€; confirmado por sueldovox.es y Hacienda "SMI=0€ ahorro"). Solo IVA: cesta -3-4% = **+400-600 €/año**. Si autónomo <SMI: +3.000-3.500 € por cuota 0.
+- PP: deflactación + IVA 0% básicos + energía 10%. IRPF ~0€ (ya exento). **+200-400 €/año** (solo IVA).
 - PSOE: SMI a 17.094 exento + subsidio/IMV mejorado si parcial/paro. Ganas **+518 € salario + 300-500 € fiscal/social**.
 - Sumar: SMI sobre IPC + crianza si hijos (2.400 por hijo) + alquiler topado. Sin hijos: **+300-500 €**, con 2 hijos: **+5.000-5.500 €**.
 
 **16.500-22.000 € (mileurista bajo, ~3 M):**
-- VOX: exento o 15% marginal mínimo. **+1.000-1.800 €**.
-- PP: **+700-1.100 €** (deflact + hijos + IVA).
+- VOX: IRPF 0-400€ (exento o casi; sueldovox.es muestra 0€ hasta ~18-19k, luego ahorro pequeño al llegar a 22k) + IVA 400-600€. Total **+400-1.000 €**.
+- PP: **+400-700 €** (deflact + hijos + IVA).
 - PSOE: **+400-700 €** (reducción trabajo 7.302 € + ayudas).
 - Sumar: sin hijos **+200-400 €** (SMI arrastra), con hijos **+3.000-5.000 €**.
 
@@ -216,6 +216,7 @@ Base: salario medio 29.540 €, mediana 24.497 €, SMI 16.576 € (2025). Cálc
 - **SmartVote** — Estudio: VOX identificada como "mayor fábrica de bulos" entre partidos políticos españoles.
 - **Institut Ostrom** (think tank liberal) — Cuentas de VOX "tramposas" (oct-2026): "Bajar impuestos puede ser buena política. Pero prometer que lo pagarán las subvenciones es tramposo."
 - **Alex Wong** (alexpwong.substack.com) — Análisis independiente: VOX IRPF+IVA = ~118B (vs 64-70B declarado por VOX); solo ~15.227 M€ en recortes concretos identificados; infografía VOX muestra IRPF 85B.
+- **sueldovox.es** — Simulador oficial de VOX (programa económico junio 2025). Confirma que con SMI el ahorro de IRPF es 0€ (ya exento por reducciones actuales). Metodología transparente: detalla reducciones, mínimos y deducciones del sistema actual vs propuesta VOX. https://www.sueldovox.es/
 
 ### Prensa (solo cuando doble/triple fuente y marcada)
 - **Cinco Días/El País** (21-07-2023) — Propuesta IRPF VOX "hundiría la recaudación en un 50%" (~65B).

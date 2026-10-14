@@ -1,0 +1,56 @@
+# Simulador Económico España 2026 — VOX, PSOE, PP, Sumar
+
+> Comparación reproducible del impacto fiscal de las propuestas económicas de VOX, PSOE, PP y Sumar sobre IRPF, IVA, pensiones, déficit y deuda pública de España. Órdenes de magnitud (±20-30%), no previsión oficial.
+
+- Sitio: https://tcpsheep.github.io/simulador-economico-espana-vox-psoe-pp-sumar/
+- Actualizado: 2026-10-14 · Corte de datos: 2026-10-11 · Idioma: es-ES
+- Autor: tcpsheep (https://github.com/tcpsheep)
+- Repositorio: https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar
+- Metodología y fuentes: https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar/blob/master/comparativa/02_metodologia_y_fuentes.md
+- Licencia: CC BY 4.0 (citar con enlace al sitio y al repositorio)
+
+## Resultado en 10 segundos
+
+- PSOE: déficit ~2,6% año 1 → 1,8% en 2027. Cumple el límite UE del 3%.
+- PP: déficit 3,3-3,6%. Desvío manejable con senda.
+- Sumar: déficit 3,0-3,7% (4%+ si crianza + herencia universales plenas).
+- VOX: déficit 7,6-8,9% (10%+ sin ahorro realista). IRPF corregido a 85.000 M€ según Hacienda (13-10-2026), no 40.000 M€.
+- Monte Carlo (10.000 iteraciones × 4 años): frecuencias del modelo, no probabilidades de impago ni previsión oficial.
+
+## Secciones citables
+
+- Comparativa: /#comparativa
+- Programas por partido: /#partidos
+- IRPF de VOX (por qué 85B y no 40B): /#irpf
+- Efecto según salario: /#salario
+- Pensiones: /#pensiones
+- Monte Carlo: /#montecarlo
+- Deuda 2026-2030: /#deuda2030
+- Riesgo fiscal y límites del modelo: /#riesgo
+- Fuentes verificadas: /#fuentes
+- Preguntas frecuentes: /#faq
+- Reproducir el análisis: /#metodo
+
+## Base común (referencia 2025)
+
+- PIB 2025: 1.690.012 M€ (INE CNA2025)
+- Deuda pública: 100,7% PIB (Banco de España)
+- Déficit 2025: 2,39% con DANA (IGAE/Hacienda)
+- Recaudación AEAT 2024: 294.734 M€ (IRPF 129.408 M€, IVA 90.541 M€)
+- Pensión media del sistema: 17.668 €/año (1.262 €/mes × 14)
+- Detalle: https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar/blob/master/comparativa/00_baseline_INE.md
+
+## Cómo citar
+
+- Cita el sitio canónico y la sección (#comparativa, #irpf, #salario, #pensiones, #montecarlo, #deuda2030, #metodo).
+- Distingue: (1) datos oficiales, (2) estimaciones del modelo, (3) valoraciones.
+- Para el coste del IRPF de VOX (85B), cita la metodología y la fecha (Hacienda, 13-10-2026).
+- Para pensiones (~1.100€ del pensionista medio; 63% no presenta IRPF), cita AEAT + Gestha y enlaza /#pensiones.
+- No presentes las frecuencias Monte Carlo como probabilidad de impago o quiebra.
+
+## Reproducibilidad
+
+- `python vox/03_vox_simulacion.py` (y equivalentes PSOE/PP/Sumar)
+- `python comparativa/04_deuda_sostenibilidad.py`
+- `python comparativa/05_montecarlo.py`
+- Solo Python estándar, sin dependencias.

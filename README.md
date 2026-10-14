@@ -1,13 +1,13 @@
-# Qué pasaría en España si se aplicaran todas las propuestas económicas de VOX, PSOE, PP y Sumar
+# Elecciones 29-N: propuestas de VOX, PSOE, PP y Sumar
 
-![GitHub Repo stars](https://img.shields.io/github/stars/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar?style=social)
-![GitHub release](https://img.shields.io/github/v/release/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar)
+![GitHub Repo stars](https://img.shields.io/github/stars/tcpsheep/elecciones-29n-propuestas-vox-psoe-pp-sumar?style=social)
+![GitHub release](https://img.shields.io/github/v/release/tcpsheep/elecciones-29n-propuestas-vox-psoe-pp-sumar)
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-green)
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![Datos](https://img.shields.io/badge/datos-INE%20%7C%20AEAT%20%7C%20BdE-orange)
 ![Estado](https://img.shields.io/badge/corte-11%2F10%2F2026-lightgrey)
 
-> Simulador economía España 2026: programas VOX, PSOE, PP, Sumar comparados con la misma base (PIB, déficit, deuda, IRPF, IVA, pensiones, SMI, paro). Con scripts Python reproducibles y fuentes oficiales.
+> Elecciones 29-N: qué proponen VOX, PSOE, PP y Sumar y qué pasaría si se aplicaran todas sus propuestas, comparadas con la misma base (PIB, déficit, deuda, IRPF, IVA, pensiones, SMI, paro). Con scripts Python reproducibles y fuentes oficiales.
 
 ```mermaid
 xychart-beta
@@ -58,7 +58,7 @@ Detalle y URLs oficiales en `comparativa/00_baseline_INE.md`.
 
 ## 1. Qué propone cada uno (resumen fiel, fuentes en cada `01_propuestas_*`)
 
-**VOX** (Programa Económico jun-2025 "Hexágono de la prosperidad" + 23J + PNLs 2024-2026; mismo programa defendido para 29-N, sin programa nuevo a 14-oct-2026): IRPF a 2 tramos 15%/25% con exento 22.000 € y -4 pp por hijo — 🔴 VOX declara coste 40.000 M (solo tramo estatal) / ✅ Hacienda 13-10-2026: 85.000 M (61% recaudación IRPF, incluye autonómico); IVA 21→18 y 10→8, 0% alimentos básicos, 4% luz/gas/agua — 🔴 VOX declara 14.000 M / ✅ cálculo propio 18.075 M (VOX no suma 0% alimentos + 4% luz/gas + IIEE); Sociedades 25→15% — 🔴 VOX declara 10.000 M / ✅ estático 15.600 M / central usado 12.000 M; suprimir Patrimonio, Sucesiones, Plusvalía municipal y rebajar ITP 8→4% y AJD 1,5→0,5% (10,6B); exención IRPF pensiones contributivas (14,3B AEAT); cuota autónomos 0 si <SMI (6,25B); bonificación 100%/50% SS nuevos indefinidos (3,2B); 🔴 ahorro prometido 40.000 M/año / ✅ cuestionado: Ostrom "tramposo", Alex Wong solo ~15B identificados — usamos escenarios 40B/25B/15B; devolver Educación/Sanidad/Justicia al Estado; nuclear + fin ecotasas; derogar Ley Vivienda, desalojo <24h, fin IVA primera vivienda; prioridad nacional 10/5 años empadronamiento para ayudas/vivienda. **IRPF verificado con [sueldovox.es](https://www.sueldovox.es/)** (simulador oficial VOX).
+**VOX** (Programa Económico jun-2025 "Hexágono de la prosperidad" + 23J + PNLs 2024-2026; mismo programa defendido para 29-N, sin programa nuevo a 14-oct-2026): IRPF a 2 tramos 15%/25% con exento 22.000 € y -4 pp por hijo — 🔴 VOX declara coste 40.000 M (solo tramo estatal) / ✅ Hacienda 13-10-2026: 85.000 M (61% recaudación IRPF, incluye autonómico); IVA 21→18 y 10→8, 0% alimentos básicos, 4% luz/gas/agua — 🔴 VOX declara 14.000 M / ✅ cálculo propio 18.075 M (VOX no suma 0% alimentos + 4% luz/gas + IIEE); Sociedades 25→15% — 🔴 VOX declara 10.000 M / ✅ estático 15.600 M / central usado 12.000 M; suprimir Patrimonio, Sucesiones, Plusvalía municipal y rebajar ITP 8→4% y AJD 1,5→0,5% (10,6B); exención IRPF pensiones contributivas (14,3B AEAT); cuota autónomos 0 si <SMI (6,25B); bonificación 100%/50% SS nuevos indefinidos (3,2B); 🔴 ahorro prometido 40.000 M/año / ✅ cuestionado: Ostrom "tramposo", Alex Wong solo ~15B identificados — usamos escenarios 40B/25B/15B; devolver Educación/Sanidad/Justicia al Estado; nuclear + fin ecotasas; derogar Ley Vivienda, desalojo <24h, fin IVA primera vivienda; prioridad nacional 10/5 años empadronamiento para ayudas/vivienda. **IRPF verificado con [sueldovox.es](https://www.sueldovox.es/)** (calculadora oficial de VOX).
 
 **PSOE** (Programa 23J + Gobierno 2024-2026, BOE/Moncloa): déficit a 1,8% en 2027 sin subida general; IRPF: mínimo exento en SMI + tramo ahorro >300k al 30%; IVA alimentos 0-2% transitorio + aceite oliva 4% permanente; Sociedades mínimo 15% grupos >750 M + rebaja pymes; banca (impuesto margen) y energéticas (gravamen 2025) permanentes; SMI 1.221×14 exento IRPF; pensiones +2,7% (+7%/+11,4% mínimas); subsidio 570/540/480 € + complemento empleo; vivienda: Ley 12/2023 + Plan 7.000 M 2026-2030 + aval ICO 20-25% + Bono Joven 250×24; jornada 40→36h antes 2030 (Forbes oct-2026; legal hoy 40h); PRTR 77.000 M ejecutados (76% MRR).
 
@@ -107,7 +107,7 @@ Ningún escenario da impago a 12 meses con BCE activo. La diferencia es el colch
 
 ## 5. Cómo te afecta según tu salario (bruto anual, jornada completa, sin hijos salvo indicado)
 
-Base: salario medio 29.540 €, mediana 24.497 €, SMI 16.576 € (2025). **IRPF de VOX verificado con [sueldovox.es](https://www.sueldovox.es/)** (simulador oficial VOX, Programa Económico jun-2025, base del 29-N). IVA estimado por cesta de consumo.
+Base: salario medio 29.540 €, mediana 24.497 €, SMI 16.576 € (2025). **IRPF de VOX verificado con [sueldovox.es](https://www.sueldovox.es/)** (calculadora oficial de VOX, Programa Económico jun-2025, base del 29-N). IVA estimado por cesta de consumo.
 
 **Nota clave — umbral real de exención VOX:** VOX dice "exento hasta 22.000€" pero el 22.000€ se aplica al **rendimiento neto** (tras cotizaciones SS ~6,5% + 2.000€ gastos), no al bruto. En la práctica, quien cobra hasta **~25.300€ brutos** paga 0€ IRPF con VOX. sueldovox.es confirma: 25.000€ bruto → 0€ IRPF. Esto no contradice la propuesta electoral — es cómo funciona el IRPF — pero es un matiz que VOX no destaca.
 
@@ -153,7 +153,7 @@ Base: salario medio 29.540 €, mediana 24.497 €, SMI 16.576 € (2025). **IRP
 - PSOE: +2pp ahorro >300k + banca/energéticas si accionista. **-2.000 a -15.000€**.
 - Sumar: 52% desde 300k + capital 30-33% + Sucesiones estatal + 3% >50M. **-15.000 a -500.000€+** (ej. 5M herencia: >1,5M cuota; 10M: ~3,3M). Aquí se concentra el +20B.
 
-> ¹ Verificado con sueldovox.es (simulador oficial VOX, oct-2026). ² Estimación por interpolación. ³ Coincide con Ministerio de Hacienda (13-10-2026).
+> ¹ Verificado con sueldovox.es (calculadora oficial de VOX, oct-2026). ² Estimación por interpolación. ³ Coincide con Ministerio de Hacienda (13-10-2026).
 
 **Pensionistas (pensión media del sistema: 1.262€/mes × 14 = 17.668€/año):**
 - VOX: exención IRPF pensiones contributivas. Coste agregado **14,3B** (AEAT 2024: retenciones pensiones públicas 14.317 M€). 🔴 **VOX declara "+1.200-2.000€/año"**: es la media aritmética (14.317M÷9,3M=1.540€). ✅ **Realidad**: el 63% no presenta IRPF (Gestha, pensión <15.876€) → ahorra **0€**. El pensionista medio (17.668€/año, 65+) paga **~1.100€ IRPF actual** (con reducción por trabajo umbral 16.825€ neto; mínimo personal 65+ = 6.700€; sin deducción SMI que es solo para asalariados — sueldovox.es metodología). Con VOX: base 15.668€ (17.668−2.000 gastos, sin cotizaciones) < 22.000€ → **0€ IRPF**. Santander blog dic-2025: retención media 2-3% tramo 12.001-18.000€ (más alta en 17.668€ concreto). El ahorro real se concentra en el ~37% con pensión >22.000€ (~4.160€/año media). Como dijo demon.code.blog: *"la mayoría de la gente no va a notar ningún cambio"*. Sistema -14,3B IRPF + 9,4B cotizaciones bonificadas = **~24B/año**. Capitalización sueca a 20-30 años. Fuentes: AEAT Nota3_Pensiones, Gestha, Santander blog, demon.code.blog/2020/05/07/pensiones, sueldovox.es (metodología). Nota: sueldovox.es es para trabajadores, no pensionistas; cálculo aproximado.
@@ -220,7 +220,7 @@ Base: salario medio 29.540 €, mediana 24.497 €, SMI 16.576 € (2025). **IRP
 - **SmartVote** — Estudio: VOX identificada como "mayor fábrica de bulos" entre partidos políticos españoles.
 - **Institut Ostrom** (think tank liberal) — Cuentas de VOX "tramposas" (oct-2026): "Bajar impuestos puede ser buena política. Pero prometer que lo pagarán las subvenciones es tramposo."
 - **Alex Wong** (alexpwong.substack.com) — Análisis independiente: VOX IRPF+IVA = ~118B (vs 64-70B declarado por VOX); solo ~15.227 M€ en recortes concretos identificados; infografía VOX muestra IRPF 85B.
-- **sueldovox.es** — Simulador oficial de VOX (programa económico junio 2025). Confirma que con SMI el ahorro de IRPF es 0€ (ya exento por reducciones actuales). Metodología transparente: detalla reducciones, mínimos y deducciones del sistema actual vs propuesta VOX. https://www.sueldovox.es/
+- **sueldovox.es** — Calculadora oficial de VOX (programa económico junio 2025). Confirma que con SMI el ahorro de IRPF es 0€ (ya exento por reducciones actuales). Metodología transparente: detalla reducciones, mínimos y deducciones del sistema actual vs propuesta VOX. https://www.sueldovox.es/
 
 ### Prensa (solo cuando doble/triple fuente y marcada)
 - **Cinco Días/El País** (21-07-2023) — Propuesta IRPF VOX "hundiría la recaudación en un 50%" (~65B).

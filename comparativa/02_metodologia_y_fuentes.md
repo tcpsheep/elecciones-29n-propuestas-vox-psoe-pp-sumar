@@ -62,7 +62,7 @@ politica/
 | **SmartVote** | VOX = "mayor fábrica de bulos" entre partidos políticos españoles | smartvote.es |
 | **Institut Ostrom** (think tank *liberal*) | Cuentas VOX "tramposas": "Bajar impuestos puede ser buena política. Pero prometer que lo pagarán las subvenciones es tramposo" (oct-2026) | ostrom.cat |
 | **Alex Wong** | IRPF+IVA VOX ~118B (vs 64-70B declarado); solo ~15.227 M€ recortes identificados; infografía VOX muestra IRPF 85B | alexpwong.substack.com |
-| **sueldovox.es** | Simulador oficial VOX (programa junio 2025). Confirma SMI = 0€ ahorro IRPF (ya exento). Metodología transparente con reducciones/mínimos/deducciones actuales vs VOX | sueldovox.es |
+| **sueldovox.es** | Calculadora oficial de VOX (programa junio 2025). Confirma SMI = 0€ ahorro IRPF (ya exento). Metodología transparente con reducciones/mínimos/deducciones actuales vs VOX | sueldovox.es |
 | **Cinco Días/El País** | Propuesta IRPF VOX "hundiría la recaudación en un 50%" (~65B) (21-07-2023) | cincodias.elpais.com |
 | **Herqles** | VOX estima 64B (IRPF 40+IVA 14+Soc 10); confirma Sociedades 15% general (10-10-2026) | herqles.com |
 

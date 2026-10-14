@@ -55,8 +55,8 @@ Fuentes madre:
 - Fin IVA 1ª vivienda, ITP/AJD bonif 100%, deducción alquiler nacional (15% general /20% <36 y numerosas, +50% si municipio <3.000 hab), liberalizar suelo, colaboración público-privada, avales/créditos blandos.
 
 ## 10. Inmigración económica / prioridad nacional
-- Coste inmigración >30.000 M€/año según VOX (~2M receptores prestaciones). Remigración/expulsión ilegales + legales con delitos/no integración.
-- **Prioridad nacional**: ayudas/vivienda/alquiler social solo con arraigo (10 años empadronamiento compra, 5 años alquiler + cotización), excluir ilegales salvo urgencia vital, reservar no contributivas a nacionales, prohibir arrendar a ilegales.
+- Coste inmigración >30.000 M€/año según VOX (~2M de receptores de prestaciones). Remigración/expulsión ilegales + legales con delitos/no integración.
+- **Prioridad nacional**: ayudas/vivienda/alquiler social solo con arraigo (10 años de empadronamiento para compra, 5 años de alquiler + cotización), excluir ilegales salvo urgencia vital, reservar no contributivas a nacionales, prohibir arrendar a ilegales.
 
 ## 11. Campo
 - Derogar Pacto Verde en campo, PAC nacional, cláusulas espejo, suspender UE-Marruecos/Mercosur, bajar costes energía/fiscalidad/burocracia.

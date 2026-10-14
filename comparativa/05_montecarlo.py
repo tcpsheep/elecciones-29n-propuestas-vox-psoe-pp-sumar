@@ -1,11 +1,11 @@
 """
 Monte Carlo: 10.000 iteraciones por partido.
-Proyecta deficit (% PIB), deuda (% PIB), PIB nominal y paro a 1, 2, 3 y 4 anos.
+Proyecta déficit (% PIB), deuda (% PIB), PIB nominal y paro a 1, 2, 3 y 4 años.
 
 Baseline 2025 (fuentes oficiales):
   PIB 1.690.012 M (INE CNA 2025)
-  Deuda 100,7% PIB (Banco de Espana)
-  Deficit estructural 2,2% (IGAE, sin DANA)
+  Deuda 100,7% PIB (Banco de España)
+  Déficit estructural 2,2% (IGAE, sin DANA)
   Paro 9,93% (INE EPA Q4-2025)
 
 Modelo: stock-flujo consistente.
@@ -18,12 +18,12 @@ Modelo: stock-flujo consistente.
 Incertidumbre: distribuciones triangulares (min, moda, max) en:
   - merma/gasto bruto
   - ahorro/ingresos compensatorios
-  - tasa de recuperacion (multiplicador)
+  - tasa de recuperación (multiplicador)
   - impulso PIB corto plazo
   - spread de riesgo (prima)
   - drag por confianza/incertidumbre
 
-Solo libreria estandar. Semilla 42 para reproducibilidad.
+Solo librería estándar. Semilla 42 para reproducibilidad.
 Uso: python 05_montecarlo.py
 """
 import random
@@ -34,41 +34,41 @@ YEARS = 4
 
 # === Baseline (fuentes oficiales) ===
 PIB0 = 1690.012        # B (INE CNA 2025)
-DEUDA0_PCT = 100.7     # % PIB (Banco de Espana)
+DEUDA0_PCT = 100.7     # % PIB (Banco de España)
 D0 = PIB0 * DEUDA0_PCT / 100
-DEF_BASE = 0.022       # 2,2% deficit estructral (IGAE)
+DEF_BASE = 0.022       # 2,2% déficit estructural (IGAE)
 G_NOM_BASE = 0.045     # 4,5% crecimiento nominal (2,2% real + 2,3% deflactor)
 PARO0 = 9.93           # % (INE EPA Q4-2025)
 G_POT = 0.022          # crecimiento potencial para ley de Okun
 INFLA_BASE = 0.023     # 2,3% deflactor base
 
-# === Parametros por partido ===
-# Formato: (min, moda, max) para distribucion triangular
+# === Parámetros por partido ===
+# Formato: (min, moda, max) para distribución triangular
 # Saldos en B, tasas en fraccion decimal
 
 PARTIDOS = {
     "VOX": {
         "tipo": "merma_ahorro",
-        "desc": "IRPF 85B (Hacienda 13-10-2026) 2 tramos 15/25% exento 22k | IVA 21->18 10->8 0% alimentos 4% energia | Soc 25->15% | Suprimir Patrimonio/Sucesiones/Plusvalia | Exencion IRPF pensiones (14,3B AEAT) | Cuota autonomos 0 <SMI | Bonif SS nuevos indefinidos | Ahorro 40B prometido",
+        "desc": "IRPF 85B (Hacienda 13-10-2026) 2 tramos 15/25% exento 22k | IVA 21->18 10->8 0% alimentos 4% energía | Soc 25->15% | Suprimir Patrimonio/Sucesiones/Plusvalía | Exención IRPF pensiones (14,3B AEAT) | Cuota autónomos 0 <SMI | Bonif SS nuevos indefinidos | Ahorro 40B prometido",
         # Merma bruta: 135-149B (IRPF corregido a 85B, Hacienda 13-10-2026)
-        # VOX decia 40B (solo tramo estatal); Hacienda confirma 85B = 61% recaudacion IRPF
+        # VOX decía 40B (solo tramo estatal); Hacienda confirma 85B = 61% recaudación IRPF
         "merma": (125, 149, 175),
-        # Ahorro: 8B realista ano1 -> 40B prometido
+        # Ahorro: 8B realista año 1 -> 40B prometido
         "ahorro": (8, 22, 40),
-        # Recuperacion via mayor consumo/empleo: 10-25%
+        # Recuperación vía mayor consumo/empleo: 10-25%
         "recup_rate": (0.10, 0.18, 0.25),
         # Eficacia del ahorro (no todo se materializa): 65-95%
         "ahorro_ef": (0.65, 0.85, 0.95),
-        # Impulso PIB ano 1: +0,5 a +4,0pp (repo central +2,8pp con IRPF 85B)
+        # Impulso PIB año 1: +0,5 a +4,0pp (repo central +2,8pp con IRPF 85B)
         "impulso": (0.005, 0.028, 0.040),
         # Spread prima de riesgo: 40-220bp (repo 80-150bp)
         "spread": (0.004, 0.011, 0.022),
-        # Drag confianza ano 2+: -2pp (conflictos UE/CCAA) a 0
+        # Drag confianza año 2+: -2pp (conflictos UE/CCAA) a 0
         "drag": (-0.020, -0.004, 0.0),
     },
     "PP": {
         "tipo": "merma_ahorro",
-        "desc": "Deflactar IRPF <40k | Duplicar minimos hijos | IVA 0% basicos vivienda joven | Bajada tipos autonomos | 1M viviendas",
+        "desc": "Deflactar IRPF <40k | Duplicar mínimos por hijo | IVA 0% básicos vivienda joven | Bajada tipos autónomos | 1M viviendas",
         "merma": (22, 27, 35),
         "ahorro": (2, 7, 12),
         "recup_rate": (0.10, 0.18, 0.25),
@@ -79,8 +79,8 @@ PARTIDOS = {
     },
     "PSOE": {
         "tipo": "neto_fijo",
-        "desc": "SMI 1.221x14 | Pensiones +2,7% (+miminas +7-11,4%) | Jornada 36h antes 2030 | PRTR 77B | MEI 0,9%",
-        # Gasto neto pequeno: SMI, pensiones, PRTR vs MEI/cuotas
+        "desc": "SMI 1.221x14 | Pensiones +2,7% (+mínimas +7-11,4%) | Jornada 36h antes 2030 | PRTR 77B | MEI 0,9%",
+        # Gasto neto pequeño: SMI, pensiones, PRTR vs MEI/cuotas
         "neto": (1.0, 3.0, 6.0),
         "impulso": (-0.002, 0.005, 0.012),
         "spread": (0.0, 0.0005, 0.0025),
@@ -88,7 +88,7 @@ PARTIDOS = {
     },
     "SUMAR": {
         "tipo": "gasto_ingresos",
-        "desc": "Crianza 200/mes | Herencia 20k a los 23 | IRPF 52% desde 300k | Gravamen 3% >50M | Vivienda 1% PIB | 30h semana",
+        "desc": "Crianza 200/mes | Herencia 20k a los 23 | IRPF 52% desde 300k | Gravamen 3% >50M | Vivienda 1% PIB | 30h semanales",
         # Gasto: crianza + herencia + vivienda + impuestos
         "gasto": (32, 41.5, 55),
         # Ingresos: IRPF 52% + gravamen 50M + sociedades
@@ -113,7 +113,7 @@ def pctile(data, p):
 
 
 def simulate(params, n_iter, is_base=False):
-    """Ejecuta n_iter iteraciones de 4 anos."""
+    """Ejecuta n_iter iteraciones de 4 años."""
     res = {y: {"def": [], "deuda": [], "pib": [], "paro": []}
            for y in range(1, YEARS + 1)}
 
@@ -164,7 +164,7 @@ def simulate(params, n_iter, is_base=False):
             passthru = 0.20 + 0.10 * t
             extra_int = D * spread * passthru
 
-            # Deficit total
+            # Déficit total
             def_base = DEF_BASE * Y
             def_tot = def_base + neto + extra_int
 
@@ -192,7 +192,7 @@ def simulate(params, n_iter, is_base=False):
 def show(name, res):
     print(f"\n{'='*95}")
     print(f"=== {name} ===")
-    hdr = (f"{'Ano':<6} {'Deficit %PIB':>28} {'Deuda %PIB':>22} "
+    hdr = (f"{'Año':<6} {'Déficit %PIB':>28} {'Deuda %PIB':>22} "
            f"{'PIB acum':>9} {'Paro %':>7} {'P(EDP)':>7} {'P(>110%)':>8} {'P(>5%)':>7}")
     print(hdr)
     print("-" * 95)
@@ -232,11 +232,11 @@ def show(name, res):
 
 # === Ejecucion ===
 print("=" * 95)
-print("SIMULACION MONTE CARLO -- 10.000 iteraciones por partido")
-print("Baseline 2025: PIB 1.690 B (INE), deuda 100,7% (BdE), deficit 2,2% (IGAE), paro 9,93% (INE EPA)")
+print("SIMULACIÓN MONTE CARLO -- 10.000 iteraciones por partido")
+print("Baseline 2025: PIB 1.690 B (INE), deuda 100,7% (BdE), déficit 2,2% (IGAE), paro 9,93% (INE EPA)")
 print("Modelo stock-flujo: D(t)=D(t-1)+Def(t), Y(t)=Y(t-1)*(1+g), b=D/Y")
 print("Incertidumbre triangular en merma, ahorro, multiplicadores, spread, crecimiento")
-print(f"Semilla: 42 | Iteraciones: {N} | Horizonte: {YEARS} anos (2026-2029)")
+print(f"Semilla: 42 | Iteraciones: {N} | Horizonte: {YEARS} años (2026-2029)")
 print("=" * 95)
 
 all_res = {}
@@ -249,7 +249,7 @@ for name in ["BASE", "PSOE", "PP", "SUMAR", "VOX"]:
 
 # === Resumen comparativo ===
 print(f"\n{'='*95}")
-print(f"RESUMEN COMPARATIVO -- Ano 4 (2029)")
+print(f"RESUMEN COMPARATIVO -- Año 4 (2029)")
 print(f"{'='*95}")
 hdr = (f"{'Partido':<12} {'Def.medio':>10} {'P(EDP>3%)':>10} {'P(Def>5%)':>10} "
        f"{'Deuda media':>12} {'P(>110%)':>9} {'PIB acum':>9} {'Paro':>6}")
@@ -277,36 +277,36 @@ for name in ["BASE", "PSOE", "PP", "SUMAR", "VOX"]:
 
 # === Markdown para repo ===
 md = []
-md.append("# Simulacion Monte Carlo (10.000 iteraciones)\n\n")
-md.append("Baseline 2025: PIB 1.690 B (INE CNA), deuda 100,7% (Banco de Espana), ")
-md.append("deficit 2,2% estructural (IGAE), paro 9,93% (INE EPA Q4-2025).\n\n")
+md.append("# Simulación Monte Carlo (10.000 iteraciones)\n\n")
+md.append("Baseline 2025: PIB 1.690 B (INE CNA), deuda 100,7% (Banco de España), ")
+md.append("déficit 2,2% estructural (IGAE), paro 9,93% (INE EPA Q4-2025).\n\n")
 md.append("Modelo stock-flujo con incertidumbre triangular en merma, ahorro, multiplicadores, ")
-md.append("spread y crecimiento. Semilla 42 para reproducibilidad. Solo libreria estandar.\n\n")
+md.append("spread y crecimiento. Semilla 42 para reproducibilidad. Solo librería estándar.\n\n")
 
-md.append("## Parametros por partido\n\n")
+md.append("## Parámetros por partido\n\n")
 for name, p in PARTIDOS.items():
     md.append(f"### {name}\n")
     md.append(f"**Propuestas**: {p['desc']}\n\n")
     if p["tipo"] == "merma_ahorro":
-        md.append(f"| Parametro | Min | Moda | Max | Unidad |\n|---|---|---|---|---|\n")
+        md.append(f"| Parámetro | Min | Moda | Max | Unidad |\n|---|---|---|---|---|\n")
         md.append(f"| Merma bruta | {p['merma'][0]} | {p['merma'][1]} | {p['merma'][2]} | B |\n")
         md.append(f"| Ahorro | {p['ahorro'][0]} | {p['ahorro'][1]} | {p['ahorro'][2]} | B |\n")
-        md.append(f"| Recuperacion | {p['recup_rate'][0]*100:.0f} | {p['recup_rate'][1]*100:.0f} | {p['recup_rate'][2]*100:.0f} | % |\n")
+        md.append(f"| Recuperación | {p['recup_rate'][0]*100:.0f} | {p['recup_rate'][1]*100:.0f} | {p['recup_rate'][2]*100:.0f} | % |\n")
         md.append(f"| Eficacia ahorro | {p['ahorro_ef'][0]*100:.0f} | {p['ahorro_ef'][1]*100:.0f} | {p['ahorro_ef'][2]*100:.0f} | % |\n")
         md.append(f"| Impulso PIB | {p['impulso'][0]*100:.1f} | {p['impulso'][1]*100:.1f} | {p['impulso'][2]*100:.1f} | pp |\n")
         md.append(f"| Spread | {p['spread'][0]*10000:.0f} | {p['spread'][1]*10000:.0f} | {p['spread'][2]*10000:.0f} | pb |\n")
         md.append(f"| Drag confianza | {p['drag'][0]*100:.1f} | {p['drag'][1]*100:.1f} | {p['drag'][2]*100:.1f} | pp |\n\n")
     elif p["tipo"] == "neto_fijo":
-        md.append(f"| Parametro | Min | Moda | Max | Unidad |\n|---|---|---|---|---|\n")
+        md.append(f"| Parámetro | Min | Moda | Max | Unidad |\n|---|---|---|---|---|\n")
         md.append(f"| Neto fiscal | {p['neto'][0]} | {p['neto'][1]} | {p['neto'][2]} | B |\n")
         md.append(f"| Impulso PIB | {p['impulso'][0]*100:.1f} | {p['impulso'][1]*100:.1f} | {p['impulso'][2]*100:.1f} | pp |\n")
         md.append(f"| Spread | {p['spread'][0]*10000:.0f} | {p['spread'][1]*10000:.0f} | {p['spread'][2]*10000:.0f} | pb |\n")
         md.append(f"| Drag confianza | {p['drag'][0]*100:.1f} | {p['drag'][1]*100:.1f} | {p['drag'][2]*100:.1f} | pp |\n\n")
     elif p["tipo"] == "gasto_ingresos":
-        md.append(f"| Parametro | Min | Moda | Max | Unidad |\n|---|---|---|---|---|\n")
+        md.append(f"| Parámetro | Min | Moda | Max | Unidad |\n|---|---|---|---|---|\n")
         md.append(f"| Gasto | {p['gasto'][0]} | {p['gasto'][1]} | {p['gasto'][2]} | B |\n")
         md.append(f"| Ingresos | {p['ingresos'][0]} | {p['ingresos'][1]} | {p['ingresos'][2]} | B |\n")
-        md.append(f"| Recuperacion | {p['recup_rate'][0]*100:.0f} | {p['recup_rate'][1]*100:.0f} | {p['recup_rate'][2]*100:.0f} | % |\n")
+        md.append(f"| Recuperación | {p['recup_rate'][0]*100:.0f} | {p['recup_rate'][1]*100:.0f} | {p['recup_rate'][2]*100:.0f} | % |\n")
         md.append(f"| Impulso PIB | {p['impulso'][0]*100:.1f} | {p['impulso'][1]*100:.1f} | {p['impulso'][2]*100:.1f} | pp |\n")
         md.append(f"| Spread | {p['spread'][0]*10000:.0f} | {p['spread'][1]*10000:.0f} | {p['spread'][2]*10000:.0f} | pb |\n")
         md.append(f"| Drag confianza | {p['drag'][0]*100:.1f} | {p['drag'][1]*100:.1f} | {p['drag'][2]*100:.1f} | pp |\n\n")
@@ -319,7 +319,7 @@ for name in ["BASE", "PSOE", "PP", "SUMAR", "VOX"]:
         md.append(f"### {name}\n")
         md.append(f"**Propuestas**: {PARTIDOS[name]['desc']}\n\n")
 
-    md.append(f"| Ano | Deficit % (mediana) [P5-P95] | Deuda % [P5-P95] | PIB acum | Paro % | P(EDP>3%) | P(Deuda>110%) | P(Def>5%) |\n")
+    md.append(f"| Año | Déficit % (mediana) [P5-P95] | Deuda % [P5-P95] | PIB acum | Paro % | P(EDP>3%) | P(Deuda>110%) | P(Def>5%) |\n")
     md.append(f"|---|---|---|---|---|---|---|---|\n")
 
     for y in range(1, YEARS + 1):
@@ -350,8 +350,8 @@ for name in ["BASE", "PSOE", "PP", "SUMAR", "VOX"]:
 
     md.append("\n")
 
-md.append("## Resumen comparativo (Ano 4 - 2029)\n\n")
-md.append("| Partido | Deficit medio | P(EDP>3%) | P(Def>5%) | Deuda media | P(>110%) | PIB acum | Paro medio |\n")
+md.append("## Resumen comparativo (Año 4 - 2029)\n\n")
+md.append("| Partido | Déficit medio | P(EDP>3%) | P(Def>5%) | Deuda media | P(>110%) | PIB acum | Paro medio |\n")
 md.append("|---|---|---|---|---|---|---|---|\n")
 for name in ["BASE", "PSOE", "PP", "SUMAR", "VOX"]:
     d4 = all_res[name][YEARS]
@@ -371,18 +371,18 @@ for name in ["BASE", "PSOE", "PP", "SUMAR", "VOX"]:
 
     md.append(f"| {name} | {dm:.1f}% | {pe:.0f}% | {p5:.0f}% | {bm:.1f}% | {pd:.0f}% | {pg:.1f}% | {prm:.1f}% |\n")
 
-md.append("\n## Metodologia\n\n")
+md.append("\n## Metodología\n\n")
 md.append("- **Modelo**: stock-flujo consistente. D(t)=D(t-1)+Def(t), Y(t)=Y(t-1)*(1+g(t)), b(t)=D(t)/Y(t).\n")
-md.append("- **Def(t)** = deficit base (2,2% PIB) + impacto fiscal neto del partido + intereses extra por prima de riesgo.\n")
-md.append("- **Impacto neto**: merma*(1-recuperacion) - ahorro*eficacia (VOX/PP); gasto neto (PSOE); gasto*(1-recup) - ingresos (SUMAR).\n")
-md.append("- **Passthrough del spread**: gradual (20% ano 1, +10pp/ano) sobre el stock de deuda.\n")
-md.append("- **Impulso PIB**: decae 30%/ano desde ano 1.\n")
-md.append("- **Drag confianza**: activo desde ano 2.\n")
+md.append("- **Def(t)** = déficit base (2,2% PIB) + impacto fiscal neto del partido + intereses extra por prima de riesgo.\n")
+md.append("- **Impacto neto**: merma*(1-recuperación) - ahorro*eficacia (VOX/PP); gasto neto (PSOE); gasto*(1-recup) - ingresos (SUMAR).\n")
+md.append("- **Passthrough del spread**: gradual (20% año 1, +10pp/año) sobre el stock de deuda.\n")
+md.append("- **Impulso PIB**: decae 30%/año desde año 1.\n")
+md.append("- **Drag confianza**: activo desde año 2.\n")
 md.append("- **Paro**: ley de Okun simplificada (delta_paro = -0,5*(g_real - g_potencial)).\n")
 md.append("- **Distribuciones**: triangulares (min, moda, max) calibradas con datos del repo y fuentes oficiales.\n")
-md.append("- **Ruido**: gauss(0, 0,3%) anadido al crecimiento para variabilidad no explicada.\n")
-md.append("- **Fuentes**: INE (PIB CNA, EPA, EAES), Banco de Espana (deuda), IGAE (deficit), AEAT (recaudacion IRPF/IVA/pensiones), La Moncloa/BOE (SMI, pensiones).\n")
-md.append("- **Limitaciones**: parametros muestreados independientemente (sin correlacion entre merma y spread); el impulso fiscal no distingue oferta/demanda; el paro usa Okun simplificado.\n")
+md.append("- **Ruido**: gauss(0, 0,3%) añadido al crecimiento para variabilidad no explicada.\n")
+md.append("- **Fuentes**: INE (PIB CNA, EPA, EAES), Banco de España (deuda), IGAE (déficit), AEAT (recaudación IRPF/IVA/pensiones), La Moncloa/BOE (SMI, pensiones).\n")
+md.append("- **Limitaciones**: parámetros muestreados independientemente (sin correlación entre merma y spread); el impulso fiscal no distingue oferta/demanda; el paro usa Okun simplificado.\n")
 
 with open("comparativa/05_montecarlo_resultados.md", "w", encoding="utf-8") as f:
     f.writelines(md)

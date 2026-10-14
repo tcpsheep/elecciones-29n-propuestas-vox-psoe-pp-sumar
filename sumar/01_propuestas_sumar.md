@@ -29,12 +29,12 @@ Fuentes madre:
 
 ## 5. Grandes fortunas / herencias
 - Fortunas permanente hasta **4%+**, mínimo estatal Sucesiones no rebajable.
-- PGE-2025: exento ITSGF 3M→1M neto, **grandes herencias/donaciones desde 1M netos** (complementario ISD, tarifa estatal). ISD 3.000M → +2.000M. Ejemplo: 1M paga 221k en CCAA bonificadas, 5M >1,5M, 10M ~3,3M.
+- PGE-2025: exento ITSGF 3M→1M neto, **grandes herencias/donaciones desde 1M neto** (complementario ISD, tarifa estatal). ISD 3.000M → +2.000M. Ejemplo: 1M paga 221k en CCAA bonificadas, 5M >1,5M, 10M ~3,3M.
 - **2026 gravamen concentración riqueza (verificado multi-fuente 6+ medios, pendiente BOCG definitivo): 3% >50M (primeros 50M exentos), ~1.500 contribuyentes, ~4.200M/año** a Fondo Infancia/crianza. Sin exención familiar, tope Patrimonio 3,5%. Fuentes: El País, El Economista, Europa Press, Infobae, La Voz de Galicia, El Mundo (17-18 sep 2026). Recaudación estimada 4.200M confirmada por Infobae.
 
 ## 6. SMI + jornada
 - SMI por encima IPC, 1.080 €=60% insuficiente (salarios 25% bajo eurozona).
-- **Hacia 32h** (la jornada legal actual es 40h, Estatuto de los Trabajadores art. 34; PSOE propone 36h antes 2030 — Forbes oct-2026 —, acuerdo dic-2024 de 37,5h no implementado en ley). Sumar va más allá: 32h sin recorte salarial, extras con tiempo libre, registro reforzado, desconexión, festivos a lunes.
+- **Hacia 32h** (la jornada legal actual es 40h, Estatuto de los Trabajadores art. 34; PSOE propone 36h antes de 2030 — Forbes oct-2026 —, acuerdo dic-2024 de 37,5h no implementado en ley). Sumar va más allá: 32h sin recorte salarial, extras con tiempo libre, registro reforzado, desconexión, festivos a lunes.
 
 ## 7. Pensiones
 - IPC automático, mínimas/no contributivas por encima hasta pobreza, más ingresos. Acuerdo: subir mínimas por encima contributivas, brecha género 0, jubilación parcial/relevo.

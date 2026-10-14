@@ -11,7 +11,7 @@ Fuentes madre:
 ## 1. IRPF / fiscal general
 - Alivio inmediato + **deflactar tarifa por inflación**, reforma integral que proteja ahorro/inversión/empleo, simplificar. Medidas 41-42.
 - **Deflactar rentas <40.000 € (3 primeros tramos)** — Plan Feijóo 2022. Prensa doble cuantifica -5,3% cuota, 283k dejan de tributar.
-- **Plan Choque 2026: duplicar mínimo descendientes**: 1º 2.400→4.800, 2º 2.700→5.400, 3º 4.000→8.000, 4º+ 4.500→9.000, <3 años 2.800→5.600. Ahorro >400 € ago-dic familia 2 hijos.
+- **Plan Choque 2026: duplicar mínimo descendientes**: 1º 2.400→4.800, 2º 2.700→5.400, 3º 4.000→8.000, 4º+ 4.500→9.000, <3 años 2.800→5.600. Ahorro >400 € ago-dic para familias con 2 hijos.
 - Actualizar tarifa estatal a inflación / devolver lo recaudado por inflación. Estatuto Contribuyente, derecho al error, reforma TEA.
 - Régimen nuevos residentes atractivo, no tributación ayudas catástrofe.
 - Jóvenes 4 primeros años bonificación IRPF si compran/alquilan. ✅ Verificado multi-fuente: PP oficial (pp.es decálogo 27/09/2026) + Congreso respalda moción (feb-2026) + El Economista, Idealista, Democrata, Servimedia. Exención/bonificación progresiva.
@@ -34,7 +34,7 @@ Fuentes madre:
 
 ## 5. SMI / empleo / autónomos
 - **SMI en diálogo social, sin cifra** (medida 22). Ponencia: SMI debe ser el menos frecuente, salario medio debe subir, marco fiscal empleo estable alto valor.
-- Reforma políticas activas + Big Data + foco <30/>50/larga duración + FP dual IA/robótica (medidas 20-21,24). Subsidio condicionado a no renuncia injustificada, bancos horas, lucha absentismo (400k 2018→1,2M 2026).
+- Reforma políticas activas + Big Data + foco <30/>50/larga duración + FP dual IA/robótica (medidas 20-21,24). Subsidio condicionado a la no renuncia injustificada, bancos de horas, lucha contra el absentismo (400k 2018→1,2M 2026).
 - Autónomos: **Tarifa 0 1er año** (medida 27 + Decálogo 5), aplazamiento 3 cuotas/año, exención 2 años maternidad/paternidad, TRADE, compatibilizar, no cotizar 1 año primer empleado ni por baja grave, 4→2/1 declaraciones.
 
 ## 6. Pensiones / social
@@ -47,4 +47,4 @@ Fuentes madre:
 ## 8. Energía / agua / agro / industria
 - **Prórroga nuclear con CSN + derogar cierre** (114 + Decálogo 3). **Suprimir impuesto generación eléctrica**, Bono Social Único, desbloquear renovables, electrificación+H2, interconexiones, CO2 industria electrointensiva.
 - Pacto Agua + Ley Hidrológica + hasta 100.000M a 2035 (Decálogo 10). Agro estratégico, revisar PEPAC, cadena, regadío, seguros, relevo. Industria 20% PIB, auto 2030, infra 300.000M público-privada, I+D Next35.
-- Administración: recortar ministerios/altos cargos, 1 norma = suprimir 3, silencio positivo, unidad mercado, reforma financiación autonómica/local, reforzar AIReF/evaluación.
+- Administración: recortar ministerios/altos cargos, 1 norma = suprimir 3, silencio positivo, unidad de mercado, reforma de la financiación autonómica/local, reforzar AIReF/evaluación.

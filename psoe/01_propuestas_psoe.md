@@ -11,7 +11,7 @@ Fuentes madre:
 
 ## 1. Marco fiscal
 - Responsabilidad fiscal + justicia social, **sin subir impuestos con carácter general**, aflorar sumergida. Déficit a **1,8% PIB en 2027**, deuda a la baja. PGE prorrogados 380.822 M€ Estado.
-- Libro Blanco reforma tributaria, pacto fraude, AT reforzada, fiscalidad verde con compensación, spending review, financiación autonómica nuevo sistema +30.000 M extra ya transferidos.
+- Libro Blanco de reforma tributaria, pacto contra el fraude, AT reforzada, fiscalidad verde con compensación, revisión del gasto, nuevo sistema de financiación autonómica +30.000 M extra ya transferidos.
 
 ## 2. IRPF
 - Mejorar mínimos descendientes/dependientes, ayudas crianza/vivienda/movilidad vía renta, cuenta joven <39 años exenta hasta 2.000 €/año (30.000 € total).
@@ -19,7 +19,7 @@ Fuentes madre:
 - Ley 7/2024: nuevo tramo ahorro **>300.000 € al 30%** (15% estatal+15% autonómico) desde 1/1/2025. DANA: exentas donaciones empresas a empleados.
 
 ## 3. IVA
-- 0% básicos +5% pastas/aceites hasta 30/09/2024, luego 2%/7,5% hasta 31/12/2024. **Aceite oliva 4% permanente desde 1/1/2025**. Retirada gradual IVA luz/gas para evitar rebote inflación.
+- 0% básicos +5% pastas/aceites hasta 30/09/2024, luego 2%/7,5% hasta 31/12/2024. **Aceite de oliva 4% permanente desde 1/1/2025**. Retirada gradual IVA luz/gas para evitar rebote inflación.
 
 ## 4. Sociedades / pymes
 - Mínimo suficiente UE, anti-elusión. **Complementario mínimo 15% grupos >750 M€** (Pilar Dos, Ley 7/2024).
@@ -45,7 +45,7 @@ Fuentes madre:
 
 ## 10. Empleo
 - Pacto Pleno Empleo, paro estructural <8%, reforma laboral (+3M indefinidos, temporalidad 26→16%, 21,3M afiliados). Ley Empleo 3/2023, Estrategia 2025-2028.
-- **Jornada 40→36h antes 2030 sin recorte salarial** (Forbes 5-oct-2026; legal hoy 40h; acuerdo 20/12/2024 registro digital, desconexión). Mecanismo RED, Kit Digital >50 trabajadores.
+- **Jornada 40→36h antes de 2030 sin recorte salarial** (Forbes 5-oct-2026; legal hoy 40h; acuerdo 20/12/2024 registro digital, desconexión). Mecanismo RED, Kit Digital >50 trabajadores.
 
 ## 11. Fondos UE
 - PRTR hasta 160.000 M. Asignados 79.854M, resueltos 53.646M (>40% pymes), recibidos >48.000M, 6º desembolso 7.021M jul-2026 (total >77.000M, 76% MRR). 12 PERTE 25.600M convocados. Impacto +2,6% PIB 2024.

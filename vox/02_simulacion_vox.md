@@ -12,7 +12,7 @@
 | IVA total |  | **18,1 B (1,07% PIB)** |
 | Sociedades 25→15% | Estático sería 15,6B; VOX dice 10B por modulación empleo/relocalización. Central **12,0 B** | **12,0 B (0,71%)** |
 | Patrimonio+Sucesiones+Plusvalía+ITP/AJD | 1,4+3,2+1,5+4,5 | **10,6 B (0,63%)** |
-| Exención IRPF pensiones contributivas | Solo tributan los pensionistas con pensión >15.876 €/año (umbral exento retenciones, Gestha); obligación de declarar = 22.000 € (1 pagador). El 63% no presenta declaración (Gestha). AEAT 2024: retenciones pensiones públicas = 14.317 M€ sobre masa 159.743 M€. Solapa parcial con reforma IRPF, se suma porque VOX la lista aparte | **14,3 B (0,85%)** |
+| Exención IRPF pensiones contributivas | Solo tributan los pensionistas con pensión >15.876 €/año (umbral exento de retenciones, Gestha); obligación de declarar = 22.000 € (1 pagador). El 63% no presenta declaración (Gestha). AEAT 2024: retenciones pensiones públicas = 14.317 M€ sobre masa 159.743 M€. Solapa parcial con reforma IRPF, se suma porque VOX la lista aparte | **14,3 B (0,85%)** |
 | Cuota autónomos <SMI bonif 100% | Cifra VOX (>50% RETA 11.655M) | **6,25 B (0,37%)** |
 | Bonif 100%/50% SS nuevos indefinidos | ~400k empleos × ~8k cotización | **3,2 B (0,19%)** |
 | **TOTAL merma bruta** |  | **~149,4 B = 8,84% PIB** |
@@ -30,7 +30,7 @@ Solape IRPF pensiones/reforma: si se corrige 100% el solape (exención 14,3B ya 
 - Con solape corregido (~135B): neto ~95B → **déficit ~8,0%**.
 - Dinámico (recuperación 18% merma ≈26,9B por mayor consumo/empleo, ahorro efectivo 34B tras restar -15% por menor PIB del recorte): **neto ~88,5B = +5,24 pp → déficit ~7,6%**.
 - **Rango final año 1-2: déficit 7,6-8,9% PIB, deuda 108-113% y subiendo ~4 pp/año si no hay ajuste adicional.**
-- Sin el ahorro completo (solo 15B realista año 1): déficit **10%+**, deuda camino 110-115% en 2 años. Procedimiento de déficit excesivo UE casi seguro, prima de riesgo al alza.
+- Sin el ahorro completo (solo 15B realista año 1): déficit **10%+**, deuda rumbo a 110-115% en 2 años. Procedimiento de déficit excesivo UE casi seguro, prima de riesgo al alza.
 
 Verificación:
 ```
@@ -45,7 +45,7 @@ Impulso PIB corto +2.76pp antes de financiación
 **Hogares / poder adquisitivo (corto: muy positivo, medio: condicionado a financiar el agujero)**
 - Exento 22k + 15% deja sin IRPF a ~40-50% de asalariados mileuristas/SMI (SMI 16.576 € <22k). Ahorro tipo: quien pagaba 25-30% pasa a 15%: +1.500-3.000 €/año en 25-40k; con 2 hijos (-8pp) el ahorro se duplica.
 - IVA -3pp/-2pp + 0% alimentos + 4% energía: cesta -2,5-4% precio efectivo. IPC -0,8-1,2 pp año 1. Poder adquisitivo +4-6% para rentas bajas-medias año 1.
-- Pensiones sin IRPF: la media aritmética por pensionista (14.317M AEAT / 9,3M = ~1.540 €/año) cae en el rango +1.200-2.000, **pero es engañosa**: el 63% no presenta declaración (Gestha) y muchos no notan cambio (blog Desmontando VOX). El umbral exento de retenciones es 15.876 €/año (Gestha); el pensionista medio (pensión media del sistema 1.262 €/mes × 14 pagas = 17.668 €/año, 65+) está entre 15.876 y 22.000 € y paga **~1.100€/año IRPF** (con reducción por trabajo umbral 16.825€ neto + mínimo personal 65+ 6.700€; sin deducción SMI que es solo para asalariados — sueldovox.es metodología; Santander blog: retención 2-3% media tramo 12-18k). El ahorro real se concentra en el ~37% con pensión >22.000 € (~4.160 €/año de media). Consumo jubilados medio sube +1-3%, no +8-10%.
+- Pensiones sin IRPF: la media aritmética por pensionista (14.317M AEAT / 9,3M = ~1.540 €/año) cae en el rango +1.200-2.000, **pero es engañosa**: el 63% no presenta declaración (Gestha) y muchos no notan ningún cambio (blog Desmontando VOX). El umbral exento de retenciones es 15.876 €/año (Gestha); el pensionista medio (pensión media del sistema 1.262 €/mes × 14 pagas = 17.668 €/año, 65+) está entre 15.876 y 22.000 € y paga **~1.100€/año IRPF** (con reducción por trabajo umbral 16.825€ neto + mínimo personal 65+ de 6.700€; sin la deducción del SMI, que solo es para asalariados — sueldovox.es metodología; Santander blog: retención 2-3% media tramo 12-18k). El ahorro real se concentra en el ~37% con pensión >22.000 € (~4.160 €/año de media). Consumo jubilados medio sube +1-3%, no +8-10%.
 
 **Empleo / empresas**
 - Soc 15% + bonif SS + cuota 0 autónomos: coste laboral -6-9% para nuevas contrataciones, margen empresarial +3-4 pp. Impulso contratación indefinida +300-500k año 1-2, paro -1,5-2 pp (hacia 8-8,5%) si no lo frena la incertidumbre fiscal/deuda.
@@ -60,7 +60,7 @@ Impulso PIB corto +2.76pp antes de financiación
 **Autonomías / energía / inmigración**
 - Devolver Educación/Sanidad y suprimir duplicidades: ahorro potencial grande pero coste transición y litigiosidad 2-4 años, parálisis inversora autonómica.
 - Nuclear + fin ecotasas: luz -15-25% factura (IVA 4% + sin IVPE + nuclear amortizada), industria electrointensiva + competitividad. Choque con UE (Pacto Verde, fondos) que puede congelar PRTR (77.000 M ya recibidos, 76% MRR).
-- Prioridad nacional 10/5 años + excluir no contributivas: ahorro 3-6B según VOX (no verificado INE), pero coste administrativo, judicial (UE/derechos) y caída cotizantes extranjeros (afiliación extranjera ~2,8M) que reduce ingresos SS 4-6B. Neto incierto, posiblemente negativo.
+- Prioridad nacional 10/5 años + excluir no contributivas: ahorro 3-6B según VOX (no verificado INE), pero coste administrativo, judicial (UE/derechos) y caída de cotizantes extranjeros (afiliación extranjera ~2,8M) que reduce ingresos SS 4-6B. Neto incierto, posiblemente negativo.
 
 ## 5. Ganadores / perdedores / riesgos
 - Ganan a corto: rentas bajas-medias con hijos, pensionistas, autónomos <SMI, empresas que contraten/inviertan, compradores primera vivienda, industria energética.

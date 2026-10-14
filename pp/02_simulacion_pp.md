@@ -22,17 +22,17 @@ Verificación Python: bruta 27B=1,60%, neta 20B=1,18pp, dinámica 16,2B=0,96pp.
 ## 2. Efectos por canal
 
 **Hogares**
-- Familia 2 hijos 30k: +400 € ago-dic (≈+1.000 €/año completo) + deflactación +300-500 € + IVA alimentos/energía +400-600 €. Total **+1.500-2.000 €/año (+5-7% renta disponible)**. Mejor focalizado en clase media-baja con hijos que VOX (menos radical) y que PSOE (más IRPF que transferencias).
+- Familia con 2 hijos y 30k: +400 € ago-dic (≈+1.000 €/año completo) + deflactación +300-500 € + IVA de alimentos/energía +400-600 €. Total **+1.500-2.000 €/año (+5-7% renta disponible)**. Mejor focalizado en clase media-baja con hijos que VOX (menos radical) y que PSOE (más IRPF que transferencias).
 - Jóvenes compra: IVA 4% + AJD 0,4% + ITP 4% + aval 95-100% + Hucha 20%: entrada -40-50% (de 50k a 25-30k en piso 250k). Demanda joven +20-30%.
 
 **Empresas / empleo**
-- IS pymes simplificado + libertad amortización + no subir impuestos (garantía Empresa Familiar): inversión +4-6%, sobre todo pymes 50-250 (umbral 250=nuevos 50 elimina salto). Tarifa 0 autónomos + menos declaraciones: altas +80-120k/año, pero exención IVA <85k puede fragmentar facturación (riesgo fraude fraccionamiento).
+- IS pymes simplificado + libertad amortización + no subir impuestos (garantía Empresa Familiar): inversión +4-6%, sobre todo pymes 50-250 (umbral 250=nuevos 50 elimina salto). Tarifa 0 autónomos + menos declaraciones: altas +80-120k/año, pero exención IVA <85k puede fragmentar facturación (riesgo de fraude por fraccionamiento).
 - SMI sin cifra + bancos horas + control absentismo (1,2M): coste laboral contenido vs PSOE/Sumar. Paro **-0,8-1,2 pp hacia 8,8-9,0%**, ocupados +350-450k, sin el freno jornada.
 - Absentismo: si baja 10-15%, PIB +0,2-0,3 pp.
 
 **Vivienda**
-- 250k/año ×4 = 1M: hoy se visan ~110-130k + se terminan ~90k. Multiplicar ×2,5 exige suelo + mano de obra + financiación que no existe año 1. Factible **140-170k/año** con reforma (silencio positivo, suelo público, seguridad jurídica antiokupa). Precio modera +1-2% vs +5% inercial, alquiler + oferta +8-12% en tensión por seguridad jurídica (derogar topes atrae propietarios que PSOE expulsa).
-- Riesgo: derogar Ley Vivienda sin alternativa tensionadas genera choque CCAA/ayuntamientos 12-18 meses.
+- 250k/año ×4 = 1M: hoy se visan ~110-130k + se terminan ~90k. Multiplicar ×2,5 exige suelo + mano de obra + financiación que no existe en el año 1. Factible **140-170k/año** con reforma (silencio positivo, suelo público, seguridad jurídica antiokupa). Precio modera +1-2% vs +5% inercial, alquiler + oferta +8-12% en tensión por seguridad jurídica (derogar topes atrae propietarios que PSOE expulsa).
+- Riesgo: derogar Ley Vivienda sin alternativa para las tensionadas genera choque con CCAA/ayuntamientos durante 12-18 meses.
 
 **Energía / industria**
 - Nuclear prorrogada + quitar impuesto generación: pool -10-15 €/MWh, factura -8-12%. Industria electrointensiva + competitividad, inversión +2-3B. Compatible con renovables (desbloqueo red) a diferencia de VOX (ruptura verde). Menos choque UE, PRTR se mantiene.

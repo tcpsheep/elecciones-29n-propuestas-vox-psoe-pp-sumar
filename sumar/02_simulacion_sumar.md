@@ -48,16 +48,16 @@ Herencia 9.0B, Crianza 15.6B
 ## 4. Efectos por canal
 
 **Desigualdad / pobreza (el punto fuerte)**
-- Crianza 200 €/mes: pobreza infantil -6-9 pp (hoy ~28% arope infantil), Gini -2-3 pp. Herencia 20k a los 23: movilidad + (acceso máster/entrada piso/negocio) pero regresivo si es universal (hijos ricos también cobran). Mínimas/IPC+: pobreza severa -2-3 pp.
+- Crianza 200 €/mes: pobreza infantil -6-9 pp (hoy ~28% AROPE infantil), Gini -2-3 pp. Herencia 20k a los 23: movilidad + (acceso máster/entrada piso/negocio) pero regresivo si es universal (hijos ricos también cobran). Mínimas/IPC+: pobreza severa -2-3 pp.
 - Coste: para lograrlo hay que mantener 25B/año de transferencias universales = **subida permanente presión fiscal +1,5 pp**.
 
 **Empleo / empresas (el punto débil)**
-- Sociedades efectivo 15% duro + fin consolidación + límite pérdidas 4 años + banca/energéticas/alimentación extendidos: tipo efectivo pymes (hoy ~15-18%) sube a 18-22%, grandes de ~12-15% a 15-18% pero con más base. Inversión -6-10%, I+D - (deducciones recortadas vs PP que las amplía), deslocalización sedes/filiales + (precedente SICAV/SOCIMI: fuga a Luxemburgo/Irlanda).
-- Jornada 40→32h sin recorte + SMI por encima IPC: la legal actual es 40h (ET art. 34); acuerdo dic-2024 de 37,5h no llegó a implementarse. Reducción a 32h = -20% horas con mismo salario = coste hora +25% teórico, ajustado a ~+15-20% con productividad parcial. Hostelería/comercio/agro pierden 3-6% empleo, automatización + precariedad parcial. Paro **+0,5-1,0 pp (hacia 10,5-11%)** en pymes, aunque empleo público/protegido sube.
+- Sociedades efectivo 15% duro + fin consolidación + límite pérdidas 4 años + banca/energéticas/alimentación extendidas: tipo efectivo pymes (hoy ~15-18%) sube a 18-22%, grandes de ~12-15% a 15-18% pero con más base. Inversión -6-10%, I+D - (deducciones recortadas vs PP que las amplía), deslocalización sedes/filiales + (precedente SICAV/SOCIMI: fuga a Luxemburgo/Irlanda).
+- Jornada 40→32h sin recorte + SMI por encima del IPC: la jornada legal actual es 40h (ET art. 34); acuerdo dic-2024 de 37,5h no llegó a implementarse. Reducción a 32h = -20% horas con mismo salario = coste hora +25% teórico, ajustado a ~+15-20% con productividad parcial. Hostelería/comercio/agro pierden 3-6% empleo, automatización + precariedad parcial. Paro **+0,5-1,0 pp (hacia 10,5-11%)** en pymes, aunque empleo público/protegido sube.
 - IVA 21% turístico + fin SOCIMI + recargo >referencia: alquiler turístico -30-40% oferta (pasa a permanente o negro), alquiler permanente +5-8% oferta pero precio regulado -5-10% en tensión. Inversión build-to-rent -50%.
 
 **Vivienda**
-- 1% PIB + Sareb/SEPES + Viena + 30% reserva + tanteo: único plan que cierra el déficit (100-150k/año) si ejecuta: **150-200k protegidas/año**. Pero exige expropiar/suelo/banco público + recentralizar (choque CCAA/UE, 3-5 años). Corto plazo: intervención (topes, indefinidos, recargos) retrae privada -20-30k antes de que lo público compense → precio tensionado +2-3% año 1, luego -5-8% si ejecuta.
+- 1% PIB + Sareb/SEPES + Viena + 30% reserva + tanteo: único plan que cierra el déficit (100-150k/año) si se ejecuta: **150-200k protegidas/año**. Pero exige expropiar/suelo/banco público + recentralizar (choque CCAA/UE, 3-5 años). Corto plazo: intervención (topes, indefinidos, recargos) retrae privada -20-30k antes de que lo público compense → precio tensionado +2-3% año 1, luego -5-8% si se ejecuta.
 
 **Finanzas / banca pública**
 - ICO+Correos como banco minorista: crédito social +3-5B/año a vaciada/jóvenes, hipotecas -0,3-0,5 pp, pero morosidad +2-3 pp y necesidad capital 5-8B. Limitar comisiones/depósitos vinculados recorta margen banca -8-12% → menos crédito privado.
@@ -71,4 +71,4 @@ Herencia 9.0B, Crianza 15.6B
 - Balance: **máxima redistribución, máximo coste eficiencia**. Reduce desigualdad 3-4 pp Gini pero a costa de -0,7 pp crecimiento y +1 pp déficit estructural. Sostenible solo si la UE acepta 46% PIB + deuda mutualizada o si crianza/herencia se focalizan (means-test ahorraría 8-10B).
 
 ## 6. Qué vigilar (INE)
-- Gini/arope (ECV), EPA empleo por tamaño sector, CNA FBCF/inversión, AEAT Sociedades efectivo vs nominal, recaudación 50M/herencias (¿llega a 4,2+2,0B o se queda en 2,9+1,2B?), visados/precios alquiler (MIVAU+INE), deuda/déficit IGAE.
+- Gini/AROPE (ECV), EPA empleo por tamaño sector, CNA FBCF/inversión, AEAT Sociedades efectivo vs nominal, recaudación 50M/herencias (¿llega a 4,2+2,0B o se queda en 2,9+1,2B?), visados/precios alquiler (MIVAU+INE), deuda/déficit IGAE.

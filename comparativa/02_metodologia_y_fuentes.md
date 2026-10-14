@@ -11,7 +11,7 @@
 ## 2. Método simulación
 - **Estático año 1:** tipo × base (ej. IVA 3pp/21 sobre 70% de 90,5B = 9,05B). Sin comportamiento.
 - **Dinámico 1-3 años:** multiplicadores AIReF/BdE (impuestos 0,4-0,6, gasto 0,6-1,0), recuperación Laffer 15-20% merma, erosión base capital 30-40%, retorno gasto social 25%.
-- **Deuda/déficit:** déficit nuevo = 2,39% + neto/PIB. Deuda +1 año ≈ 100,7% + neto/PIB (sin contar crecimiento denominador; con PIB nominal +5% la deuda baja ~4pp todo else equal — se advierte en cada ficha).
+- **Deuda/déficit:** déficit nuevo = 2,39% + neto/PIB. Deuda +1 año ≈ 100,7% + neto/PIB (sin contar crecimiento denominador; con PIB nominal +5% la deuda baja ~4pp a igualdad de todo lo demás — se advierte en cada ficha).
 - **Empleo/precios:** elasticidades BdE (jornada -0,3-0,6% empleo, SMI +518 €×2,5M=1,29B masa), IPC por IVA (1pp IVA ≈ 0,3-0,4pp IPC).
 - Cálculos reproducibles: bloques Python ejecutados en sesión (mermas, dinámicos, pensiones 189,6×2,7%=5,12B, herencia 450k×20k=9B, crianza 6,5M×2.400=15,6B).
 
@@ -23,7 +23,7 @@
 - Fondos UE (77.000M, 76% MRR) y BCE se mantienen constantes en central; ruptura verde VOX o EDP cambiarían el escenario a peor.
 
 ## 4. Qué actualizar con INE cada trimestre
-- CNA (PIB), EPA (paro/ocupados), IPC (alimentos/energía/alquiler), EAES/EACL (salarios/coste hora), IGAE (déficit/deuda), AEAT (IRPF/IVA/Soc), ECV (Gini/arope), MIVAU visados (vivienda).
+- CNA (PIB), EPA (paro/ocupados), IPC (alimentos/energía/alquiler), EAES/EACL (salarios/coste hora), IGAE (déficit/deuda), AEAT (IRPF/IVA/Soc), ECV (Gini/AROPE), MIVAU visados (vivienda).
 - Si la recaudación cae 135B (VOX) o sube 20B (SUMAR) o el paro no baja a 8-9% (PP/PSOE), revisar hipótesis.
 
 ## 5. Estructura carpetas

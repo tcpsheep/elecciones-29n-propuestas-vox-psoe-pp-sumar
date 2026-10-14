@@ -28,235 +28,77 @@
 {"@type":"Question","name":"¿Cuánto sube el IRPF con Sumar?","acceptedAnswer":{"@type":"Answer","text":"Sumar propone IRPF marginal del 52% desde 300.000€, gravamen del 3% sobre patrimonios >50M€, crianza universal 200€/mes, herencia universal 20.000€ a los 23 años. Gasto total 41,5B, ingresos ~20B."}}
 ]}
 </script>
-<style>
-:root{--bg:#0a0e14;--bg2:#111720;--card:#161b22;--card2:#1c2330;--border:#2a3441;--border2:#364152;--text:#e6edf3;--muted:#7d8590;--muted2:#9aa4b0;--vox:#f85149;--psoe:#3fb950;--pp:#58a6ff;--sumar:#bc8cff;--yellow:#d29922;--orange:#e8873a;--dark:#010409}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-a{color:var(--pp);text-decoration:none;transition:color .2s}
-a:hover{color:#7cc3ff}
-code{background:var(--card2);padding:2px 6px;border-radius:4px;font-size:.85em;font-family:'SF Mono',Consolas,monospace}
-
-/* ===== NAV ===== */
-nav{position:sticky;top:0;z-index:100;background:rgba(10,14,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 16px}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:4px;height:52px;overflow-x:auto;scrollbar-width:none}
-.nav-inner::-webkit-scrollbar{display:none}
-.nav-inner a{padding:6px 14px;border-radius:8px;font-size:.82em;font-weight:600;color:var(--muted2);white-space:nowrap;transition:all .2s}
-.nav-inner a:hover,.nav-inner a.active{color:var(--text);background:var(--card)}
-.brand{font-weight:800;color:var(--text);margin-right:auto;font-size:.9em;white-space:nowrap}
-
-/* ===== HERO ===== */
-.hero{min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(88,166,255,.08),transparent 70%);top:-200px;left:50%;transform:translateX(-50%);animation:pulse 6s ease-in-out infinite}
-.hero::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(248,81,73,.06),transparent 70%);bottom:-100px;right:10%;animation:pulse 8s ease-in-out infinite reverse}
-@keyframes pulse{0%,100%{transform:translateX(-50%) scale(1);opacity:.6}50%{transform:translateX(-50%) scale(1.15);opacity:1}}
-.hero-content{position:relative;z-index:2;max-width:800px}
-.hero h1{font-size:clamp(1.5em,4vw,2.6em);line-height:1.15;margin-bottom:16px;font-weight:800;background:linear-gradient(135deg,var(--text),var(--muted2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:slideUp .8s ease-out}
-.hero p{color:var(--muted2);font-size:1em;margin-bottom:28px;animation:slideUp .8s .15s ease-out backwards}
-@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.hero-badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px;animation:slideUp .8s .3s ease-out backwards}
-.badge{padding:6px 16px;border-radius:20px;font-size:.8em;font-weight:700;border:1px solid;backdrop-filter:blur(4px);transition:transform .2s}
-.badge:hover{transform:translateY(-2px)}
-.b-vox{background:rgba(248,81,73,.12);color:var(--vox);border-color:rgba(248,81,73,.3)}
-.b-psoe{background:rgba(63,185,80,.12);color:var(--psoe);border-color:rgba(63,185,80,.3)}
-.b-pp{background:rgba(88,166,255,.12);color:var(--pp);border-color:rgba(88,166,255,.3)}
-.b-sumar{background:rgba(188,140,255,.12);color:var(--sumar);border-color:rgba(188,140,255,.3)}
-
-/* Animated deficit bars in hero */
-.hero-chart{margin:28px 0;animation:slideUp .8s .45s ease-out backwards}
-.hbar{display:flex;align-items:center;gap:12px;margin:10px 0}
-.hbar-label{width:70px;text-align:right;font-weight:700;font-size:.85em}
-.hbar-track{flex:1;max-width:400px;height:28px;background:var(--card);border-radius:14px;overflow:hidden;position:relative}
-.hbar-fill{height:100%;border-radius:14px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;font-size:.75em;font-weight:700;color:#fff;white-space:nowrap;width:0;transition:width 1.5s cubic-bezier(.16,1,.3,1)}
-.hbar.onscreen .hbar-fill{width:var(--w)}
-.ue-line{position:absolute;left:30%;top:-4px;bottom:-4px;width:2px;background:var(--yellow);z-index:5}
-.ue-label{position:absolute;left:30%;top:-20px;transform:translateX(-50%);font-size:.65em;color:var(--yellow);font-weight:700;white-space:nowrap}
-
-/* ===== SECTIONS ===== */
-section{padding:60px 20px;max-width:1200px;margin:0 auto}
-.sec-title{font-size:clamp(1.3em,3vw,1.8em);font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:10px}
-.sec-title .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.sec-sub{color:var(--muted);font-size:.9em;margin-bottom:24px}
-
-/* Reveal animation */
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease}
-.reveal.onscreen{opacity:1;transform:translateY(0)}
-
-/* ===== STAT CARDS ===== */
-.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:20px 0}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;transition:transform .2s,border-color .2s}
-.stat:hover{transform:translateY(-3px);border-color:var(--border2)}
-.stat .val{font-size:1.6em;font-weight:800;margin:4px 0}
-.stat .lbl{font-size:.75em;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
-.stat .src{font-size:.65em;color:var(--muted);margin-top:4px}
-
-/* ===== TABLES ===== */
-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.83em;border-radius:10px;overflow:hidden}
-th,td{padding:10px 12px;border:1px solid var(--border)}
-th{background:var(--card2);font-weight:700;text-align:left;font-size:.8em;text-transform:uppercase;letter-spacing:.3px;color:var(--muted2)}
-td{background:var(--card)}
-td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
-tr:hover td{background:var(--card2)}
-.r{color:var(--vox)}
-.g{color:var(--psoe)}
-.y{color:var(--yellow)}
-.b{color:var(--pp)}
-.p{color:var(--sumar)}
-
-/* ===== PARTY TABS ===== */
-.tabs{display:flex;gap:6px;margin:20px 0;flex-wrap:wrap}
-.tab{padding:8px 20px;border-radius:10px;font-weight:700;font-size:.85em;cursor:pointer;border:2px solid var(--border);background:var(--card);color:var(--muted2);transition:all .25s;user-select:none}
-.tab:hover{border-color:var(--border2)}
-.tab.active.vox{border-color:var(--vox);color:var(--vox);background:rgba(248,81,73,.08)}
-.tab.active.psoe{border-color:var(--psoe);color:var(--psoe);background:rgba(63,185,80,.08)}
-.tab.active.pp{border-color:var(--pp);color:var(--pp);background:rgba(88,166,255,.08)}
-.tab.active.sumar{border-color:var(--sumar);color:var(--sumar);background:rgba(188,140,255,.08)}
-.tab-panel{display:none;animation:fadeIn .4s ease}
-.tab-panel.active{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-
-/* ===== CARDS ===== */
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:16px 0}
-.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
-.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-2px);border-color:var(--border2)}
-.card h3{margin-bottom:8px;font-size:1em}
-.card .big{font-size:2.2em;font-weight:800;margin:8px 0;line-height:1}
-.card .sub{font-size:.8em;color:var(--muted)}
-.card .desc{font-size:.82em;color:var(--muted2);margin-top:8px}
-
-/* ===== ALERT ===== */
-.alert{background:rgba(248,81,73,.06);border:1px solid rgba(248,81,73,.25);border-radius:12px;padding:20px;margin:16px 0}
-.alert h3{color:var(--vox);margin-bottom:8px}
-.info{background:rgba(88,166,255,.06);border:1px solid rgba(88,166,255,.2);border-radius:12px;padding:20px;margin:16px 0}
-.warn{background:rgba(210,153,34,.06);border:1px solid rgba(210,153,34,.2);border-radius:12px;padding:20px;margin:16px 0}
-
-/* ===== ACCORDION ===== */
-.acc{background:var(--card);border:1px solid var(--border);border-radius:10px;margin:8px 0;overflow:hidden;transition:border-color .2s}
-.acc:hover{border-color:var(--border2)}
-.acc summary{padding:14px 18px;cursor:pointer;font-weight:600;font-size:.9em;display:flex;align-items:center;gap:8px;list-style:none;user-select:none}
-.acc summary::-webkit-details-marker{display:none}
-.acc summary::before{content:'▸';color:var(--muted);transition:transform .2s;font-size:.8em}
-.acc[open] summary::before{transform:rotate(90deg)}
-.acc[open] summary{border-bottom:1px solid var(--border)}
-.acc-body{padding:14px 18px;font-size:.85em}
-.acc-body p{margin-bottom:8px}
-.acc-body ul{margin:8px 0 8px 20px}
-.acc-body li{margin-bottom:4px}
-
-/* ===== PROGRESS BARS ===== */
-.prog{margin:12px 0}
-.prog-row{display:flex;align-items:center;gap:10px;margin:6px 0}
-.prog-lbl{width:70px;font-weight:600;font-size:.8em;text-align:right}
-.prog-track{flex:1;height:20px;background:var(--card);border-radius:10px;overflow:hidden}
-.prog-fill{height:100%;border-radius:10px;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:.7em;font-weight:700;color:#fff;width:0;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
-.prog.onscreen .prog-fill{width:var(--w)}
-.prog-val{width:55px;font-size:.8em;font-weight:700;text-align:left}
-
-/* ===== MONTE CARLO CARDS ===== */
-.mc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:20px 0}
-.mc-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;position:relative;overflow:hidden;transition:transform .2s}
-.mc-card:hover{transform:translateY(-3px)}
-.mc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
-.mc-vox::before{background:var(--vox)}
-.mc-psoe::before{background:var(--psoe)}
-.mc-pp::before{background:var(--pp)}
-.mc-sumar::before{background:var(--sumar)}
-.mc-card h3{font-size:1.1em;margin-bottom:12px}
-.mc-stat{margin:10px 0}
-.mc-stat .v{font-size:1.8em;font-weight:800;line-height:1}
-.mc-stat .l{font-size:.75em;color:var(--muted)}
-
-/* ===== SALARY CALC ===== */
-.sal-table{font-size:.8em}
-.sal-table th:first-child{text-align:right;width:120px}
-
-/* ===== SOURCE BADGES ===== */
-.src-badge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:.72em;font-weight:600;margin:2px;background:var(--card2);border:1px solid var(--border);color:var(--muted2);transition:all .2s}
-.src-badge:hover{color:var(--text);border-color:var(--border2)}
-.src-badge.official{border-color:rgba(63,185,80,.3);color:var(--psoe)}
-.src-badge.fact{border-color:rgba(210,153,34,.3);color:var(--yellow)}
-
-/* ===== FOOTER ===== */
-footer{margin-top:60px;padding:30px 20px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:.82em}
-footer a{color:var(--muted2)}
-
-/* ===== MISC ===== */
-.vs-box{display:flex;gap:20px;margin:16px 0;flex-wrap:wrap}
-.vs-item{flex:1;min-width:200px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center}
-.vs-item .label{font-size:.75em;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
-.vs-item .value{font-size:2em;font-weight:800}
-.divider{height:1px;background:var(--border);margin:40px 0}
-.tag{display:inline-block;padding:1px 8px;border-radius:4px;font-size:.7em;font-weight:600;margin:1px}
-.tag-r{background:rgba(248,81,73,.15);color:var(--vox)}
-.tag-g{background:rgba(63,185,80,.15);color:var(--psoe)}
-.tag-y{background:rgba(210,153,34,.15);color:var(--yellow)}
-.tag-b{background:rgba(88,166,255,.15);color:var(--pp)}
-
-@media(max-width:700px){
-.stats-grid{grid-template-columns:repeat(2,1fr)}
-.hbar-label{width:55px;font-size:.75em}
-section{padding:40px 16px}
-}
-</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#172131">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
-<nav>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<nav class="site-nav" aria-label="Navegación principal">
 <div class="nav-inner">
-<span class="brand">📊 Simulador ES 2026</span>
-<a href="#hero" class="active">Inicio</a>
-<a href="#baseline">Baseline</a>
-<a href="#comparativa">Comparativa</a>
-<a href="#partidos">Partidos</a>
-<a href="#irpf">IRPF VOX 85B</a>
-<a href="#salario">Por salario</a>
-<a href="#pensiones">Pensiones</a>
-<a href="#montecarlo">Monte Carlo</a>
-<a href="#deuda2030">Deuda 2030</a>
-<a href="#riesgo">Riesgo país</a>
-<a href="#fuentes">Fuentes</a>
-<a href="#faq">FAQ</a>
+<a class="brand" href="#hero" aria-label="Economía España 2026, inicio"><span class="brand-mark" aria-hidden="true"><span class="brand-bars"><i></i><i></i><i></i><i></i></span></span><span class="brand-name">ECONOMÍA<span> / ESPAÑA</span><small>SIMULADOR · 2026</small></span></a>
+<span class="nav-caption">Explora el informe</span>
+<a href="#hero" class="active">Lectura rápida</a><a href="#baseline">Punto de partida</a><a href="#comparativa">Comparativa</a><a href="#partidos">Programas</a><a href="#irpf">IRPF de VOX</a><a href="#salario">Según tu salario</a><a href="#pensiones">Pensiones</a><a href="#montecarlo">Monte Carlo</a><a href="#deuda2030">Deuda 2030</a><a href="#riesgo">Riesgo fiscal</a><a href="#fuentes">Fuentes</a><a href="#faq">Preguntas frecuentes</a><a href="#metodo">Metodología</a>
+<div class="nav-note"><span class="nav-note-mark" aria-hidden="true">↘</span><span>Una misma base.<br>Cuatro escenarios.</span></div>
 </div>
 </nav>
+<main id="contenido">
 
-<!-- ============ HERO ============ -->
-<div class="hero" id="hero">
-<div class="hero-content">
-<h1>¿Qué pasaría en España si se aplicaran todas las propuestas económicas de VOX, PSOE, PP y Sumar?</h1>
-<p>Datos oficiales INE, AEAT, Banco de España, Ministerio de Hacienda, IGAE. Scripts Python reproducibles. Monte Carlo 10.000 iteraciones. Actualizado: 13 octubre 2026.</p>
-<div class="hero-badges">
-<span class="badge b-vox">VOX: déficit 7,6-8,9%</span>
-<span class="badge b-pp">PP: 3,3-3,6%</span>
-<span class="badge b-sumar">Sumar: 3,0-3,7%</span>
-<span class="badge b-psoe">PSOE: 2,6% → 1,8%</span>
+<!-- PORTADA · RESUMEN VISUAL -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+<div class="hero-shell">
+<div class="hero-topline"><span>Cuaderno de economía pública <b>·</b> España 2026</span><span>Una base común · cuatro programas</span></div>
+<div class="hero-layout">
+<div class="hero-copy">
+<p class="hero-kicker"><span class="hero-kicker-mark" aria-hidden="true"></span> Fiscalidad, deuda y vida cotidiana</p>
+<h1 id="hero-title">La economía<br>en <em>cuatro escenarios.</em></h1>
+<p class="hero-dek">Qué cambia cuando se aplican las propuestas económicas de VOX, PSOE, PP y Sumar sobre una misma base.</p>
+<div class="hero-actions"><a class="action-primary" href="#comparativa">Entrar en la comparativa <span aria-hidden="true">↘</span></a><a class="action-secondary" href="#metodo">Reproducir el análisis</a></div>
 </div>
-<div class="hero-chart" id="heroChart">
-<div class="hbar"><span class="hbar-label" style="color:var(--psoe)">PSOE</span><div class="hbar-track"><div class="hbar-fill" style="--w:26%;background:var(--psoe)">2,6%</div></div></div>
-<div class="hbar"><span class="hbar-label" style="color:var(--pp)">PP</span><div class="hbar-track"><div class="hbar-fill" style="--w:36%;background:var(--pp)">3,3-3,6%</div></div></div>
-<div class="hbar"><span class="hbar-label" style="color:var(--sumar)">Sumar</span><div class="hbar-track"><div class="hbar-fill" style="--w:37%;background:var(--sumar)">3,0-3,7%</div></div></div>
-<div class="hbar"><span class="hbar-label" style="color:var(--vox)">VOX</span><div class="hbar-track"><div class="hbar-fill" style="--w:89%;background:var(--vox)">7,6-8,9%</div><div class="ue-line"></div><span class="ue-label">Límite UE 3%</span></div></div>
-</div>
-<p style="font-size:.8em;color:var(--muted)">Línea amarilla = límite déficit UE (3%). EDP = Procedimiento de Déficit Excesivo: Bruselas te exige recortar.</p>
+<div class="hero-feature" role="group" aria-label="Déficit estimado del escenario VOX: entre 7,6 y 8,9 por ciento del PIB">
+<div class="feature-label"><span aria-hidden="true"></span> Déficit estimado · escenario VOX</div>
+<div class="feature-number"><span>7,6</span><i aria-hidden="true">–</i><span>8,9</span><small>%</small></div>
+<p class="feature-note">La horquilla más amplia<br><strong>del análisis</strong></p>
+<div class="feature-foot"><span>del PIB</span><span>IRPF corregido a 85.000 M€</span></div>
 </div>
 </div>
+<div class="hero-data">
+<div class="chart-heading"><div><span class="chart-kicker">EN UN VISTAZO</span><strong>Déficit resultante</strong></div><span class="chart-unit">Porcentaje del PIB</span></div>
+<div class="hero-chart" id="heroChart" role="group" aria-label="Comparación del déficit estimado por partido">
+<div class="hbar hbar-psoe"><div class="hbar-heading"><span class="hbar-label">PSOE</span><strong>~2,6%</strong></div><div class="hbar-track"><div class="hbar-fill" style="--w:26%;background:var(--psoe)"></div></div><span class="hbar-note">2,6% → 1,8% en 2027</span></div>
+<div class="hbar hbar-pp"><div class="hbar-heading"><span class="hbar-label">PP</span><strong>3,3–3,6%</strong></div><div class="hbar-track"><div class="hbar-fill" style="--w:36%;background:var(--pp)"></div></div><span class="hbar-note">Rango del escenario</span></div>
+<div class="hbar hbar-sumar"><div class="hbar-heading"><span class="hbar-label">Sumar</span><strong>3,0–3,7%</strong></div><div class="hbar-track"><div class="hbar-fill" style="--w:37%;background:var(--sumar)"></div></div><span class="hbar-note">Rango del escenario</span></div>
+<div class="hbar hbar-vox"><div class="hbar-heading"><span class="hbar-label">VOX</span><strong>7,6–8,9%</strong></div><div class="hbar-track"><div class="hbar-fill" style="--w:89%;background:var(--vox)"></div><span class="ue-line" aria-hidden="true"></span></div><span class="hbar-note">La línea discontinua marca el límite UE del 3%</span></div>
+</div>
+<p class="hero-caption" id="deficit-chart-note">Escala: 0–10% del PIB. Línea discontinua: referencia del 3%. EDP = Procedimiento de Déficit Excesivo.</p>
+</div>
+</div>
+</section>
 
 <!-- ============ BASELINE ============ -->
 <section id="baseline" class="reveal">
-<h2 class="sec-title"><span class="dot" style="background:var(--pp)"></span>Punto de partida común (baseline 2025)</h2>
-<p class="sec-sub">Para no comparar peras con manzanas, todos los cálculos parten del mismo punto. Todas las fuentes son organismos oficiales.</p>
+<h2 class="sec-title"><span class="dot" style="background:var(--pp)"></span>Punto de partida común (referencia 2025)</h2>
+<p class="sec-sub">Para comparar los cuatro escenarios con la misma vara de medir, los cálculos parten de estas magnitudes. Se indica la fuente junto a cada dato.</p>
 <div class="stats-grid" id="baselineStats">
-<div class="stat"><div class="lbl">PIB 2025</div><div class="val" data-target="1690012" data-suffix=" M€">0 M€</div><div class="src">INE CNA2025</div></div>
-<div class="stat"><div class="lbl">Deuda pública</div><div class="val" data-target="1007" data-decimal="1" data-suffix="% PIB">0% PIB</div><div class="src">Banco de España</div></div>
-<div class="stat"><div class="lbl">Déficit 2025</div><div class="val" data-target="239" data-decimal="1" data-prefix="2," data-suffix="%">0%</div><div class="src">IGAE/Hacienda</div></div>
-<div class="stat"><div class="lbl">IRPF recaudación</div><div class="val" data-target="129408" data-suffix=" M€">0 M€</div><div class="src">AEAT 2024</div></div>
-<div class="stat"><div class="lbl">IVA recaudación</div><div class="val" data-target="90541" data-suffix=" M€">0 M€</div><div class="src">AEAT 2024</div></div>
-<div class="stat"><div class="lbl">Pensiones (gasto)</div><div class="val" data-target="189600" data-suffix=" M€">0 M€</div><div class="src">Seg. Social</div></div>
-<div class="stat"><div class="lbl">Salario medio</div><div class="val" data-target="29540" data-suffix=" €">0 €</div><div class="src">INE EAES2024</div></div>
-<div class="stat"><div class="lbl">SMI 2026</div><div class="val" data-target="17094" data-suffix=" €">0 €</div><div class="src">La Moncloa/BOE</div></div>
-<div class="stat"><div class="lbl">Paro</div><div class="val" data-target="993" data-decimal="1" data-prefix="9," data-suffix="%">0%</div><div class="src">INE EPA Q4-2025</div></div>
-<div class="stat"><div class="lbl">Recaudación total</div><div class="val" data-target="294734" data-suffix=" M€">0 M€</div><div class="src">AEAT 2024</div></div>
+<div class="stat"><div class="lbl">PIB 2025</div><div class="val" data-target="1690012" data-suffix=" M€">1.690.012 M€</div><div class="src">INE CNA2025</div></div>
+<div class="stat"><div class="lbl">Deuda pública</div><div class="val" data-target="10070" data-decimal="1" data-suffix="% PIB">100,7% PIB</div><div class="src">Banco de España</div></div>
+<div class="stat"><div class="lbl">Déficit 2025</div><div class="val" data-target="239" data-decimal="2" data-suffix="%">2,39%</div><div class="src">IGAE/Hacienda</div></div>
+<div class="stat"><div class="lbl">IRPF recaudación</div><div class="val" data-target="129408" data-suffix=" M€">129.408 M€</div><div class="src">AEAT 2024</div></div>
+<div class="stat"><div class="lbl">IVA recaudación</div><div class="val" data-target="90541" data-suffix=" M€">90.541 M€</div><div class="src">AEAT 2024</div></div>
+<div class="stat"><div class="lbl">Pensiones (gasto)</div><div class="val" data-target="189600" data-suffix=" M€">189.600 M€</div><div class="src">Seg. Social</div></div>
+<div class="stat"><div class="lbl">Salario medio</div><div class="val" data-target="29540" data-suffix=" €">29.540 €</div><div class="src">INE EAES2024</div></div>
+<div class="stat"><div class="lbl">SMI 2026</div><div class="val" data-target="17094" data-suffix=" €">17.094 €</div><div class="src">La Moncloa/BOE</div></div>
+<div class="stat"><div class="lbl">Paro</div><div class="val" data-target="993" data-decimal="2" data-suffix="%">9,93%</div><div class="src">INE EPA Q4-2025</div></div>
+<div class="stat"><div class="lbl">Recaudación total</div><div class="val" data-target="294734" data-suffix=" M€">294.734 M€</div><div class="src">AEAT 2024</div></div>
 </div>
+<dl class="baseline-context" aria-label="Distribución salarial, inflación y evolución de la deuda">
+<div><dt>Salario mediano · 2024</dt><dd>24.497 €</dd><p>La mitad de los salarios queda por debajo. INE · EAES 2024.</p></div>
+<div><dt>Salario más frecuente · 2024</dt><dd>16.520 €</dd><p>Es el valor modal de la encuesta. INE · EAES 2024.</p></div>
+<div><dt>IPC medio anual · 2025</dt><dd>2,7 %</dd><p>Media del año, distinta a la tasa de diciembre. INE.</p></div>
+<div><dt>Diferencia entre salarios medios · 2024</dt><dd>16,1 %</dd><p>Medias: 26.904,90 € en mujeres y 32.057,55 € en hombres. Diferencia bruta, sin ajustar (referencia: media masculina). INE · EAES 2024.</p></div>
+<div><dt>Deuda pública · 2023–2025</dt><dd>−7,0 puntos</dd><p>De 107,7 % a 100,7 % del PIB. Banco de España.</p></div>
+</dl>
 <p style="font-size:.82em;color:var(--muted)">Regla útil: <strong>1.000 M€ = 0,059% del PIB</strong>. Todo el informe usa esta conversión. Detalle y URLs oficiales en <a href="https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar/blob/master/comparativa/00_baseline_INE.md">comparativa/00_baseline_INE.md</a>.</p>
 </section>
 
@@ -264,7 +106,7 @@ section{padding:40px 16px}
 <section id="comparativa" class="reveal">
 <h2 class="sec-title"><span class="dot" style="background:var(--sumar)"></span>Tabla comparativa: todo a la vez</h2>
 <p class="sec-sub">Si se aplicaran TODAS las propuestas fiscales de cada partido simultáneamente (sin mezclar partidos entre sí). Año 1 estático + ajuste dinámico 1-3 años.</p>
-<table>
+<div class="table-wrap" role="region" aria-label="Tabla de datos; desplazamiento horizontal disponible" tabindex="0"><table>
 <tr><th></th><th style="color:var(--vox)">VOX</th><th style="color:var(--pp)">PP</th><th style="color:var(--psoe)">PSOE</th><th style="color:var(--sumar)">Sumar</th></tr>
 <tr><td><strong>Merma bruta</strong></td><td class="num r">-149,4B (-8,8% PIB)</td><td class="num">-27B (-1,6%)</td><td class="num g">+5B (+0,3%)</td><td class="num">+31B (+1,8%)</td></tr>
 <tr><td><strong>Ahorro/gasto nuevo</strong></td><td class="num">-40B ahorro (dudoso año 1)</td><td class="num">-7B ahorro</td><td class="num">+8B gasto</td><td class="num">+41,5B gasto (2,5% PIB)</td></tr>
@@ -277,38 +119,38 @@ section{padding:40px 16px}
 <tr><td><strong>Poder adquisitivo</strong></td><td class="num">+4-6% (más con hijos; pensión solo si >15.876€)</td><td class="num">+5-7% familias hijos/jóvenes</td><td class="num">+2-3% SMI/mínimas</td><td class="num">+8-12% con hijos, +1-2% sin hijos</td></tr>
 <tr><td><strong>Desigualdad (Gini)</strong></td><td class="num r">Sube inicial (plano 15/25%)</td><td class="num">Neutro-baja (hijos)</td><td class="num g">Baja 0,5-1pp</td><td class="num g">Baja 2-3pp (máxima)</td></tr>
 <tr><td><strong>Riesgo UE</strong></td><td class="num r">Muy alto (EDP, PRTR en riesgo)</td><td class="num">Medio-bajo</td><td class="num g">Bajo (cumple)</td><td class="num y">Alto (EDP + fuga capitales)</td></tr>
-</table>
+</table></div>
 <p style="font-size:.8em;color:var(--muted)">Multiplicadores AIReF/BdE: bajada impuestos 0,4-0,6, recorte gasto 0,6-0,8, subida capital 0,2-0,4 con erosión 30-40%, gasto social 0,6-1,0. Recuperación parcial 15-20% merma en 2 años. Cálculos en <code>vox/03_vox_simulacion.py</code> y equivalentes.</p>
 </section>
 
 <!-- ============ PARTIDOS ============ -->
 <section id="partidos" class="reveal">
 <h2 class="sec-title"><span class="dot" style="background:var(--vox)"></span>Qué propone cada partido (detalle)</h2>
-<p class="sec-sub">Programas electorales + PNLs + BOE/Moncloa. Solo fuentes oficiales. Click en cada partido para ver el detalle.</p>
-<div class="tabs" id="partyTabs">
-<div class="tab vox active" data-party="vox">🔴 VOX</div>
-<div class="tab psoe" data-party="psoe">🟢 PSOE</div>
-<div class="tab pp" data-party="pp">🔵 PP</div>
-<div class="tab sumar" data-party="sumar">🟣 Sumar</div>
+<p class="sec-sub">Programas electorales, iniciativas parlamentarias, BOE y Moncloa. Selecciona un partido para consultar sus propuestas.</p>
+<div class="tabs" id="partyTabs" role="tablist" aria-label="Partidos">
+<button type="button" class="tab vox active" data-party="vox" id="tab-vox" role="tab" aria-selected="true" aria-controls="panel-vox"><span class="party-mark" aria-hidden="true"></span> VOX</button>
+<button type="button" class="tab psoe" data-party="psoe" id="tab-psoe" role="tab" aria-selected="false" aria-controls="panel-psoe" tabindex="-1"><span class="party-mark" aria-hidden="true"></span> PSOE</button>
+<button type="button" class="tab pp" data-party="pp" id="tab-pp" role="tab" aria-selected="false" aria-controls="panel-pp" tabindex="-1"><span class="party-mark" aria-hidden="true"></span> PP</button>
+<button type="button" class="tab sumar" data-party="sumar" id="tab-sumar" role="tab" aria-selected="false" aria-controls="panel-sumar" tabindex="-1"><span class="party-mark" aria-hidden="true"></span> Sumar</button>
 </div>
 
 <!-- VOX PANEL -->
-<div class="tab-panel active" id="panel-vox">
+<div class="tab-panel active" id="panel-vox" role="tabpanel" aria-labelledby="tab-vox" tabindex="0">
 <div class="grid2">
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">IRPF — reforma total 2 tramos</h3>
 <p><strong>Exento 22.000€</strong> + <strong>15% hasta 70.000€</strong> + <strong>25% desde 70.000€</strong>. <strong>-4pp por hijo</strong> (4 hijos y <70k = tipo 0).</p>
-<p class="desc">🔴 <strong style="color:var(--vox)">VOX declara: 40.000 M€</strong> (solo tramo estatal, sin contar autonómico que también elimina). ✅ <strong style="color:var(--psoe)">Hacienda (13-10-2026): 85.000 M€</strong> = 61% recaudación IRPF. Ministro Arcadi España, Consejo de Ministros. SMI = 0€ ahorro, 100k = 18.935€, 1M = 212.333€. <strong>Usamos 85B</strong>.</p>
+<p class="desc">🟢 <strong style="color:var(--vox)">VOX declara: 40.000 M€</strong> (solo tramo estatal, sin contar autonómico que también elimina). ✅ <strong style="color:var(--ink)">Hacienda (13-10-2026): 85.000 M€</strong> = 61% recaudación IRPF. Ministro Arcadi España, Consejo de Ministros. SMI = 0€ ahorro, 100k = 18.935€, 1M = 212.333€. <strong>Usamos 85B</strong>.</p>
 </div>
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">IVA</h3>
 <p>21→18% general · 10→8% reducido · 0% alimentos básicos · 4% luz/gas/agua · Fin IVA primera vivienda</p>
-<p class="desc">🔴 <strong style="color:var(--vox)">VOX declara: 14.000 M€</strong> (solo tipos 21→18 + 10→8). ✅ <strong style="color:var(--psoe)">Cálculo propio: 18.075 M€</strong> (suma además 0% alimentos ~2,5B + 4% luz/gas ~2,0B que VOX no incluye en sus 14B). Ambas son propuestas reales de VOX; la diferencia es qué incluye cada cifra.</p>
+<p class="desc">🟢 <strong style="color:var(--vox)">VOX declara: 14.000 M€</strong> (solo tipos 21→18 + 10→8). ✅ <strong style="color:var(--ink)">Cálculo propio: 18.075 M€</strong> (suma además 0% alimentos ~2,5B + 4% luz/gas ~2,0B que VOX no incluye en sus 14B). Ambas son propuestas reales de VOX; la diferencia es qué incluye cada cifra.</p>
 </div>
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">Sociedades</h3>
-<p>25→15% general (confirmado programa oct-2025). Bonif 100% SS nuevos indefinidos. Cuota 0 autónomos <SMI.</p>
-<p class="desc">🔴 <strong style="color:var(--vox)">VOX declara: 10.000 M€</strong> (asume modulación empleo/relocalización). ✅ <strong style="color:var(--psoe)">Estático (tipo×base): 15.600 M€</strong> (39,1B×10/25). ✅ <strong>Central usado: 12.000 M€</strong>. Autónomos 6,25B + Bonif SS 3,2B aparte.</p>
+<p>25→15% general (confirmado programa oct-2025). Bonif 100% SS nuevos indefinidos. Cuota 0 autónomos &lt;SMI.</p>
+<p class="desc">🟢 <strong style="color:var(--vox)">VOX declara: 10.000 M€</strong> (asume modulación empleo/relocalización). ✅ <strong style="color:var(--ink)">Estático (tipo×base): 15.600 M€</strong> (39,1B×10/25). ✅ <strong>Central usado: 12.000 M€</strong>. Autónomos 6,25B + Bonif SS 3,2B aparte.</p>
 </div>
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">Impuestos suprimidos</h3>
@@ -323,7 +165,7 @@ section{padding:40px 16px}
 <div class="card" style="border-left:3px solid var(--vox)">
 <h3 style="color:var(--vox)">Ahorro prometido</h3>
 <p>40.000 M€/año: 22→12 ministerios, fin subvenciones/ODS/cooperación/TVs autonómicas, presupuestos base cero.</p>
-<p class="desc">🔴 <strong style="color:var(--vox)">VOX declara: 40.000 M€</strong>. ✅ <strong style="color:var(--psoe)">Cuestionado por independientes</strong>: Institut Ostrom (liberal) lo llama "tramposo"; Alex Wong identifica solo <strong>~15.000 M€</strong> en partidas concretas. <strong>Usamos tres escenarios</strong>: 40B (VOX), 25B (central), 15B (realista).</p>
+<p class="desc">🟢 <strong style="color:var(--vox)">VOX declara: 40.000 M€</strong>. ✅ <strong style="color:var(--ink)">Cuestionado por independientes</strong>: Institut Ostrom (liberal) lo llama "tramposo"; Alex Wong identifica solo <strong>~15.000 M€</strong> en partidas concretas. <strong>Usamos tres escenarios</strong>: 40B (VOX), 25B (central), 15B (realista).</p>
 </div>
 </div>
 <div class="alert" style="margin-top:16px">
@@ -334,7 +176,7 @@ section{padding:40px 16px}
 </div>
 
 <!-- PSOE PANEL -->
-<div class="tab-panel" id="panel-psoe">
+<div class="tab-panel" id="panel-psoe" role="tabpanel" aria-labelledby="tab-psoe" tabindex="0">
 <div class="grid2">
 <div class="card" style="border-left:3px solid var(--psoe)"><h3 style="color:var(--psoe)">IRPF</h3><p>Mínimo exento en SMI. Tramo ahorro >300k al 30%.</p><p class="desc">Prácticamente aplicado ya.</p></div>
 <div class="card" style="border-left:3px solid var(--psoe)"><h3 style="color:var(--psoe)">IVA</h3><p>Alimentos básicos 0-2% transitorio. Aceite oliva 4% permanente.</p></div>
@@ -347,7 +189,7 @@ section{padding:40px 16px}
 </div>
 
 <!-- PP PANEL -->
-<div class="tab-panel" id="panel-pp">
+<div class="tab-panel" id="panel-pp" role="tabpanel" aria-labelledby="tab-pp" tabindex="0">
 <div class="grid2">
 <div class="card" style="border-left:3px solid var(--pp)"><h3 style="color:var(--pp)">IRPF</h3><p>Deflactar <40.000€. Duplicar mínimos hijos (2.400→4.800 1º, hasta 9.000 4º+).</p></div>
 <div class="card" style="border-left:3px solid var(--pp)"><h3 style="color:var(--pp)">IVA</h3><p>0% básicos. Energía 21→10%. IVA 4% vivienda joven. Exención autónomos <85k.</p><p class="desc">✅ Verificado: pp.es + Congreso + 6 periódicos.</p></div>
@@ -360,7 +202,7 @@ section{padding:40px 16px}
 </div>
 
 <!-- SUMAR PANEL -->
-<div class="tab-panel" id="panel-sumar">
+<div class="tab-panel" id="panel-sumar" role="tabpanel" aria-labelledby="tab-sumar" tabindex="0">
 <p style="font-size:.8em;color:var(--muted);margin-bottom:12px">⚠️ Sumar se presenta como <strong>Frente Amplio</strong> (IU+Comuns+Más Madrid) para el 29-N. <strong>Programa electoral no presentado aún</strong> (Forbes 5-oct-2026). Datos basados en programa 2023 + posiciones conocidas 2026.</p>
 <div class="grid2">
 <div class="card" style="border-left:3px solid var(--sumar)"><h3 style="color:var(--sumar)">IRPF</h3><p>Marginal 52% desde 300.000€. Capital hasta 33%.</p></div>
@@ -394,13 +236,13 @@ section{padding:40px 16px}
 <p>El IRPF en España tiene dos partes: <strong>tramo estatal</strong> (~60%) y <strong>tramo autonómico</strong> (~40%). La reforma de VOX elimina ambos (exento 22k + 15%/25%), pero solo contaba uno en su coste.</p>
 <p>El <strong>ministro Arcadi España</strong> (Consejo de Ministros, 13-10-2026) lo confirmó: "El coste de la propuesta fiscal de Vox son 85.000 millones de euros en el IRPF, que es el impuesto más progresivo". Ejemplos:</p>
 </div>
-<table>
+<div class="table-wrap" role="region" aria-label="Tabla de datos; desplazamiento horizontal disponible" tabindex="0"><table>
 <tr><th>Renta anual</th><th>Ahorro con VOX</th><th>¿Quién nota el cambio?</th></tr>
 <tr><td class="num">SMI (17.094€)</td><td class="num r">0€</td><td>Nada. Ya estaba exento.</td></tr>
 <tr><td class="num">29.540€ (salario medio)</td><td class="num">~1.800-3.000€</td><td>Renta media: ahorro moderado.</td></tr>
 <tr><td class="num">100.000€</td><td class="num">18.935€</td><td>Renta alta: gran ahorro.</td></tr>
 <tr><td class="num">1.000.000€</td><td class="num r">212.333€</td><td>Top 1%: ahorro masivo.</td></tr>
-</table>
+</table></div>
 <p style="font-size:.8em;color:var(--muted)">Esto cascada a todo el análisis: <strong>merma 149B</strong> (no 104B), <strong>déficit 7,6-8,9%</strong> (no 5-6%), <strong>deuda 108-113%</strong> (no 104-107%). El <a href="https://www.sueldovox.es/">simulador oficial de VOX</a> confirma que con SMI el ahorro de IRPF es 0€: el trabajador ya paga ~0€ por la reducción por trabajo (7.302€), mínimo personal (5,550€) y deducción SMI (590,89€, RDL 5/2026). VOX lo pone a 0€… pero ya lo estaba.</p>
 <div class="warn">
 <p style="font-size:.85em"><strong>Estimaciones previas que ya advertían:</strong></p>
@@ -415,9 +257,9 @@ section{padding:40px 16px}
 
 <!-- ============ POR SALARIO ============ -->
 <section id="salario" class="reveal">
-<h2 class="sec-title"><span class="dot" style="background:var(--yellow)"></span>Cómo te afecta según tu salario</h2>
+<h2 class="sec-title"><span class="dot" style="background:var(--gold)"></span>Cómo te afecta según tu salario</h2>
 <p class="sec-sub">IRPF verificado con el <a href="https://www.sueldovox.es/">simulador oficial de VOX</a> (Programa Económico jun-2025, base del 29-N). IVA estimado por cesta de consumo. <strong>Nota clave</strong>: VOX dice "exento hasta 22.000€" pero el umbral se aplica al rendimiento neto (tras cotizaciones SS + 2.000€ gastos), no al bruto. En la práctica, quien cobra hasta <strong>~25.300€ brutos</strong> paga 0€ IRPF con VOX (sueldovox.es confirma: 25.000€ → 0€).</p>
-<table class="sal-table">
+<div class="table-wrap" role="region" aria-label="Tabla de datos; desplazamiento horizontal disponible" tabindex="0"><table class="sal-table">
 <tr><th>Renta anual</th><th style="color:var(--vox)">VOX (IRPF + IVA)</th><th style="color:var(--pp)">PP</th><th style="color:var(--psoe)">PSOE</th><th style="color:var(--sumar)">Sumar</th></tr>
 <tr><td class="num">16.500€ (SMI)</td><td class="num r"><strong>0€</strong> IRPF¹ + ~500€ IVA = <strong>~500€</strong></td><td class="num">+200-400€ (IVA; IRPF ~0€)</td><td class="num">+518€ salario</td><td class="num">+300-500€ sin hijos · +5.000+ con hijos</td></tr>
 <tr><td class="num">20.000€</td><td class="num r"><strong>2.035€</strong> IRPF¹ + ~600€ IVA = <strong>~2.600€</strong></td><td class="num">+400-700€</td><td class="num">+400-700€</td><td class="num">+200-400€ · +3.000-5.000 con hijos</td></tr>
@@ -426,11 +268,11 @@ section{padding:40px 16px}
 <tr><td class="num">50.000€</td><td class="num r"><strong>7.792€</strong> IRPF¹ + ~800€ IVA = <strong>~8.600€</strong></td><td class="num">+600-1.200€</td><td class="num">Neutro</td><td class="num">-300 a -1.000€ sin hijos</td></tr>
 <tr><td class="num">100.000€</td><td class="num r"><strong>18.935€</strong> IRPF¹³ + ~900€ IVA = <strong>~19.800€</strong></td><td class="num">+1.000-2.500€</td><td class="num">-0-500€</td><td class="num">-1.500 a -5.000€</td></tr>
 <tr><td class="num">>150.000€ / >1M patrimonio</td><td class="num r">+20.000-100.000€+</td><td class="num">+10.000-40.000€</td><td class="num">-2.000 a -15.000€</td><td class="num">-15.000 a -500.000€+</td></tr>
-</table>
+</table></div>
 <p style="font-size:.75em;color:var(--muted)">¹ Verificado con <a href="https://www.sueldovox.es/">sueldovox.es</a> (simulador oficial VOX, oct-2026). ² Estimación por interpolación. ³ Coincide con Ministerio de Hacienda (13-10-2026). IVA: estimación propia sobre cesta de consumo (VOX: 21→18% general, 10→8% reducido, 0% básicos, 4% luz/gas).</p>
 <details class="acc"><summary>Pensionistas (pensión media del sistema: 1.262€/mes × 14 = 17.668€/año)</summary>
 <div class="acc-body">
-<p><strong style="color:var(--psoe)">PSOE/Sumar</strong>: +2,7% (+477€/año) + mínimas +7-11,4% (+800-1.400€). Sostenible con MEI/cuotas.</p>
+<p><strong>PSOE/Sumar</strong>: +2,7% (+477€/año) + mínimas +7-11,4% (+800-1.400€). Sostenible con MEI/cuotas.</p>
 <p><strong style="color:var(--pp)">PP</strong>: revalorización Pacto Toledo, sin cifra extra.</p>
 <p><strong style="color:var(--vox)">VOX</strong>: exención IRPF. Con VOX: base 15.668€ (17.668−2.000 gastos, sin cotizaciones) &lt; 22.000€ → <strong>0€ IRPF</strong>. IRPF actual estimado: <strong>~1.100€</strong> (con reducción por trabajo, umbral 16.825€ neto; mínimo personal 65+ = 6.700€; sin deducción SMI que es solo para asalariados). Santander blog dic-2025: retención media 2-3% para tramo 12.001-18.000€ (más alta en 17.668€ concreto). <strong>63% no presenta IRPF</strong> (Gestha, pensión &lt;15.876€) → ahorra <strong>0€</strong>. Solo ~37% con pensión &gt;22.000€ ahorra más (~4.160€ media). <strong>Claim VOX "+1.200-2.000€": la media aritmética (14.317M÷9,3M=1.540€) es engañosa</strong> porque la mayoría no notará cambio (demon.code.blog).</p>
 <p class="src" style="font-size:.8em;color:var(--muted)">Fuentes: AEAT 2024 (retenciones pensiones públicas 14.317M€), Gestha (63% no presenta IRPF), Santander blog (retenciones por tramo), demon.code.blog/2020/05/07/pensiones, sueldovox.es (metodología: "La deducción del SMI solo es para asalariados"). Nota: sueldovox.es es para trabajadores, no pensionistas; cálculo aproximado.</p>
@@ -447,7 +289,7 @@ section{padding:40px 16px}
 
 <!-- ============ PENSIONES ============ -->
 <section id="pensiones" class="reveal">
-<h2 class="sec-title"><span class="dot" style="background:var(--orange)"></span>Pensiones: el claim engañoso de VOX</h2>
+<h2 class="sec-title"><span class="dot" style="background:var(--gold)"></span>Pensiones: una afirmación engañosa de VOX</h2>
 <p class="sec-sub">VOX promete eximir las pensiones del IRPF con el claim implícito de "+1.200-2.000€/año". Es engañoso. Esto es lo que pasa realmente:</p>
 <div class="grid3">
 <div class="card" style="text-align:center"><div class="big r">63%</div><p class="sub">de pensionistas NO presenta IRPF (Gestha). Pensión &lt;15.876€ = sin retenciones. Ahorro con VOX: <strong>0€</strong>.</p></div>
@@ -467,57 +309,66 @@ section{padding:40px 16px}
 <!-- ============ MONTE CARLO ============ -->
 <section id="montecarlo" class="reveal">
 <h2 class="sec-title"><span class="dot" style="background:var(--sumar)"></span>Monte Carlo: 10.000 iteraciones × 4 años</h2>
-<p class="sec-sub">No es un solo número, es un abanico. Sorteamos 10.000 escenarios con incertidumbre triangular en merma, ahorro, multiplicadores, spread y crecimiento. Semilla 42 para reproducibilidad.</p>
-<div class="mc-grid">
-<div class="mc-card mc-psoe">
-<h3 class="g">PSOE</h3>
-<div class="mc-stat"><div class="v g">0%</div><div class="l">Probabilidad EDP (>3% déficit)</div></div>
-<div class="mc-stat"><div class="v g">92,9%</div><div class="l">Deuda año 4 (2029)</div></div>
-<p class="desc">Estable. Deuda baja. Cumple UE.</p>
+<p class="sec-sub">Cada iteración combina incertidumbre triangular en merma, ahorro, multiplicadores, prima de riesgo y crecimiento (semilla 42). Las tarjetas muestran medias y bandas P5–P95, que abarcan el 90% central de los resultados simulados. Las probabilidades son frecuencias del modelo, no previsiones oficiales ni probabilidades de impago.</p>
+<div class="mc-grid" role="group" aria-label="Resultados de la simulación para 2029">
+<article class="mc-card mc-psoe">
+<h3 class="party-name party-psoe">PSOE</h3>
+<div class="mc-stat"><span class="v g">2,4%</span><span class="l">Déficit medio · 2029 (% PIB)</span><span class="mc-range">P5–P95: 2,3–2,5%</span></div>
+<div class="mc-stat"><span class="v g">92,9%</span><span class="l">Deuda media · 2029 (% PIB)</span><span class="mc-range">P5–P95: 91,8–94,1%</span></div>
+<div class="mc-stat"><span class="v g">0%</span><span class="l">Probabilidad de déficit &gt;3%</span></div>
+<p class="desc">Ninguna de las 10.000 iteraciones supera el 3%.</p>
+</article>
+<article class="mc-card mc-pp">
+<h3 class="party-name party-pp">PP</h3>
+<div class="mc-stat"><span class="v y">3,3%</span><span class="l">Déficit medio · 2029 (% PIB)</span><span class="mc-range">P5–P95: 3,1–3,6%</span></div>
+<div class="mc-stat"><span class="v">95,8%</span><span class="l">Deuda media · 2029 (% PIB)</span><span class="mc-range">P5–P95: 94,3–97,2%</span></div>
+<div class="mc-stat"><span class="v y">99%</span><span class="l">Probabilidad de déficit &gt;3%</span></div>
+<p class="desc">El umbral del 3% se supera en el 99% de las iteraciones.</p>
+</article>
+<article class="mc-card mc-sumar">
+<h3 class="party-name party-sumar">Sumar</h3>
+<div class="mc-stat"><span class="v y">3,5%</span><span class="l">Déficit medio · 2029 (% PIB)</span><span class="mc-range">P5–P95: 3,1–4,0%</span></div>
+<div class="mc-stat"><span class="v">99,0%</span><span class="l">Deuda media · 2029 (% PIB)</span><span class="mc-range">P5–P95: 96,6–101,5%</span></div>
+<div class="mc-stat"><span class="v y">97%</span><span class="l">Probabilidad de déficit &gt;3%</span></div>
+<p class="desc">El umbral del 3% se supera en el 97% de las iteraciones.</p>
+</article>
+<article class="mc-card mc-vox">
+<h3 class="party-name party-vox">VOX</h3>
+<div class="mc-stat"><span class="v r">9,0%</span><span class="l">Déficit medio · 2029 (% PIB)</span><span class="mc-range">P5–P95: 8,1–9,9%</span></div>
+<div class="mc-stat"><span class="v r">115,3%</span><span class="l">Deuda media · 2029 (% PIB)</span><span class="mc-range">P5–P95: 110,8–119,8%</span></div>
+<div class="mc-stat"><span class="v r">100%</span><span class="l">Probabilidad de déficit &gt;3%</span></div>
+<p class="desc">Todas superan el 3%; el 100% también rebasa el 5% de déficit.</p>
+</article>
 </div>
-<div class="mc-card mc-pp">
-<h3 class="b">PP</h3>
-<div class="mc-stat"><div class="v y">99%</div><div class="l">Probabilidad EDP</div></div>
-<div class="mc-stat"><div class="v">95,8%</div><div class="l">Deuda año 4</div></div>
-<p class="desc">Raspa el 3% pero deuda baja. Manejable.</p>
-</div>
-<div class="mc-card mc-sumar">
-<h3 class="p">Sumar</h3>
-<div class="mc-stat"><div class="v y">97%</div><div class="l">Probabilidad EDP</div></div>
-<div class="mc-stat"><div class="v">99,0%</div><div class="l">Deuda año 4</div></div>
-<p class="desc">Estructural sobre 3%. Deuda no baja.</p>
-</div>
-<div class="mc-card mc-vox">
-<h3 class="r">VOX</h3>
-<div class="mc-stat"><div class="v r">100%</div><div class="l">Probabilidad EDP y déficit >5%</div></div>
-<div class="mc-stat"><div class="v r">115,3%</div><div class="l">Deuda año 4 (98% prob. >110%)</div></div>
-<p class="desc">Insostenible. Deuda sube 15pp. EDP seguro.</p>
-</div>
-</div>
-<table>
+<aside class="mc-baseline" role="note" aria-label="Escenario base del modelo, sin medidas de partido">
+<p><strong>Referencia del mismo modelo, sin medidas de partido (2029):</strong> déficit medio del 2,2%, deuda media del 92,7% del PIB, PIB acumulado +19,3% desde 2025 y paro medio del 9,9%. Es una comparación interna del modelo, no una previsión oficial.</p>
+<p class="mc-base-note"><strong>Base fiscal distinta:</strong> el modelo parte de un déficit estructural del 2,2%, redondeo del 2,18% de 2025 sin DANA. La ficha general recoge el 2,39% de 2025 con DANA; no son la misma base.</p>
+</aside>
+<div class="table-wrap" role="region" aria-label="Tabla de datos; desplazamiento horizontal disponible" tabindex="0"><table>
+<caption>Resumen de las 10.000 iteraciones al final del cuarto año (2029). P = frecuencia simulada.</caption>
 <tr><th>Año 4 (2029)</th><th style="color:var(--psoe)">PSOE</th><th style="color:var(--pp)">PP</th><th style="color:var(--sumar)">Sumar</th><th style="color:var(--vox)">VOX</th></tr>
 <tr><td>Déficit medio</td><td class="num g">2,4%</td><td class="num y">3,3%</td><td class="num y">3,5%</td><td class="num r">9,0%</td></tr>
 <tr><td>Deuda media</td><td class="num g">92,9%</td><td class="num">95,8%</td><td class="num">99,0%</td><td class="num r">115,3%</td></tr>
-<tr><td>P(Deuda >110%)</td><td class="num g">0%</td><td class="num g">0%</td><td class="num g">0%</td><td class="num r">98%</td></tr>
-<tr><td>P(Def >5%)</td><td class="num g">0%</td><td class="num g">0%</td><td class="num g">0%</td><td class="num r">100%</td></tr>
+<tr><td>Frecuencia: deuda &gt;110% del PIB</td><td class="num g">0%</td><td class="num g">0%</td><td class="num g">0%</td><td class="num r">98%</td></tr>
+<tr><td>Frecuencia: déficit &gt;5% del PIB</td><td class="num g">0%</td><td class="num g">0%</td><td class="num g">0%</td><td class="num r">100%</td></tr>
 <tr><td>PIB acumulado</td><td class="num">+20,1%</td><td class="num">+20,7%</td><td class="num">+17,0%</td><td class="num">+22,5%</td></tr>
-<tr><td>Paro medio</td><td class="num">9,6%</td><td class="num">9,3%</td><td class="num">10,9%</td><td class="num">8,5%</td></tr>
-</table>
-<div class="prog" id="mcProg">
-<p style="font-size:.85em;color:var(--muted);margin-bottom:8px">Probabilidad de que la deuda supere el 110% del PIB (año 4, 2029):</p>
-<div class="prog-row"><span class="prog-lbl g">PSOE</span><div class="prog-track"><div class="prog-fill" style="--w:1%;background:var(--psoe)">0%</div></div><span class="prog-val g">0%</span></div>
-<div class="prog-row"><span class="prog-lbl b">PP</span><div class="prog-track"><div class="prog-fill" style="--w:1%;background:var(--pp)">0%</div></div><span class="prog-val g">0%</span></div>
-<div class="prog-row"><span class="prog-lbl p">Sumar</span><div class="prog-track"><div class="prog-fill" style="--w:1%;background:var(--sumar)">0%</div></div><span class="prog-val g">0%</span></div>
-<div class="prog-row"><span class="prog-lbl r">VOX</span><div class="prog-track"><div class="prog-fill" style="--w:98%;background:var(--vox)">98%</div></div><span class="prog-val r">98%</span></div>
+<tr><td>Paro medio · 2029</td><td class="num">9,6%</td><td class="num">9,3%</td><td class="num">10,9%</td><td class="num">8,5%</td></tr>
+</table></div>
+<div class="prog" id="mcProg" role="group" aria-label="Frecuencia simulada de deuda superior al 110 por ciento del PIB">
+<p class="prog-title">Frecuencia Monte Carlo: deuda superior al 110% del PIB en 2029</p>
+<div class="prog-row"><span class="prog-lbl party-psoe">PSOE</span><div class="prog-track" aria-hidden="true"><div class="prog-fill" style="--w:0%;background:var(--psoe)"></div></div><span class="prog-val">0%</span></div>
+<div class="prog-row"><span class="prog-lbl party-pp">PP</span><div class="prog-track" aria-hidden="true"><div class="prog-fill" style="--w:0%;background:var(--pp)"></div></div><span class="prog-val">0%</span></div>
+<div class="prog-row"><span class="prog-lbl party-sumar">Sumar</span><div class="prog-track" aria-hidden="true"><div class="prog-fill" style="--w:0%;background:var(--sumar)"></div></div><span class="prog-val">0%</span></div>
+<div class="prog-row"><span class="prog-lbl party-vox">VOX</span><div class="prog-track" aria-hidden="true"><div class="prog-fill" style="--w:98%;background:var(--vox)"></div></div><span class="prog-val">98%</span></div>
 </div>
 <p style="font-size:.8em;color:var(--muted)">Script: <code>comparativa/05_montecarlo.py</code>. Resultados completos: <a href="https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar/blob/master/comparativa/05_montecarlo_resultados.md">05_montecarlo_resultados.md</a>. Modelo: stock-flujo D(t)=D(t-1)+Def(t), Y(t)=Y(t-1)*(1+g).</p>
 </section>
 
 <!-- ============ DEUDA 2030 ============ -->
 <section id="deuda2030" class="reveal">
-<h2 class="sec-title"><span class="dot" style="background:var(--orange)"></span>Sostenibilidad de deuda 2026-2030</h2>
+<h2 class="sec-title"><span class="dot" style="background:var(--gold)"></span>Sostenibilidad de deuda 2026-2030</h2>
 <p class="sec-sub">Simulación stock-flujo con escenarios pesimista/central/optimista por partido. Modelo: D(t)=D(t-1)+Def(t), Y(t)=Y(t-1)*(1+g). Script: <code>comparativa/04_deuda_sostenibilidad.py</code>.</p>
-<table>
+<div class="table-wrap" role="region" aria-label="Tabla de datos; desplazamiento horizontal disponible" tabindex="0"><table>
 <tr><th>Escenario</th><th>Déficit 2030</th><th>Deuda 2030</th><th>Lectura</th></tr>
 <tr><td style="color:var(--vox)"><strong>VOX pesimista</strong> (12B ahorro, prima 150pb)</td><td class="num r">9,65%</td><td class="num r">123,2%</td><td>Casi triplica el 3%. EDP seguro. Bola intereses +22B.</td></tr>
 <tr><td style="color:var(--vox)"><strong>VOX central</strong> (25B, 110pb)</td><td class="num r">8,58%</td><td class="num r">117,2%</td><td>Triplica el límite. Necesita ~5,5pp de ajuste.</td></tr>
@@ -530,26 +381,48 @@ section{padding:40px 16px}
 <tr><td style="color:var(--sumar)"><strong>Sumar pesimista</strong> (ing 17B, 80pb)</td><td class="num y">4,12%</td><td class="num">102,1%</td><td>Estructural >4%. Requiere focalizar.</td></tr>
 <tr><td style="color:var(--sumar)"><strong>Sumar central</strong> (20B, 55pb)</td><td class="num y">3,79%</td><td class="num">100,1%</td><td>Sobre 3% persistente. Corrección ~0,8pp.</td></tr>
 <tr><td style="color:var(--sumar)"><strong>Sumar optimista</strong> (24,8B, 30pb)</td><td class="num y">3,36%</td><td class="num">97,6%</td><td>Aun con recaudación alta, queda sobre 3%.</td></tr>
-</table>
+</table></div>
+<div class="sensitivity-block" aria-labelledby="sensitivity-title">
+<h3 id="sensitivity-title">Qué puede mover la deuda</h3>
+<p class="sensitivity-intro">Tres sensibilidades aproximadas del análisis de sostenibilidad:</p>
+<div class="grid3 sensitivity-grid">
+<article class="sensitivity-card">
+<span class="sensitivity-label">CRECIMIENTO NOMINAL</span>
+<strong class="sensitivity-metric">−1 punto</strong>
+<p>Durante cinco años, con el mismo déficit, puede añadir <strong>4–5 puntos del PIB</strong> a la deuda.</p>
+</article>
+<article class="sensitivity-card">
+<span class="sensitivity-label">PRIMA DE RIESGO</span>
+<strong class="sensitivity-metric">+100 pb</strong>
+<p>Si se mantiene, supone unos <strong>3–5 mil millones de euros</strong> más de intereses al año al final del periodo.</p>
+</article>
+<article class="sensitivity-card">
+<span class="sensitivity-label">AJUSTE PERMANENTE</span>
+<strong class="sensitivity-metric">+10.000 M€</strong>
+<p>De ahorro o ingresos: alrededor de <strong>−0,5 puntos</strong> de déficit y <strong>−2–3 puntos</strong> de deuda en 2030.</p>
+</article>
+</div>
+<p class="sensitivity-note">Fuente: <code>comparativa/03_sostenibilidad_deuda.md</code>. Son sensibilidades del modelo, no resultados del Monte Carlo ni predicciones.</p>
+</div>
 </section>
 
 <!-- ============ RIESGO PAÍS ============ -->
 <section id="riesgo" class="reveal">
-<h2 class="sec-title"><span class="dot" style="background:var(--vox)"></span>Riesgo de quiebra del país</h2>
-<p class="sec-sub">España no quiebra como una empresa (deuda en euros, BCE como prestamista de última instancia). El riesgo real es otro: quedarse sin margen fiscal, entrar en EDP y tener que recortar en la siguiente recesión.</p>
+<h2 class="sec-title"><span class="dot" style="background:var(--vox)"></span>Riesgo fiscal: presión y margen de maniobra</h2>
+<p class="sec-sub">Aquí, «riesgo» significa presión sobre las cuentas y menos margen para responder a una recesión. Las cifras de 2029 son frecuencias Monte Carlo; las de 2030, escenarios de sostenibilidad. Todo depende de las hipótesis: no son pronósticos ni predicen una decisión institucional, una quiebra o un impago.</p>
 <div class="grid2">
-<div class="card" style="border-left:3px solid var(--psoe)"><h3 class="g">PSOE: margen conservado</h3><p>Necesidades de financiación estables. Con PIB nominal +5-6% la deuda baja sola 2-3pp/año. Procedimiento excesivo evitable.</p></div>
-<div class="card" style="border-left:3px solid var(--pp)"><h3 class="b">PP: desvío manejable</h3><p>+16-20B neto (+1pp). Financiable con crecimiento +2,5%. Prima +20-40 pb. Sin EDP duro si hay presupuestos.</p></div>
-<div class="card" style="border-left:3px solid var(--sumar)"><h3 class="p">Sumar: colchón estrecho</h3><p>+20B neto estructural (+1,2pp) + derechos permanentes. Déficit no baja del 3,5-4%. Prima +40-80 pb, EDP probable.</p></div>
-<div class="card" style="border-left:3px solid var(--vox)"><h3 class="r">VOX: escudo agotado</h3><p>+89-109B neto (+5,2-6,5pp) o +134B si ahorro se queda en 15B. Volver a 2010-2012 pero con deuda 100%. Prima +80-150 pb, EDP seguro. Financiable 12 meses, insostenible 2-3 años sin tijera o revertir rebaja.</p></div>
+<div class="card" style="border-left:3px solid var(--psoe)"><h3 class="party-name party-psoe">PSOE: menor presión en esta muestra</h3><p>Déficit medio del 2,4% y deuda media del 92,9% en 2029. Ninguna de las 10.000 iteraciones supera el 3% de déficit; esto no cubre shocks ajenos a las hipótesis.</p></div>
+<div class="card" style="border-left:3px solid var(--pp)"><h3 class="party-name party-pp">PP: déficit sobre el umbral</h3><p>Déficit medio del 3,3% en 2029; el 99% de las iteraciones supera el 3%. El escenario central de sostenibilidad llega al 3,31% en 2030. No se simula una respuesta presupuestaria correctora.</p></div>
+<div class="card" style="border-left:3px solid var(--sumar)"><h3 class="party-name party-sumar">Sumar: presión persistente en los escenarios</h3><p>Déficit medio del 3,5% en 2029 y del 3,79% en el escenario central de 2030; el 97% de las iteraciones supera el 3%. El resultado depende de cuánto recauden las medidas y de cómo se diseñe el gasto.</p></div>
+<div class="card" style="border-left:3px solid var(--vox)"><h3 class="party-name party-vox">VOX: mayor tensión fiscal simulada</h3><p>En 2029, el 100% de las iteraciones supera el 5% de déficit y el 98% supera el 110% de deuda/PIB. Son frecuencias del modelo, muy sensibles a los supuestos de coste, ahorro, crecimiento y prima de riesgo.</p></div>
 </div>
-<p style="font-size:.85em;color:var(--muted)">Ningún escenario da impago a 12 meses con BCE activo. La diferencia es el colchón para la siguiente recesión: PSOE/PP lo mantienen, Sumar lo estrecha, VOX lo agota.</p>
+<div class="warn risk-caveat" role="note"><p><strong>Límite del modelo:</strong> no incorpora compras del BCE/TPI, calificación crediticia, colchón de caja ni shocks (tipos, petróleo o DANA). Las frecuencias Monte Carlo son condicionales a sus hipótesis y <strong>no representan una probabilidad de impago</strong>.</p></div>
 </section>
 
 <!-- ============ FUENTES ============ -->
 <section id="fuentes" class="reveal">
 <h2 class="sec-title"><span class="dot" style="background:var(--psoe)"></span>Fuentes verificadas</h2>
-<p class="sec-sub">INE primero, prensa mínima y verificada. Para VOX: verificación extra (right-wing media tiende a omitir/distorsionar).</p>
+<p class="sec-sub">El análisis distingue datos de organismos oficiales, documentos de los partidos y verificaciones de prensa.</p>
 <h3>Organismos oficiales</h3>
 <div style="margin:8px 0 16px">
 <span class="src-badge official">INE — PIB, EPA, EAES</span>
@@ -598,8 +471,8 @@ section{padding:40px 16px}
 <details class="acc"><summary>¿Es cierto que VOX baja el IRPF y eso recauda más por efecto Laffer?</summary>
 <div class="acc-body"><p>No. El efecto Laffer recupera solo el 15-20% de la merma en 2 años (multiplicadores AIReF/BdE). Con 149B de merma, se recuperan ~27B. Quedan 122B de agujero neto. La curva Laffer funciona cuando los tipos son muy altos (>70%), no cuando ya están en 19-45%.</p></div>
 </details>
-<details class="acc"><summary>¿Puede España ir a la quiebra con las propuestas de VOX?</summary>
-<div class="acc-body"><p>No hay impago inminente. España emite en euros, el BCE actúa como prestamista (TPI desde 2022), vencimiento medio ~8 años. El riesgo real: entrar en EDP, pagar más intereses (+80-150 pb), perder margen para la siguiente recesión. Financiable 12 meses, insostenible 2-3 años sin recortar o revertir la rebaja.</p></div>
+<details class="acc"><summary>¿El análisis predice que España quebrará o dejará de pagar?</summary>
+<div class="acc-body"><p><strong>No.</strong> El propio análisis de sostenibilidad indica que no es sólido fechar una quiebra o un impago. Compara déficit, deuda y correcciones necesarias; no modela compras del BCE/TPI, calificación crediticia, colchón de caja ni shocks macroeconómicos. Por eso, las probabilidades Monte Carlo dependen de sus hipótesis y <strong>no son probabilidades de impago</strong>.</p></div>
 </details>
 <details class="acc"><summary>¿El ahorro de 40B de VOX es real?</summary>
 <div class="acc-body"><p>Cuestionado. Institut Ostrom (think tank <em>liberal</em>) lo califica de "tramposo" (oct-2026). Alex Wong: solo ~15.227 M€ identificados en recortes concretos. El gasto político directo suma ~8-12B. Llegar a 40B exige recortar transferencias CCAA o personal, con fricción constitucional.</p></div>
@@ -619,8 +492,8 @@ section{padding:40px 16px}
 </section>
 
 <!-- ============ REPRODUCIR ============ -->
-<section class="reveal">
-<h2 class="sec-title"><span class="dot" style="background:var(--muted2)"></span>Reproducir</h2>
+<section class="reveal" id="metodo">
+<h2 class="sec-title"><span class="dot" style="background:var(--muted)"></span>Reproducir el análisis</h2>
 <p>Clona el repo y ejecuta los scripts (solo Python estándar, sin dependencias):</p>
 <p style="margin:12px 0"><code>git clone https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar.git</code></p>
 <p><code>python vox/03_vox_simulacion.py</code></p>
@@ -628,74 +501,133 @@ section{padding:40px 16px}
 <p><code>python comparativa/05_montecarlo.py</code></p>
 <p style="margin-top:16px">Repo completo: <a href="https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar">GitHub</a>. Metodología: <a href="https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar/blob/master/comparativa/02_metodologia_y_fuentes.md">comparativa/02_metodologia_y_fuentes.md</a>. Licencia CC BY 4.0.</p>
 </section>
+</main>
 
 <footer>
 <p>Simulador económico España 2026 · Datos: INE, AEAT, Banco de España, IGAE, Ministerio de Hacienda · Monte Carlo 10.000 iteraciones · <a href="https://github.com/tcpsheep/simulador-economico-espana-vox-psoe-pp-sumar">GitHub</a> · CC BY 4.0</p>
 </footer>
 
 <script>
-// ===== Scroll reveal =====
-const obs=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{
-if(e.isIntersecting){e.target.classList.add('onscreen')}
-})
-},{threshold:0.1,rootMargin:'0px 0px -60px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-document.querySelectorAll('.hbar').forEach(el=>obs.observe(el));
-document.querySelectorAll('.prog').forEach(el=>obs.observe(el));
+// ===== Movimiento accesible y compatible =====
+const reduceMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches??false;
+const supportsObserver='IntersectionObserver' in window;
+const revealTargets=document.querySelectorAll('.reveal,.hbar,.prog');
+if(supportsObserver&&!reduceMotion){
+const revealObserver=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('onscreen');revealObserver.unobserve(entry.target)}
+});
+},{threshold:0.12,rootMargin:'0px 0px -48px 0px'});
+revealTargets.forEach(element=>revealObserver.observe(element));
+}else{
+revealTargets.forEach(element=>element.classList.add('onscreen'));
+}
 
-// ===== Animated counters =====
-function animateCounter(el){
-const target=parseFloat(el.dataset.target);
-const suffix=el.dataset.suffix||'';
-const prefix=el.dataset.prefix||'';
-const dec=parseInt(el.dataset.decimal||'0');
-const dur=1500;const start=performance.now();
+// Barras discretas: la cifra permanece fuera de la pista para evitar solapamientos.
+document.querySelectorAll('.mc-card').forEach(card=>{
+card.querySelectorAll('.mc-stat').forEach(stat=>{
+if(!stat.querySelector('.l')?.textContent.includes('Probabilidad'))return;
+const value=parseFloat(stat.querySelector('.v')?.textContent.replace(',','.'));
+if(!Number.isFinite(value))return;
+const track=document.createElement('span');
+track.className='mc-prob-track';
+stat.classList.add('mc-stat-probability');
+track.setAttribute('aria-hidden','true');
+const fill=document.createElement('span');
+fill.className='mc-prob-fill';
+fill.style.setProperty('--probability',Math.max(0,Math.min(value,100))+'%');
+track.append(fill);
+stat.append(track);
+});
+});
+
+// ===== Contadores =====
+function animateCounter(element){
+const target=parseFloat(element.dataset.target);
+if(!Number.isFinite(target))return;
+const suffix=element.dataset.suffix||'';
+const prefix=element.dataset.prefix||'';
+const decimals=parseInt(element.dataset.decimal||'0',10);
+const format=value=>prefix+(decimals>0?(value/100).toFixed(decimals).replace('.',','):Math.floor(value).toLocaleString('es-ES'))+suffix;
+if(reduceMotion||!window.requestAnimationFrame){element.textContent=format(target);return;}
+const duration=1500;
+const start=performance.now();
 function tick(now){
-const p=Math.min((now-start)/dur,1);
-const ease=1-Math.pow(1-p,3);
-const val=target*ease;
-let display;
-if(dec>0)display=(val/100).toFixed(dec).replace('.',',');
-else display=Math.floor(val).toLocaleString('es-ES');
-el.textContent=prefix+display+suffix;
-if(p<1)requestAnimationFrame(tick);
-else el.textContent=prefix+(dec>0?(target/100).toFixed(dec).replace('.',','):target.toLocaleString('es-ES'))+suffix;
+const progress=Math.min((now-start)/duration,1);
+const eased=1-Math.pow(1-progress,3);
+element.textContent=format(target*eased);
+if(progress<1)requestAnimationFrame(tick);
+else element.textContent=format(target);
 }
 requestAnimationFrame(tick);
 }
-const counterObs=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{
-if(e.isIntersecting){animateCounter(e.target);counterObs.unobserve(e.target)}
-})
-},{threshold:0.5});
-document.querySelectorAll('[data-target]').forEach(el=>counterObs.observe(el));
+const counters=document.querySelectorAll('[data-target]');
+if(supportsObserver&&!reduceMotion){
+const counterObserver=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){animateCounter(entry.target);counterObserver.unobserve(entry.target)}
+});
+},{threshold:0.45});
+counters.forEach(counter=>counterObserver.observe(counter));
+}else{
+counters.forEach(animateCounter);
+}
 
-// ===== Party tabs =====
+// ===== Pestañas de partidos (ratón, teclado y lectores de pantalla) =====
 document.querySelectorAll('#partyTabs .tab').forEach(tab=>{
-tab.addEventListener('click',()=>{
-document.querySelectorAll('#partyTabs .tab').forEach(t=>t.classList.remove('active'));
-document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+const selectTab=()=>{
+document.querySelectorAll('#partyTabs .tab').forEach(item=>{
+item.classList.remove('active');
+item.setAttribute('aria-selected','false');
+item.tabIndex=-1;
+});
+document.querySelectorAll('.tab-panel').forEach(panel=>panel.classList.remove('active'));
 tab.classList.add('active');
+tab.setAttribute('aria-selected','true');
+tab.tabIndex=0;
 const panel=document.getElementById('panel-'+tab.dataset.party);
 if(panel)panel.classList.add('active');
+};
+tab.addEventListener('click',selectTab);
+tab.addEventListener('keydown',event=>{
+const tabs=[...document.querySelectorAll('#partyTabs .tab')];
+const index=tabs.indexOf(tab);
+const next=event.key==='ArrowRight'?(index+1)%tabs.length:event.key==='ArrowLeft'?(index-1+tabs.length)%tabs.length:-1;
+if(next<0)return;
+event.preventDefault();
+tabs[next].focus();
+tabs[next].click();
 });
 });
 
-// ===== Nav active state =====
+// ===== Navegación activa =====
 const navLinks=document.querySelectorAll('.nav-inner a');
-const sections=document.querySelectorAll('section[id], .hero[id]');
-const navObs=new IntersectionObserver((entries)=>{
-entries.forEach(e=>{
-if(e.isIntersecting){
-const id=e.target.id;
-navLinks.forEach(l=>{
-l.classList.toggle('active',l.getAttribute('href')==='#'+id);
-});
+const sections=document.querySelectorAll('section[id],.hero[id]');
+const setActiveSection=id=>navLinks.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+id));
+if(supportsObserver){
+const navObserver=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{if(entry.isIntersecting)setActiveSection(entry.target.id)});
+},{threshold:0.25,rootMargin:'-62px 0px -48% 0px'});
+sections.forEach(section=>navObserver.observe(section));
+}else{
+let navigationFrame=0;
+const updateActiveSection=()=>{
+navigationFrame=0;
+let current=sections[0]?.id;
+sections.forEach(section=>{if(section.getBoundingClientRect().top<=window.innerHeight*0.42)current=section.id});
+if(current)setActiveSection(current);
+};
+window.addEventListener('scroll',()=>{
+if(!navigationFrame){
+if(window.requestAnimationFrame)navigationFrame=requestAnimationFrame(updateActiveSection);
+else updateActiveSection();
 }
-});
-},{threshold:0.3,rootMargin:'-60px 0px -50% 0px'});
-sections.forEach(s=>navObs.observe(s));
+},{passive:true});
+updateActiveSection();
+}
 </script>
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7f52ca0e7a9c46c0b26f80d437fd6388"}'></script>
+<!-- End Cloudflare Web Analytics -->
 </body>
 </html>
